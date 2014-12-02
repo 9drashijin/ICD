@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 543418e40980.03.7f.00.00.01.00.51.70 4 2 1 0
+V v 2 1 5434190320d7.03.7f.00.00.01.00.51.70
+F f 2 "AE.smbl_2"
+V v 3 1 543419298890.03.7f.00.00.01.00.51.70
+F f 3 "AE.smbl_3"
+V v 4 1 543d3fa9c5bc.03.7f.00.00.01.00.10.48
+F f 4 "AE.smbl_4"
+O 4
+R csduv 0 "/home/training/ALU_CL/schem/AE/part" 3 Eddm_part 543d3fb2bc4e.03.7f.00.00.01.00.10.48 543418d92a68.03.7f.00.00.01.00.51.70
+O 3
+R csduv 0 "/home/training/ALU_CL/schem/AE/part" 2 Eddm_part 543418f7bfbe.03.7f.00.00.01.00.51.70 543418d92a68.03.7f.00.00.01.00.51.70
+O 2
+R csduv 0 "/home/training/ALU_CL/schem/AE/part" 2 Eddm_part 543418f7bfbe.03.7f.00.00.01.00.51.70 543418d92a68.03.7f.00.00.01.00.51.70

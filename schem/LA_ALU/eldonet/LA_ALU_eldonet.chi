@@ -1,0 +1,2579 @@
+  Run on TARC17 (Linux 2.6.18-308.el5)
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : unknown@TARC17
+*** OS    : Red Hat Enterprise Linux Client release 5.4 (Tikanga) [VCO = aol]
+*** CPU   :
+            Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : disabled
+    Number of cpu cores               : 4
+    Number of logical processors      : 4
+*** Freq  : 3201.000MHz
+*** Cache : 6144 KB
+*** MEM   : 4020648 kB
+*** Date  : Wed Nov  5 00:42:39 2014
+
+/EDA/ams_2010.2/aol/bin/eldo_64.exe -i /home/training/ALU_CL/schem/LA_ALU/eldonet/LA_ALU_eldonet.cir -o /home/training/ALU_CL/schem/LA_ALU/eldonet/LA_ALU_eldonet.chi -gwl jwdb -nocou -wdb_folder -outname LA_ALU_eldonet_01 
+
+
+***** PRE-PROCESSING ...
+
+1******* 5-Nov-14 *******  ELDO 2010.2 (64 bits)  (v7.4_1.1)  *******00:42:39******
+
+0* Component: /home/training/ALU_CL/schem/LA_ALU  Viewpoint: eldonet
+
+0****     INPUT LISTING                                               
+
+0***********************************************************************
+    2  ** including /home/training/ALU_CL/schem/LA_ALU/eldonet/LA_ALU_eldonet.spi
+    1  *
+    2  * .CONNECT statements
+    3  *
+    4  .CONNECT GROUND 0
+    5  
+    6  
+    7  * ELDO netlist generated with ICnet by 'training' on Wed Nov  5 2014 at 00:42:38
+    8  
+    9  *
+   10  * Globals.
+   11  *
+   12  .GLOBAL VDD GND
+   13  
+   14  *
+   15  * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/mux21a_ni
+   16  *
+   17  .SUBCKT MUX21A_NI  Y S0 A0 A1
+   18  
+   19          M11 N$462 A1 GND GND NCH L=0.35U W=1.2U M=1
+   20          M10 N$461 S0 N$462 GND NCH L=0.35U W=1.2U M=1
+   21          M9 N$461 N$223 N$464 GND NCH L=0.35U W=1.2U M=1
+   22          M8 Y N$461 GND GND NCH L=0.35U W=1.2U M=1
+   23          M7 N$223 S0 GND GND NCH L=0.35U W=1.2U M=1
+   24          M1 N$223 S0 VDD VDD PCH L=0.35U W=2U M=1
+   25          M4 N$459 A1 VDD VDD PCH L=0.35U W=2U M=1
+   26          M2 Y N$461 VDD VDD PCH L=0.35U W=2U M=1
+   27          M5 N$461 S0 N$457 VDD PCH L=0.35U W=2U M=1
+   28          M3 N$457 A0 VDD VDD PCH L=0.35U W=2U M=1
+   29          M12 N$464 A0 GND GND NCH L=0.35U W=1.2U M=1
+   30          M6 N$461 N$223 N$459 VDD PCH L=0.35U W=2U M=1
+   31  .ENDS MUX21A_NI
+   32  
+   33  *
+   34  * Component pathname : /home/training/ALU_CL/schem/mux2to1_4bit
+   35  *
+   36  .SUBCKT MUX2TO1_4BIT  S2 AE3 LE3 AE2 LE2 AE1 LE1 AE0 LE0 Q0 Q1 Q2 Q3
+   37  
+   38          X_MUX21A_NI4 Q0 S2 AE0 LE0 MUX21A_NI
+   39          X_MUX21A_NI2 Q1 S2 AE1 LE1 MUX21A_NI
+   40          X_MUX21A_NI1 Q2 S2 AE2 LE2 MUX21A_NI
+   41          X_MUX21A_NI3 Q3 S2 AE3 LE3 MUX21A_NI
+   42  .ENDS MUX2TO1_4BIT
+   43  
+   44  *
+   45  * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/and02a
+   46  *
+   47  .SUBCKT AND02A  A1 A0 Y
+   48  
+   49          M3 Y N$647 GND GND NCH L=0.35U W=1.2U M=1
+   50          M1 N$647 A0 VDD VDD PCH L=0.35U W=2U M=1
+   51          M2 N$647 A1 VDD VDD PCH L=0.35U W=2U M=1
+   52          M4 Y N$647 VDD VDD PCH L=0.35U W=2U M=1
+   53          M5 N$647 A0 N$649 GND NCH L=0.35U W=1.2U M=1
+   54          M6 N$649 A1 GND GND NCH L=0.35U W=1.2U M=1
+   55  .ENDS AND02A
+   56  
+   57  *
+   58  * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/or02a
+   59  *
+   60  .SUBCKT OR02A  Y A1 A0
+   61  
+   62          M4 N$431 A0 GND GND NCH L=0.35U W=1.2U M=1
+   63          M3 Y N$431 VDD VDD PCH L=0.35U W=2U M=1
+   64          M2 N$431 A1 N$429 VDD PCH L=0.35U W=2U M=1
+   65          M1 N$429 A0 VDD VDD PCH L=0.35U W=2U M=1
+   66          M6 Y N$431 GND GND NCH L=0.35U W=1.2U M=1
+   67          M5 N$431 A1 GND GND NCH L=0.35U W=1.2U M=1
+   68  .ENDS OR02A
+   69  
+   70  *
+   71  * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/inv01a
+   72  *
+   73  .SUBCKT INV01A  A Y
+   74  
+   75          M1 Y A VDD VDD PCH L=0.35U W=2U M=1
+   76          M2 Y A GND GND NCH L=0.35U W=1.2U M=1
+   77  .ENDS INV01A
+   78  
+   79  *
+   80  * Component pathname : /home/training/ALU_CL/schem/LE
+   81  *
+   82  .SUBCKT LE  LE S1 S2 A B
+   83  
+   84          X_OR02A1 N$21 B A OR02A
+   85          X_AND02A1 B A N$19 AND02A
+   86          X_INV01A1 A N$17 INV01A
+   87          X_MUX21A_NI3 LE S2 N$10 N$9 MUX21A_NI
+   88          X_MUX21A_NI2 N$9 S1 N$19 N$21 MUX21A_NI
+   89          X_MUX21A_NI1 N$10 S1 A N$17 MUX21A_NI
+   90  .ENDS LE
+   91  
+   92  *
+   93  * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/axor2a
+   94  *
+   95  .SUBCKT AXOR2A  A0 A1 Y
+   96  
+   97          M9 N$470 A0 N$472 GND NCH L=0.35U W=1.2U M=1
+   98          M12 Y N$470 GND GND NCH L=0.35U W=1.2U M=1
+   99          M8 N$468 A1 GND GND NCH L=0.35U W=1.2U M=1
+  100          M7 N$467 A0 N$468 GND NCH L=0.35U W=1.2U M=1
+  101          M6 Y N$470 VDD VDD PCH L=0.35U W=2U M=1
+  102          M3 N$470 N$467 VDD VDD PCH L=0.35U W=2U M=1
+  103          M1 N$467 A0 VDD VDD PCH L=0.35U W=2U M=1
+  104          M2 N$467 A1 VDD VDD PCH L=0.35U W=2U M=1
+  105          M4 N$465 A0 VDD VDD PCH L=0.35U W=2U M=1
+  106          M5 N$470 A1 N$465 VDD PCH L=0.35U W=2U M=1
+  107          M11 N$472 N$467 GND GND NCH L=0.35U W=1.2U M=1
+  108          M10 N$470 A1 N$472 GND NCH L=0.35U W=1.2U M=1
+  109  .ENDS AXOR2A
+  110  
+  111  *
+  112  * Component pathname : /home/training/ALU_CL/schem/CE
+  113  *
+  114  .SUBCKT CE  S0 S1 C0 S2
+  115  
+  116          X_AND02A1 S2 N$7 C0 AND02A
+  117          X_AXOR2A1 S0 S1 N$7 AXOR2A
+  118  .ENDS CE
+  119  
+  120  *
+  121  * Component pathname : /home/training/ALU_CL/schem/LookAhead
+  122  *
+  123  .SUBCKT LOOKAHEAD  CIN X0 Y0 X1 Y1 X2 Y2 X3 Y3 S0 S1 S2 S3 COUT
+  124  
+  125          X_AXOR2A8 N$35 N$17 S3 AXOR2A
+  126          X_AXOR2A7 N$34 N$15 S2 AXOR2A
+  127          X_AXOR2A6 N$29 N$13 S1 AXOR2A
+  128          X_AXOR2A5 CIN N$5 S0 AXOR2A
+  129          X_OR02A4 COUT N$7 N$19 OR02A
+  130          X_OR02A3 N$35 N$9 N$21 OR02A
+  131          X_OR02A2 N$34 N$11 N$23 OR02A
+  132          X_AND02A8 N$17 N$35 N$7 AND02A
+  133          X_AND02A7 N$15 N$34 N$9 AND02A
+  134          X_AND02A6 N$13 N$29 N$11 AND02A
+  135          X_OR02A1 N$29 N$3 N$1 OR02A
+  136          X_AND02A5 N$5 CIN N$3 AND02A
+  137          X_AXOR2A4 X3 Y3 N$17 AXOR2A
+  138          X_AXOR2A3 X2 Y2 N$15 AXOR2A
+  139          X_AXOR2A2 X1 Y1 N$13 AXOR2A
+  140          X_AXOR2A1 X0 Y0 N$5 AXOR2A
+  141          X_AND02A4 Y3 X3 N$19 AND02A
+  142          X_AND02A3 Y2 X2 N$21 AND02A
+  143          X_AND02A2 Y1 X1 N$23 AND02A
+  144          X_AND02A1 Y0 X0 N$1 AND02A
+  145  .ENDS LOOKAHEAD
+  146  
+  147  *
+  148  * MAIN CELL: Component pathname : /home/training/ALU_CL/schem/LA_ALU
+  149  *
+  150          X_MUX2TO1_4BIT1 S2 N$215 N$195 N$214 N$194 N$213 N$193 N$79 N$212
+  151  + Q0 Q1 Q2 Q3 MUX2TO1_4BIT
+  152          X_AND02A12 B N$208 N$100 AND02A
+  153          X_LE3 N$214 S0 S1 A B LE
+  154          X_LE4 N$215 S0 S1 A B LE
+  155          X_AND02A11 A VDD N$97 AND02A
+  156          X_AXOR2A1 GND N$97 N$102 AXOR2A
+  157          X_LE1 N$79 S0 S1 A B LE
+  158          X_CE1 S0 S1 N$39 S2 CE
+  159          X_AXOR2A4 N$8 S0 N$2 AXOR2A
+  160          X_AXOR2A3 GND N$5 N$10 AXOR2A
+  161          X_AND02A4 B N$208 N$8 AND02A
+  162          X_AND02A1 A VDD N$5 AND02A
+  163          X_LOOKAHEAD1 N$39 N$10 N$2 N$102 N$104 N$121 N$123 N$131 N$133 N$212
+  164  + N$193 N$194 N$195 COUT LOOKAHEAD
+  165          X_AXOR2A8 N$129 S0 N$133 AXOR2A
+  166          X_AND02A15 A VDD N$126 AND02A
+  167          X_AND02A16 B N$208 N$129 AND02A
+  168          X_AXOR2A6 N$119 S0 N$123 AXOR2A
+  169          X_AXOR2A5 GND N$116 N$121 AXOR2A
+  170          X_AND02A14 B N$208 N$119 AND02A
+  171          X_AND02A13 A VDD N$116 AND02A
+  172          X_INV01A1 S1 N$208 INV01A
+  173          X_AXOR2A7 GND N$126 N$131 AXOR2A
+  174          X_AXOR2A2 N$100 S0 N$104 AXOR2A
+  175          X_LE2 N$213 S0 S1 A B LE
+  176  *
+  177  *end
+    2  
+    3  
+    4  
+    5  
+    6  
+    7  .OPTION NOASCII
+    8  .OPTION MODWL
+    9  .OPTION ENGNOT
+   10  .OPTION AEX
+   11  
+   12  .TEMP 27 
+   13  
+   14  .END
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***** GENERATION ...
+
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI4.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI2.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI1.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_MUX2TO1_4BIT1.X_MUX21A_NI3.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A12.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A12.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A12.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A12.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A12.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A12.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A12.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A12.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A12.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A12.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A12.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A12.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LE3.X_OR02A1.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LE3.X_OR02A1.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LE3.X_OR02A1.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LE3.X_OR02A1.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LE3.X_OR02A1.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LE3.X_OR02A1.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LE3.X_OR02A1.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LE3.X_OR02A1.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LE3.X_OR02A1.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LE3.X_OR02A1.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LE3.X_OR02A1.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LE3.X_OR02A1.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LE3.X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LE3.X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LE3.X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LE3.X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LE3.X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LE3.X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LE3.X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LE3.X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LE3.X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LE3.X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LE3.X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LE3.X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 75:
++   OBJECT "X_LE3.X_INV01A1.M1": Model INV01A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 75:
++   OBJECT "X_LE3.X_INV01A1.M1": Model INV01A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 76:
++   OBJECT "X_LE3.X_INV01A1.M2": Model INV01A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 76:
++   OBJECT "X_LE3.X_INV01A1.M2": Model INV01A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE3.X_MUX21A_NI3.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE3.X_MUX21A_NI3.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE3.X_MUX21A_NI3.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE3.X_MUX21A_NI3.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE3.X_MUX21A_NI3.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE3.X_MUX21A_NI3.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE3.X_MUX21A_NI3.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE3.X_MUX21A_NI3.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE3.X_MUX21A_NI3.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE3.X_MUX21A_NI3.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE3.X_MUX21A_NI3.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE3.X_MUX21A_NI3.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE3.X_MUX21A_NI3.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE3.X_MUX21A_NI3.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE3.X_MUX21A_NI3.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE3.X_MUX21A_NI3.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE3.X_MUX21A_NI3.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE3.X_MUX21A_NI3.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE3.X_MUX21A_NI3.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE3.X_MUX21A_NI3.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE3.X_MUX21A_NI3.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE3.X_MUX21A_NI3.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE3.X_MUX21A_NI3.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE3.X_MUX21A_NI3.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE3.X_MUX21A_NI2.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE3.X_MUX21A_NI2.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE3.X_MUX21A_NI2.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE3.X_MUX21A_NI2.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE3.X_MUX21A_NI2.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE3.X_MUX21A_NI2.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE3.X_MUX21A_NI2.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE3.X_MUX21A_NI2.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE3.X_MUX21A_NI2.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE3.X_MUX21A_NI2.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE3.X_MUX21A_NI2.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE3.X_MUX21A_NI2.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE3.X_MUX21A_NI2.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE3.X_MUX21A_NI2.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE3.X_MUX21A_NI2.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE3.X_MUX21A_NI2.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE3.X_MUX21A_NI2.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE3.X_MUX21A_NI2.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE3.X_MUX21A_NI2.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE3.X_MUX21A_NI2.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE3.X_MUX21A_NI2.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE3.X_MUX21A_NI2.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE3.X_MUX21A_NI2.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE3.X_MUX21A_NI2.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE3.X_MUX21A_NI1.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE3.X_MUX21A_NI1.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE3.X_MUX21A_NI1.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE3.X_MUX21A_NI1.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE3.X_MUX21A_NI1.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE3.X_MUX21A_NI1.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE3.X_MUX21A_NI1.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE3.X_MUX21A_NI1.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE3.X_MUX21A_NI1.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE3.X_MUX21A_NI1.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE3.X_MUX21A_NI1.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE3.X_MUX21A_NI1.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE3.X_MUX21A_NI1.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE3.X_MUX21A_NI1.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE3.X_MUX21A_NI1.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE3.X_MUX21A_NI1.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE3.X_MUX21A_NI1.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE3.X_MUX21A_NI1.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE3.X_MUX21A_NI1.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE3.X_MUX21A_NI1.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE3.X_MUX21A_NI1.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE3.X_MUX21A_NI1.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE3.X_MUX21A_NI1.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE3.X_MUX21A_NI1.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LE4.X_OR02A1.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LE4.X_OR02A1.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LE4.X_OR02A1.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LE4.X_OR02A1.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LE4.X_OR02A1.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LE4.X_OR02A1.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LE4.X_OR02A1.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LE4.X_OR02A1.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LE4.X_OR02A1.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LE4.X_OR02A1.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LE4.X_OR02A1.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LE4.X_OR02A1.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LE4.X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LE4.X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LE4.X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LE4.X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LE4.X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LE4.X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LE4.X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LE4.X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LE4.X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LE4.X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LE4.X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LE4.X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 75:
++   OBJECT "X_LE4.X_INV01A1.M1": Model INV01A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 75:
++   OBJECT "X_LE4.X_INV01A1.M1": Model INV01A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 76:
++   OBJECT "X_LE4.X_INV01A1.M2": Model INV01A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 76:
++   OBJECT "X_LE4.X_INV01A1.M2": Model INV01A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE4.X_MUX21A_NI3.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE4.X_MUX21A_NI3.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE4.X_MUX21A_NI3.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE4.X_MUX21A_NI3.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE4.X_MUX21A_NI3.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE4.X_MUX21A_NI3.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE4.X_MUX21A_NI3.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE4.X_MUX21A_NI3.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE4.X_MUX21A_NI3.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE4.X_MUX21A_NI3.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE4.X_MUX21A_NI3.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE4.X_MUX21A_NI3.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE4.X_MUX21A_NI3.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE4.X_MUX21A_NI3.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE4.X_MUX21A_NI3.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE4.X_MUX21A_NI3.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE4.X_MUX21A_NI3.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE4.X_MUX21A_NI3.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE4.X_MUX21A_NI3.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE4.X_MUX21A_NI3.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE4.X_MUX21A_NI3.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE4.X_MUX21A_NI3.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE4.X_MUX21A_NI3.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE4.X_MUX21A_NI3.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE4.X_MUX21A_NI2.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE4.X_MUX21A_NI2.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE4.X_MUX21A_NI2.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE4.X_MUX21A_NI2.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE4.X_MUX21A_NI2.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE4.X_MUX21A_NI2.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE4.X_MUX21A_NI2.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE4.X_MUX21A_NI2.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE4.X_MUX21A_NI2.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE4.X_MUX21A_NI2.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE4.X_MUX21A_NI2.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE4.X_MUX21A_NI2.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE4.X_MUX21A_NI2.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE4.X_MUX21A_NI2.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE4.X_MUX21A_NI2.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE4.X_MUX21A_NI2.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE4.X_MUX21A_NI2.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE4.X_MUX21A_NI2.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE4.X_MUX21A_NI2.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE4.X_MUX21A_NI2.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE4.X_MUX21A_NI2.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE4.X_MUX21A_NI2.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE4.X_MUX21A_NI2.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE4.X_MUX21A_NI2.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE4.X_MUX21A_NI1.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE4.X_MUX21A_NI1.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE4.X_MUX21A_NI1.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE4.X_MUX21A_NI1.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE4.X_MUX21A_NI1.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE4.X_MUX21A_NI1.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE4.X_MUX21A_NI1.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE4.X_MUX21A_NI1.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE4.X_MUX21A_NI1.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE4.X_MUX21A_NI1.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE4.X_MUX21A_NI1.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE4.X_MUX21A_NI1.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE4.X_MUX21A_NI1.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE4.X_MUX21A_NI1.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE4.X_MUX21A_NI1.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE4.X_MUX21A_NI1.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE4.X_MUX21A_NI1.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE4.X_MUX21A_NI1.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE4.X_MUX21A_NI1.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE4.X_MUX21A_NI1.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE4.X_MUX21A_NI1.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE4.X_MUX21A_NI1.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE4.X_MUX21A_NI1.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE4.X_MUX21A_NI1.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A11.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A11.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A11.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A11.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A11.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A11.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A11.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A11.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A11.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A11.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A11.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A11.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A1.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A1.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A1.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A1.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A1.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A1.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A1.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A1.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A1.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A1.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A1.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A1.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A1.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A1.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A1.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A1.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A1.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A1.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A1.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A1.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A1.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A1.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A1.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A1.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LE1.X_OR02A1.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LE1.X_OR02A1.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LE1.X_OR02A1.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LE1.X_OR02A1.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LE1.X_OR02A1.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LE1.X_OR02A1.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LE1.X_OR02A1.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LE1.X_OR02A1.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LE1.X_OR02A1.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LE1.X_OR02A1.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LE1.X_OR02A1.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LE1.X_OR02A1.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LE1.X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LE1.X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LE1.X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LE1.X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LE1.X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LE1.X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LE1.X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LE1.X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LE1.X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LE1.X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LE1.X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LE1.X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 75:
++   OBJECT "X_LE1.X_INV01A1.M1": Model INV01A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 75:
++   OBJECT "X_LE1.X_INV01A1.M1": Model INV01A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 76:
++   OBJECT "X_LE1.X_INV01A1.M2": Model INV01A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 76:
++   OBJECT "X_LE1.X_INV01A1.M2": Model INV01A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE1.X_MUX21A_NI3.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE1.X_MUX21A_NI3.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE1.X_MUX21A_NI3.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE1.X_MUX21A_NI3.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE1.X_MUX21A_NI3.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE1.X_MUX21A_NI3.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE1.X_MUX21A_NI3.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE1.X_MUX21A_NI3.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE1.X_MUX21A_NI3.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE1.X_MUX21A_NI3.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE1.X_MUX21A_NI3.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE1.X_MUX21A_NI3.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE1.X_MUX21A_NI3.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE1.X_MUX21A_NI3.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE1.X_MUX21A_NI3.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE1.X_MUX21A_NI3.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE1.X_MUX21A_NI3.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE1.X_MUX21A_NI3.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE1.X_MUX21A_NI3.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE1.X_MUX21A_NI3.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE1.X_MUX21A_NI3.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE1.X_MUX21A_NI3.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE1.X_MUX21A_NI3.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE1.X_MUX21A_NI3.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE1.X_MUX21A_NI2.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE1.X_MUX21A_NI2.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE1.X_MUX21A_NI2.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE1.X_MUX21A_NI2.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE1.X_MUX21A_NI2.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE1.X_MUX21A_NI2.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE1.X_MUX21A_NI2.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE1.X_MUX21A_NI2.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE1.X_MUX21A_NI2.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE1.X_MUX21A_NI2.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE1.X_MUX21A_NI2.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE1.X_MUX21A_NI2.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE1.X_MUX21A_NI2.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE1.X_MUX21A_NI2.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE1.X_MUX21A_NI2.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE1.X_MUX21A_NI2.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE1.X_MUX21A_NI2.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE1.X_MUX21A_NI2.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE1.X_MUX21A_NI2.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE1.X_MUX21A_NI2.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE1.X_MUX21A_NI2.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE1.X_MUX21A_NI2.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE1.X_MUX21A_NI2.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE1.X_MUX21A_NI2.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE1.X_MUX21A_NI1.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE1.X_MUX21A_NI1.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE1.X_MUX21A_NI1.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE1.X_MUX21A_NI1.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE1.X_MUX21A_NI1.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE1.X_MUX21A_NI1.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE1.X_MUX21A_NI1.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE1.X_MUX21A_NI1.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE1.X_MUX21A_NI1.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE1.X_MUX21A_NI1.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE1.X_MUX21A_NI1.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE1.X_MUX21A_NI1.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE1.X_MUX21A_NI1.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE1.X_MUX21A_NI1.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE1.X_MUX21A_NI1.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE1.X_MUX21A_NI1.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE1.X_MUX21A_NI1.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE1.X_MUX21A_NI1.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE1.X_MUX21A_NI1.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE1.X_MUX21A_NI1.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE1.X_MUX21A_NI1.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE1.X_MUX21A_NI1.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE1.X_MUX21A_NI1.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE1.X_MUX21A_NI1.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_CE1.X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_CE1.X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_CE1.X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_CE1.X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_CE1.X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_CE1.X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_CE1.X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_CE1.X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_CE1.X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_CE1.X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_CE1.X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_CE1.X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_CE1.X_AXOR2A1.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_CE1.X_AXOR2A1.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_CE1.X_AXOR2A1.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_CE1.X_AXOR2A1.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_CE1.X_AXOR2A1.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_CE1.X_AXOR2A1.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_CE1.X_AXOR2A1.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_CE1.X_AXOR2A1.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_CE1.X_AXOR2A1.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_CE1.X_AXOR2A1.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_CE1.X_AXOR2A1.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_CE1.X_AXOR2A1.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_CE1.X_AXOR2A1.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_CE1.X_AXOR2A1.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_CE1.X_AXOR2A1.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_CE1.X_AXOR2A1.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_CE1.X_AXOR2A1.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_CE1.X_AXOR2A1.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_CE1.X_AXOR2A1.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_CE1.X_AXOR2A1.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_CE1.X_AXOR2A1.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_CE1.X_AXOR2A1.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_CE1.X_AXOR2A1.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_CE1.X_AXOR2A1.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A4.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A4.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A4.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A4.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A4.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A4.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A4.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A4.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A4.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A4.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A4.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A4.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A4.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A4.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A4.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A4.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A4.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A4.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A4.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A4.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A4.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A4.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A4.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A4.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A3.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A3.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A3.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A3.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A3.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A3.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A3.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A3.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A3.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A3.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A3.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A3.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A3.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A3.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A3.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A3.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A3.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A3.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A3.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A3.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A3.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A3.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A3.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A3.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A4.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A4.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A4.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A4.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A4.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A4.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A4.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A4.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A4.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A4.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A4.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A4.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A8.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A7.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A6.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A5.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LOOKAHEAD1.X_OR02A4.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LOOKAHEAD1.X_OR02A4.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LOOKAHEAD1.X_OR02A4.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LOOKAHEAD1.X_OR02A4.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LOOKAHEAD1.X_OR02A4.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LOOKAHEAD1.X_OR02A4.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LOOKAHEAD1.X_OR02A4.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LOOKAHEAD1.X_OR02A4.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LOOKAHEAD1.X_OR02A4.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LOOKAHEAD1.X_OR02A4.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LOOKAHEAD1.X_OR02A4.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LOOKAHEAD1.X_OR02A4.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LOOKAHEAD1.X_OR02A3.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LOOKAHEAD1.X_OR02A3.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LOOKAHEAD1.X_OR02A3.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LOOKAHEAD1.X_OR02A3.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LOOKAHEAD1.X_OR02A3.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LOOKAHEAD1.X_OR02A3.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LOOKAHEAD1.X_OR02A3.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LOOKAHEAD1.X_OR02A3.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LOOKAHEAD1.X_OR02A3.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LOOKAHEAD1.X_OR02A3.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LOOKAHEAD1.X_OR02A3.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LOOKAHEAD1.X_OR02A3.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LOOKAHEAD1.X_OR02A2.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LOOKAHEAD1.X_OR02A2.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LOOKAHEAD1.X_OR02A2.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LOOKAHEAD1.X_OR02A2.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LOOKAHEAD1.X_OR02A2.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LOOKAHEAD1.X_OR02A2.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LOOKAHEAD1.X_OR02A2.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LOOKAHEAD1.X_OR02A2.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LOOKAHEAD1.X_OR02A2.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LOOKAHEAD1.X_OR02A2.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LOOKAHEAD1.X_OR02A2.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LOOKAHEAD1.X_OR02A2.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A8.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A8.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A8.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A8.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A8.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A8.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A8.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A8.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A8.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A8.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A8.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A8.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A7.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A7.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A7.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A7.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A7.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A7.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A7.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A7.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A7.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A7.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A7.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A7.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A6.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A6.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A6.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A6.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A6.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A6.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A6.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A6.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A6.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A6.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A6.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A6.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LOOKAHEAD1.X_OR02A1.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LOOKAHEAD1.X_OR02A1.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LOOKAHEAD1.X_OR02A1.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LOOKAHEAD1.X_OR02A1.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LOOKAHEAD1.X_OR02A1.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LOOKAHEAD1.X_OR02A1.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LOOKAHEAD1.X_OR02A1.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LOOKAHEAD1.X_OR02A1.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LOOKAHEAD1.X_OR02A1.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LOOKAHEAD1.X_OR02A1.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LOOKAHEAD1.X_OR02A1.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LOOKAHEAD1.X_OR02A1.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A5.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A5.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A5.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A5.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A5.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A5.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A5.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A5.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A5.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A5.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A5.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A5.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A4.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A3.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A2.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_LOOKAHEAD1.X_AXOR2A1.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A4.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A4.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A4.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A4.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A4.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A4.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A4.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A4.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A4.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A4.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A4.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A4.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A3.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A3.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A3.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A3.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A3.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A3.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A3.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A3.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A3.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A3.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A3.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A3.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A2.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A2.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A2.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A2.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A2.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A2.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A2.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A2.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A2.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A2.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A2.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A2.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LOOKAHEAD1.X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LOOKAHEAD1.X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LOOKAHEAD1.X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LOOKAHEAD1.X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LOOKAHEAD1.X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LOOKAHEAD1.X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A8.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A8.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A8.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A8.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A8.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A8.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A8.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A8.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A8.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A8.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A8.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A8.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A8.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A8.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A8.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A8.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A8.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A8.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A8.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A8.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A8.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A8.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A8.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A8.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A15.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A15.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A15.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A15.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A15.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A15.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A15.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A15.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A15.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A15.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A15.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A15.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A16.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A16.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A16.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A16.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A16.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A16.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A16.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A16.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A16.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A16.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A16.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A16.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A6.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A6.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A6.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A6.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A6.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A6.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A6.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A6.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A6.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A6.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A6.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A6.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A6.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A6.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A6.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A6.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A6.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A6.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A6.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A6.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A6.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A6.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A6.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A6.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A5.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A5.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A5.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A5.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A5.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A5.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A5.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A5.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A5.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A5.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A5.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A5.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A5.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A5.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A5.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A5.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A5.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A5.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A5.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A5.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A5.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A5.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A5.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A5.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A14.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A14.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A14.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A14.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A14.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A14.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A14.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A14.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A14.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A14.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A14.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A14.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A13.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_AND02A13.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A13.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_AND02A13.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A13.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_AND02A13.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A13.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_AND02A13.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A13.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_AND02A13.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A13.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_AND02A13.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 75:
++   OBJECT "X_INV01A1.M1": Model INV01A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 75:
++   OBJECT "X_INV01A1.M1": Model INV01A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 76:
++   OBJECT "X_INV01A1.M2": Model INV01A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 76:
++   OBJECT "X_INV01A1.M2": Model INV01A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A7.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A7.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A7.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A7.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A7.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A7.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A7.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A7.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A7.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A7.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A7.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A7.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A7.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A7.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A7.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A7.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A7.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A7.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A7.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A7.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A7.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A7.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A7.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A7.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A2.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 97:
++   OBJECT "X_AXOR2A2.M9": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A2.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 98:
++   OBJECT "X_AXOR2A2.M12": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A2.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 99:
++   OBJECT "X_AXOR2A2.M8": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A2.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 100:
++   OBJECT "X_AXOR2A2.M7": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A2.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 101:
++   OBJECT "X_AXOR2A2.M6": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A2.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 102:
++   OBJECT "X_AXOR2A2.M3": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A2.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 103:
++   OBJECT "X_AXOR2A2.M1": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A2.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 104:
++   OBJECT "X_AXOR2A2.M2": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A2.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 105:
++   OBJECT "X_AXOR2A2.M4": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A2.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 106:
++   OBJECT "X_AXOR2A2.M5": Model AXOR2A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A2.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 107:
++   OBJECT "X_AXOR2A2.M11": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A2.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 108:
++   OBJECT "X_AXOR2A2.M10": Model AXOR2A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LE2.X_OR02A1.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 62:
++   OBJECT "X_LE2.X_OR02A1.M4": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LE2.X_OR02A1.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 63:
++   OBJECT "X_LE2.X_OR02A1.M3": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LE2.X_OR02A1.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 64:
++   OBJECT "X_LE2.X_OR02A1.M2": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LE2.X_OR02A1.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 65:
++   OBJECT "X_LE2.X_OR02A1.M1": Model OR02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LE2.X_OR02A1.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 66:
++   OBJECT "X_LE2.X_OR02A1.M6": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LE2.X_OR02A1.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 67:
++   OBJECT "X_LE2.X_OR02A1.M5": Model OR02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LE2.X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 49:
++   OBJECT "X_LE2.X_AND02A1.M3": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LE2.X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 50:
++   OBJECT "X_LE2.X_AND02A1.M1": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LE2.X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 51:
++   OBJECT "X_LE2.X_AND02A1.M2": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LE2.X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 52:
++   OBJECT "X_LE2.X_AND02A1.M4": Model AND02A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LE2.X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 53:
++   OBJECT "X_LE2.X_AND02A1.M5": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LE2.X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 54:
++   OBJECT "X_LE2.X_AND02A1.M6": Model AND02A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 75:
++   OBJECT "X_LE2.X_INV01A1.M1": Model INV01A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 75:
++   OBJECT "X_LE2.X_INV01A1.M1": Model INV01A.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 76:
++   OBJECT "X_LE2.X_INV01A1.M2": Model INV01A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 76:
++   OBJECT "X_LE2.X_INV01A1.M2": Model INV01A.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE2.X_MUX21A_NI3.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE2.X_MUX21A_NI3.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE2.X_MUX21A_NI3.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE2.X_MUX21A_NI3.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE2.X_MUX21A_NI3.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE2.X_MUX21A_NI3.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE2.X_MUX21A_NI3.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE2.X_MUX21A_NI3.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE2.X_MUX21A_NI3.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE2.X_MUX21A_NI3.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE2.X_MUX21A_NI3.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE2.X_MUX21A_NI3.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE2.X_MUX21A_NI3.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE2.X_MUX21A_NI3.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE2.X_MUX21A_NI3.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE2.X_MUX21A_NI3.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE2.X_MUX21A_NI3.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE2.X_MUX21A_NI3.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE2.X_MUX21A_NI3.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE2.X_MUX21A_NI3.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE2.X_MUX21A_NI3.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE2.X_MUX21A_NI3.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE2.X_MUX21A_NI3.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE2.X_MUX21A_NI3.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE2.X_MUX21A_NI2.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE2.X_MUX21A_NI2.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE2.X_MUX21A_NI2.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE2.X_MUX21A_NI2.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE2.X_MUX21A_NI2.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE2.X_MUX21A_NI2.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE2.X_MUX21A_NI2.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE2.X_MUX21A_NI2.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE2.X_MUX21A_NI2.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE2.X_MUX21A_NI2.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE2.X_MUX21A_NI2.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE2.X_MUX21A_NI2.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE2.X_MUX21A_NI2.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE2.X_MUX21A_NI2.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE2.X_MUX21A_NI2.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE2.X_MUX21A_NI2.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE2.X_MUX21A_NI2.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE2.X_MUX21A_NI2.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE2.X_MUX21A_NI2.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE2.X_MUX21A_NI2.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE2.X_MUX21A_NI2.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE2.X_MUX21A_NI2.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE2.X_MUX21A_NI2.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE2.X_MUX21A_NI2.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE2.X_MUX21A_NI1.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 19:
++   OBJECT "X_LE2.X_MUX21A_NI1.M11": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE2.X_MUX21A_NI1.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 20:
++   OBJECT "X_LE2.X_MUX21A_NI1.M10": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE2.X_MUX21A_NI1.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 21:
++   OBJECT "X_LE2.X_MUX21A_NI1.M9": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE2.X_MUX21A_NI1.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 22:
++   OBJECT "X_LE2.X_MUX21A_NI1.M8": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE2.X_MUX21A_NI1.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 23:
++   OBJECT "X_LE2.X_MUX21A_NI1.M7": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE2.X_MUX21A_NI1.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 24:
++   OBJECT "X_LE2.X_MUX21A_NI1.M1": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE2.X_MUX21A_NI1.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 25:
++   OBJECT "X_LE2.X_MUX21A_NI1.M4": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE2.X_MUX21A_NI1.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 26:
++   OBJECT "X_LE2.X_MUX21A_NI1.M2": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE2.X_MUX21A_NI1.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 27:
++   OBJECT "X_LE2.X_MUX21A_NI1.M5": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE2.X_MUX21A_NI1.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 28:
++   OBJECT "X_LE2.X_MUX21A_NI1.M3": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE2.X_MUX21A_NI1.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 29:
++   OBJECT "X_LE2.X_MUX21A_NI1.M12": Model MUX21A_NI.NCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE2.X_MUX21A_NI1.M6": Model MUX21A_NI.PCH not yet defined.
+ERROR 1577: In file "./schem/LA_ALU/eldonet/LA_ALU_eldonet.spi" line 30:
++   OBJECT "X_LE2.X_MUX21A_NI1.M6": Model MUX21A_NI.PCH not yet defined.
+
+***** 1160  error(s). 
+***** 0  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+
+Memory space allocated (MB):    178
+580 elements
+314 nodes 
+0 input signals
+
+Check your input netlist...
+
+***>MESSAGE SUMMARY: 1160 errors
+
+***>GLOBAL CPU TIME 0s 010ms <***
+
+
+***>GLOBAL ELAPSED TIME 0s <***
+
+
+  Job started at  5-Nov-2014 00:42:39
+  Job end at      5-Nov-2014 00:42:39
+
+  Run on TARC17 (Linux 2.6.18-308.el5)
+

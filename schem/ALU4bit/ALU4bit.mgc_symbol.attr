@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 544fa4d3b49b.03.7f.00.00.01.00.10.6a 3 2 1 0
+V v 1 1 544fa4d3b49b.03.7f.00.00.01.01.10.6a
+F f 1 "ALU4bit.smbl_1"
+V v 2 1 547493f2e79a.03.7f.00.00.01.00.12.61
+F f 2 "ALU4bit.smbl_2"
+V v 3 1 547495298286.03.7f.00.00.01.00.12.61
+F f 3 "ALU4bit.smbl_3"
+O 3
+R csduv 0 "/home/training/ALU_CL/schem/ALU4bit/part" 4 Eddm_part 547495322edd.03.7f.00.00.01.00.12.61 544fa4fcb089.03.7f.00.00.01.00.10.6a
+O 2
+R csduv 0 "/home/training/ALU_CL/schem/ALU4bit/part" 3 Eddm_part 547493fb6ed6.03.7f.00.00.01.00.12.61 544fa4fcb089.03.7f.00.00.01.00.10.6a
+O 1
+R csduv 0 "/home/training/ALU_CL/schem/ALU4bit/part" 1 Eddm_part 544fa4fcb089.03.7f.00.00.01.01.10.6a 544fa4fcb089.03.7f.00.00.01.00.10.6a

@@ -1,0 +1,12 @@
+A 5 u Eddm_part 54340bbf163a.03.7f.00.00.01.00.3c.a8 2 2 2 0
+V v 1 1 54340bbf163a.03.7f.00.00.01.01.3c.a8
+F f 1 "part.part_1"
+V v 2 1 54340be57dee.03.7f.00.00.01.00.3c.a8
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/RippleAdder/schematic" 1 mgc_schematic 5434080688d5.03.7f.00.00.01.01.3c.a8 5434080688d5.03.7f.00.00.01.00.3c.a8
+R csduv 1 "/home/training/ALU_CL/schem/RippleAdder/RippleAdder" 1 mgc_symbol 54340bd31864.03.7f.00.00.01.01.3c.a8 54340bd31864.03.7f.00.00.01.00.3c.a8
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/RippleAdder/schematic" 1 mgc_schematic 5434080688d5.03.7f.00.00.01.01.3c.a8 5434080688d5.03.7f.00.00.01.00.3c.a8

@@ -1,0 +1,62 @@
+* ELDO netlist generated with ICnet by 'training' on Tue Dec  2 2014 at 22:23:43
+
+*
+* Globals.
+*
+.global gnd vdd
+
+*
+* Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/or02a
+*
+.subckt or02a  y a1 a0
+
+        m4 n$431 a0 gnd gnd nch L=0.35u W=1.2u M=1
+        m3 y n$431 vdd vdd pch L=0.35u W=2u M=1
+        m2 n$431 a1 n$429 vdd pch L=0.35u W=2u M=1
+        m1 n$429 a0 vdd vdd pch L=0.35u W=2u M=1
+        m6 y n$431 gnd gnd nch L=0.35u W=1.2u M=1
+        m5 n$431 a1 gnd gnd nch L=0.35u W=1.2u M=1
+.ends or02a
+
+*
+* Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/and02a
+*
+.subckt and02a  a1 a0 y
+
+        m3 y n$647 gnd gnd nch L=0.35u W=1.2u M=1
+        m1 n$647 a0 vdd vdd pch L=0.35u W=2u M=1
+        m2 n$647 a1 vdd vdd pch L=0.35u W=2u M=1
+        m4 y n$647 vdd vdd pch L=0.35u W=2u M=1
+        m5 n$647 a0 n$649 gnd nch L=0.35u W=1.2u M=1
+        m6 n$649 a1 gnd gnd nch L=0.35u W=1.2u M=1
+.ends and02a
+
+*
+* Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/axor2a
+*
+.subckt axor2a  a0 a1 y
+
+        m9 n$470 a0 n$472 gnd nch L=0.35u W=1.2u M=1
+        m12 y n$470 gnd gnd nch L=0.35u W=1.2u M=1
+        m8 n$468 a1 gnd gnd nch L=0.35u W=1.2u M=1
+        m7 n$467 a0 n$468 gnd nch L=0.35u W=1.2u M=1
+        m6 y n$470 vdd vdd pch L=0.35u W=2u M=1
+        m3 n$470 n$467 vdd vdd pch L=0.35u W=2u M=1
+        m1 n$467 a0 vdd vdd pch L=0.35u W=2u M=1
+        m2 n$467 a1 vdd vdd pch L=0.35u W=2u M=1
+        m4 n$465 a0 vdd vdd pch L=0.35u W=2u M=1
+        m5 n$470 a1 n$465 vdd pch L=0.35u W=2u M=1
+        m11 n$472 n$467 gnd gnd nch L=0.35u W=1.2u M=1
+        m10 n$470 a1 n$472 gnd nch L=0.35u W=1.2u M=1
+.ends axor2a
+
+*
+* MAIN CELL: Component pathname : /home/training/ALU_CL/schem/FullAdder
+*
+        x_or02a1 cout n$21 n$18 or02a
+        x_and02a2 cin n$29 n$18 and02a
+        x_and02a1 b a n$21 and02a
+        x_axor2a1 n$29 cin sum axor2a
+        x_axor2a2 a b n$29 axor2a
+*
+.end

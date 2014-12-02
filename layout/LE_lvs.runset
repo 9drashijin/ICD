@@ -1,0 +1,21 @@
+*lvsRulesFile: $MIMOS_KIT/calibre/lvs/Calibre035LVS.rul
+*lvsRunDir: /home/training/ALU_CL/layout
+*lvsLayoutPaths: LE.calibre.db
+*lvsLayoutPrimary: LE
+*lvsLayoutGetFromViewer: 1
+*lvsSourcePath: /home/training/ALU_CL/schem/LE/eldonet/LE_eldonet.spi
+*lvsSourcePrimary: LE
+*lvsSpiceFile: LE.sp
+*lvsPowerNames: VDD VDDO
+*lvsGroundNames: GND GNDA VSSA
+*lvsERCDatabase: LE.erc.results
+*lvsERCSummaryFile: LE.erc.summary
+*lvsReportFile: LE.lvs.report
+*lvsMaskDBFile: LE.maskdb
+*cmnWarnLayoutOverwrite: 0
+*cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnFDILayoutLibrary: %L
+*cmnFDILayoutView: %V
+*cmnFDIDEFLayoutPath: LE.def

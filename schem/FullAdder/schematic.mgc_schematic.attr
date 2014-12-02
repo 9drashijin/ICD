@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 547dc4d52833.03.7f.00.00.01.00.1f.63 6 2 1 0
+V v 4 1 547dc9f6854d.03.7f.00.00.01.00.27.95
+F o 0 ""
+V v 5 1 547dcb6b74e6.03.7f.00.00.01.00.27.95
+F o 0 ""
+V v 6 1 547dd5372472.03.7f.00.00.01.00.57.b3
+F o 0 ""
+O 6
+R cspuv 0 "/home/training/ALU_CL/schem/FullAdder/schematic/sheet1" 5 mgc_sheet 547dd5372454.03.7f.00.00.01.00.57.b3 547dc4d528d0.03.7f.00.00.01.00.1f.63
+O 5
+R cspuv 0 "/home/training/ALU_CL/schem/FullAdder/schematic/sheet1" 4 mgc_sheet 547dcb6b74c9.03.7f.00.00.01.00.27.95 547dc4d528d0.03.7f.00.00.01.00.1f.63
+O 4
+R cspuv 0 "/home/training/ALU_CL/schem/FullAdder/schematic/sheet1" 3 mgc_sheet 547dc9f6853f.03.7f.00.00.01.00.27.95 547dc4d528d0.03.7f.00.00.01.00.1f.63

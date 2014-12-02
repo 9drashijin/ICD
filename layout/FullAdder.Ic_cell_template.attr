@@ -1,0 +1,46 @@
+A 5 u Ic_cell_template 54749f8f7f2b.03.7f.00.00.01.00.24.6a 8 4 7 0
+V v 4 1 5474adc3a05c.03.7f.00.00.01.00.24.6a
+F f 4 "FullAdder.iccel_4"
+V v 5 1 5474ae757b83.03.7f.00.00.01.00.24.6a
+F f 5 "FullAdder.iccel_5"
+V v 6 1 547dc7f39b40.03.7f.00.00.01.00.23.bb
+F f 6 "FullAdder.iccel_6"
+V v 7 1 547dcc8b9eb8.03.7f.00.00.01.00.23.bb
+F f 7 "FullAdder.iccel_7"
+V v 8 1 547dcd73b479.03.7f.00.00.01.00.23.bb
+F f 8 "FullAdder.iccel_8"
+O 8
+R csduv 1 "$MIMOS_KIT/process/mimos_035lib" 20 Ic_lib_template 4e81693a6191.03.7f.00.00.01.00.53.8e 4e7c0871004c.03.7f.00.00.01.00.31.cd
+R csduv 2 "$MIMOS_KIT/process/mimos_035" 26 Ic_persist_process 4e9cf42229d9.03.7f.00.00.01.00.5f.1f 45589cee70b0.03.c0.a8.00.31.00.0c.2c
+R csduv 3 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/AXOR2a" 4 Ic_cell_template 4e82e65f2189.03.7f.00.00.01.00.0c.e5 4e7c3d92d05e.03.7f.00.00.01.00.7b.4c
+R csdni 4 "$MIMOS_KIT/calibre/drc/Calibre035DRC.rul" 1 Mgc_file
+R csduv 5 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/AND02a" 21 Ic_cell_template 4e82e477681f.03.7f.00.00.01.00.0c.e5 4e7b038898cf.03.7f.00.00.01.10.47.89
+R csduv 6 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/OR02a" 10 Ic_cell_template 4e82eae13342.03.7f.00.00.01.00.0c.e5 4e7b0722679c.03.7f.00.00.01.13.4d.bb
+O 7
+R csduv 1 "$MIMOS_KIT/process/mimos_035lib" 20 Ic_lib_template 4e81693a6191.03.7f.00.00.01.00.53.8e 4e7c0871004c.03.7f.00.00.01.00.31.cd
+R csduv 2 "$MIMOS_KIT/process/mimos_035" 26 Ic_persist_process 4e9cf42229d9.03.7f.00.00.01.00.5f.1f 45589cee70b0.03.c0.a8.00.31.00.0c.2c
+R csduv 3 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/AXOR2a" 4 Ic_cell_template 4e82e65f2189.03.7f.00.00.01.00.0c.e5 4e7c3d92d05e.03.7f.00.00.01.00.7b.4c
+R csdni 4 "$MIMOS_KIT/calibre/drc/Calibre035DRC.rul" 1 Mgc_file
+R csduv 5 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/AND02a" 21 Ic_cell_template 4e82e477681f.03.7f.00.00.01.00.0c.e5 4e7b038898cf.03.7f.00.00.01.10.47.89
+R csduv 6 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/OR02a" 10 Ic_cell_template 4e82eae13342.03.7f.00.00.01.00.0c.e5 4e7b0722679c.03.7f.00.00.01.13.4d.bb
+O 6
+R csduv 1 "$MIMOS_KIT/process/mimos_035lib" 20 Ic_lib_template 4e81693a6191.03.7f.00.00.01.00.53.8e 4e7c0871004c.03.7f.00.00.01.00.31.cd
+R csduv 2 "$MIMOS_KIT/process/mimos_035" 26 Ic_persist_process 4e9cf42229d9.03.7f.00.00.01.00.5f.1f 45589cee70b0.03.c0.a8.00.31.00.0c.2c
+R csduv 3 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/AXOR2a" 4 Ic_cell_template 4e82e65f2189.03.7f.00.00.01.00.0c.e5 4e7c3d92d05e.03.7f.00.00.01.00.7b.4c
+R csdni 4 "$MIMOS_KIT/calibre/drc/Calibre035DRC.rul" 1 Mgc_file
+R csduv 5 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/AND02a" 21 Ic_cell_template 4e82e477681f.03.7f.00.00.01.00.0c.e5 4e7b038898cf.03.7f.00.00.01.10.47.89
+R csduv 6 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/OR02a" 10 Ic_cell_template 4e82eae13342.03.7f.00.00.01.00.0c.e5 4e7b0722679c.03.7f.00.00.01.13.4d.bb
+O 5
+R csduv 1 "$MIMOS_KIT/process/mimos_035lib" 20 Ic_lib_template 4e81693a6191.03.7f.00.00.01.00.53.8e 4e7c0871004c.03.7f.00.00.01.00.31.cd
+R csduv 2 "$MIMOS_KIT/process/mimos_035" 26 Ic_persist_process 4e9cf42229d9.03.7f.00.00.01.00.5f.1f 45589cee70b0.03.c0.a8.00.31.00.0c.2c
+R csduv 3 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/AXOR2a" 4 Ic_cell_template 4e82e65f2189.03.7f.00.00.01.00.0c.e5 4e7c3d92d05e.03.7f.00.00.01.00.7b.4c
+R csdni 4 "$MIMOS_KIT/calibre/drc/Calibre035DRC.rul" 1 Mgc_file
+R csduv 5 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/AND02a" 21 Ic_cell_template 4e82e477681f.03.7f.00.00.01.00.0c.e5 4e7b038898cf.03.7f.00.00.01.10.47.89
+R csduv 6 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/OR02a" 10 Ic_cell_template 4e82eae13342.03.7f.00.00.01.00.0c.e5 4e7b0722679c.03.7f.00.00.01.13.4d.bb
+O 4
+R csduv 1 "$MIMOS_KIT/process/mimos_035lib" 20 Ic_lib_template 4e81693a6191.03.7f.00.00.01.00.53.8e 4e7c0871004c.03.7f.00.00.01.00.31.cd
+R csduv 2 "$MIMOS_KIT/process/mimos_035" 26 Ic_persist_process 4e9cf42229d9.03.7f.00.00.01.00.5f.1f 45589cee70b0.03.c0.a8.00.31.00.0c.2c
+R csduv 3 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/AXOR2a" 4 Ic_cell_template 4e82e65f2189.03.7f.00.00.01.00.0c.e5 4e7c3d92d05e.03.7f.00.00.01.00.7b.4c
+R csdni 4 "$MIMOS_KIT/calibre/drc/Calibre035DRC.rul" 1 Mgc_file
+R csduv 5 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/AND02a" 21 Ic_cell_template 4e82e477681f.03.7f.00.00.01.00.0c.e5 4e7b038898cf.03.7f.00.00.01.10.47.89
+R csduv 6 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/OR02a" 10 Ic_cell_template 4e82eae13342.03.7f.00.00.01.00.0c.e5 4e7b0722679c.03.7f.00.00.01.13.4d.bb

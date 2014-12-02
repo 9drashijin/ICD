@@ -1,0 +1,49 @@
+A 5 u mgc_sheet 543415d04f9b.03.7f.00.00.01.00.51.70 8 2 13 0
+V v 6 2 543d3c94eaa9.03.7f.00.00.01.00.10.48
+F f 6 "sheet1.ssht_6"
+F f 6 "sheet1.sgfx_6"
+V v 7 2 543d3cf12b74.03.7f.00.00.01.00.10.48
+F f 7 "sheet1.ssht_7"
+F f 7 "sheet1.sgfx_7"
+V v 8 2 543d40101790.03.7f.00.00.01.00.10.48
+F f 8 "sheet1.ssht_8"
+F f 8 "sheet1.sgfx_8"
+O 8
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/AE/schematic" 1 mgc_schematic 543415d04f29.03.7f.00.00.01.01.51.70 543415d04f29.03.7f.00.00.01.00.51.70
+R csduv 1 "/home/training/ALU_CL/schem/FullAdder/part" 2 Eddm_part 543401e260af.03.7f.00.00.01.00.3c.a8 543401c05114.03.7f.00.00.01.00.3c.a8
+R csduv 2 "/home/training/ALU_CL/schem/FullAdder/FullAdder" 1 mgc_symbol 543401a7c6a7.03.7f.00.00.01.01.3c.a8 543401a7c6a7.03.7f.00.00.01.00.3c.a8
+R csduv 3 "$MIMOS_KIT/mimos035-std-cells/schem/and02a/part" 5 Eddm_part 4758ff8ea168.03.7f.00.00.01.00.34.d4 4d688b727e10.03.7f.00.00.01.00.41.19
+R csduv 4 "$MIMOS_KIT/mimos035-std-cells/schem/and02a/and02a" 16 mgc_symbol 4871970e3856.03.7f.00.00.01.00.0d.64 4d688b727e10.03.7f.00.00.01.02.41.19
+R csduv 5 "$MIMOS_KIT/mimos035-std-cells/schem/axor2a/part" 2 Eddm_part 47591142a387.03.7f.00.00.01.00.3f.b2 4d688ca6cc96.03.7f.00.00.01.01.41.19
+R csduv 6 "$MIMOS_KIT/mimos035-std-cells/schem/axor2a/axor2a" 1 mgc_symbol 475911429302.03.7f.00.00.01.01.3f.b2 4d688ca6cc96.03.7f.00.00.01.05.41.19
+R csduv 7 "$MIMOS_KIT/lib/portin/part" 2 Eddm_part 4e51ea770272.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.07.1a.18
+R csduv 8 "$MIMOS_KIT/lib/portin/portin" 3 mgc_symbol 4e51ea793ba5.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.06.1a.18
+R csduv 11 "$MIMOS_KIT/lib/portout/part" 2 Eddm_part 4e51ea806d32.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.09.1a.18
+R csduv 12 "$MIMOS_KIT/lib/portout/portout" 3 mgc_symbol 4e51ea81cc3f.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.08.1a.18
+O 7
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/AE/schematic" 1 mgc_schematic 543415d04f29.03.7f.00.00.01.01.51.70 543415d04f29.03.7f.00.00.01.00.51.70
+R csduv 1 "/home/training/ALU_CL/schem/FullAdder/part" 2 Eddm_part 543401e260af.03.7f.00.00.01.00.3c.a8 543401c05114.03.7f.00.00.01.00.3c.a8
+R csduv 2 "/home/training/ALU_CL/schem/FullAdder/FullAdder" 1 mgc_symbol 543401a7c6a7.03.7f.00.00.01.01.3c.a8 543401a7c6a7.03.7f.00.00.01.00.3c.a8
+R csduv 3 "$MIMOS_KIT/mimos035-std-cells/schem/and02a/part" 5 Eddm_part 4758ff8ea168.03.7f.00.00.01.00.34.d4 4d688b727e10.03.7f.00.00.01.00.41.19
+R csduv 4 "$MIMOS_KIT/mimos035-std-cells/schem/and02a/and02a" 16 mgc_symbol 4871970e3856.03.7f.00.00.01.00.0d.64 4d688b727e10.03.7f.00.00.01.02.41.19
+R csduv 5 "$MIMOS_KIT/mimos035-std-cells/schem/axor2a/part" 2 Eddm_part 47591142a387.03.7f.00.00.01.00.3f.b2 4d688ca6cc96.03.7f.00.00.01.01.41.19
+R csduv 6 "$MIMOS_KIT/mimos035-std-cells/schem/axor2a/axor2a" 1 mgc_symbol 475911429302.03.7f.00.00.01.01.3f.b2 4d688ca6cc96.03.7f.00.00.01.05.41.19
+R csduv 7 "$MIMOS_KIT/lib/portin/part" 2 Eddm_part 4e51ea770272.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.07.1a.18
+R csduv 8 "$MIMOS_KIT/lib/portin/portin" 3 mgc_symbol 4e51ea793ba5.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.06.1a.18
+R csduv 11 "$MIMOS_KIT/lib/portout/part" 2 Eddm_part 4e51ea806d32.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.09.1a.18
+R csduv 12 "$MIMOS_KIT/lib/portout/portout" 3 mgc_symbol 4e51ea81cc3f.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.08.1a.18
+O 6
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/AE/schematic" 1 mgc_schematic 543415d04f29.03.7f.00.00.01.01.51.70 543415d04f29.03.7f.00.00.01.00.51.70
+R csduv 1 "/home/training/ALU_CL/schem/FullAdder/part" 2 Eddm_part 543401e260af.03.7f.00.00.01.00.3c.a8 543401c05114.03.7f.00.00.01.00.3c.a8
+R csduv 2 "/home/training/ALU_CL/schem/FullAdder/FullAdder" 1 mgc_symbol 543401a7c6a7.03.7f.00.00.01.01.3c.a8 543401a7c6a7.03.7f.00.00.01.00.3c.a8
+R csduv 3 "$MIMOS_KIT/mimos035-std-cells/schem/and02a/part" 5 Eddm_part 4758ff8ea168.03.7f.00.00.01.00.34.d4 4d688b727e10.03.7f.00.00.01.00.41.19
+R csduv 4 "$MIMOS_KIT/mimos035-std-cells/schem/and02a/and02a" 16 mgc_symbol 4871970e3856.03.7f.00.00.01.00.0d.64 4d688b727e10.03.7f.00.00.01.02.41.19
+R csduv 5 "$MIMOS_KIT/mimos035-std-cells/schem/axor2a/part" 2 Eddm_part 47591142a387.03.7f.00.00.01.00.3f.b2 4d688ca6cc96.03.7f.00.00.01.01.41.19
+R csduv 6 "$MIMOS_KIT/mimos035-std-cells/schem/axor2a/axor2a" 1 mgc_symbol 475911429302.03.7f.00.00.01.01.3f.b2 4d688ca6cc96.03.7f.00.00.01.05.41.19
+R csduv 7 "$MIMOS_KIT/lib/portin/part" 2 Eddm_part 4e51ea770272.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.07.1a.18
+R csduv 8 "$MIMOS_KIT/lib/portin/portin" 3 mgc_symbol 4e51ea793ba5.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.06.1a.18
+R csduv 11 "$MIMOS_KIT/lib/portout/part" 2 Eddm_part 4e51ea806d32.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.09.1a.18
+R csduv 12 "$MIMOS_KIT/lib/portout/portout" 3 mgc_symbol 4e51ea81cc3f.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.08.1a.18

@@ -1,0 +1,18 @@
+A 5 u Eddm_part 543418d92a68.03.7f.00.00.01.00.51.70 3 2 2 0
+V v 1 1 543418d92a68.03.7f.00.00.01.01.51.70
+F f 1 "part.part_1"
+V v 2 1 543418f7bfbe.03.7f.00.00.01.00.51.70
+F f 2 "part.part_2"
+V v 3 1 543d3fb2bc4e.03.7f.00.00.01.00.10.48
+F f 3 "part.part_3"
+O 3
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/AE/schematic" 1 mgc_schematic 543415d04f29.03.7f.00.00.01.01.51.70 543415d04f29.03.7f.00.00.01.00.51.70
+R csduv 1 "/home/training/ALU_CL/schem/AE/AE" 4 mgc_symbol 543d3fa9c5bc.03.7f.00.00.01.00.10.48 543418e40980.03.7f.00.00.01.00.51.70
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/AE/schematic" 1 mgc_schematic 543415d04f29.03.7f.00.00.01.01.51.70 543415d04f29.03.7f.00.00.01.00.51.70
+R csduv 1 "/home/training/ALU_CL/schem/AE/AE" 1 mgc_symbol 543418e40980.03.7f.00.00.01.01.51.70 543418e40980.03.7f.00.00.01.00.51.70
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/AE/schematic" 1 mgc_schematic 543415d04f29.03.7f.00.00.01.01.51.70 543415d04f29.03.7f.00.00.01.00.51.70

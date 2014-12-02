@@ -1,0 +1,5 @@
+A 5 u mgc_symbol 5434119e2a1a.03.7f.00.00.01.00.48.b4 1 2 1 0
+V v 1 1 5434119e2a1b.03.7f.00.00.01.00.48.b4
+F f 1 "LE.smbl_1"
+O 1
+R csduv 0 "/home/training/ALU_CL/schem/LE/part" 2 Eddm_part 543411bce3fe.03.7f.00.00.01.00.48.b4 5434118dc80f.03.7f.00.00.01.00.48.b4

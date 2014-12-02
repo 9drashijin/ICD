@@ -1,0 +1,236 @@
+# This file provides name mapping information for all objects
+# on the schematic design.  It provides a mapping for each
+# object between its name on the schematic and its name in the netlist.
+version 1.0
+
+Globals
+   GND gnd
+   VDD vdd
+End Globals
+
+Cell pmos4
+   Pin D d
+   Pin G g
+   Pin S s
+   Pin B b
+End Cell
+
+Cell nmos4
+   Pin D d
+   Pin G g
+   Pin S s
+   Pin B b
+End Cell
+
+Cell inv01a
+   Pin A a
+   Pin Y y
+   Net Y y
+   Net A a
+   Global GND gnd
+   Global VDD vdd
+   Inst M1 m1 pmos4
+   Inst M2 m2 nmos4
+End Cell
+
+Cell mux21a_ni
+   Pin Y y
+   Pin S0 s0
+   Pin A0 a0
+   Pin A1 a1
+   Net N$464 n$464
+   Net N$462 n$462
+   Net N$461 n$461
+   Net N$459 n$459
+   Net N$457 n$457
+   Net N$223 n$223
+   Net A1 a1
+   Net A0 a0
+   Net S0 s0
+   Net Y y
+   Global GND gnd
+   Global VDD vdd
+   Inst M11 m11 nmos4
+   Inst M10 m10 nmos4
+   Inst M9 m9 nmos4
+   Inst M8 m8 nmos4
+   Inst M7 m7 nmos4
+   Inst M1 m1 pmos4
+   Inst M4 m4 pmos4
+   Inst M2 m2 pmos4
+   Inst M5 m5 pmos4
+   Inst M3 m3 pmos4
+   Inst M12 m12 nmos4
+   Inst M6 m6 pmos4
+End Cell
+
+Cell or02a
+   Pin Y y
+   Pin A1 a1
+   Pin A0 a0
+   Net N$431 n$431
+   Net N$429 n$429
+   Net A0 a0
+   Net A1 a1
+   Net Y y
+   Global GND gnd
+   Global VDD vdd
+   Inst M4 m4 nmos4
+   Inst M3 m3 pmos4
+   Inst M2 m2 pmos4
+   Inst M1 m1 pmos4
+   Inst M6 m6 nmos4
+   Inst M5 m5 nmos4
+End Cell
+
+Cell and02a
+   Pin A1 a1
+   Pin A0 a0
+   Pin Y y
+   Net N$649 n$649
+   Net N$647 n$647
+   Net Y y
+   Net A0 a0
+   Net A1 a1
+   Global GND gnd
+   Global VDD vdd
+   Inst M3 m3 nmos4
+   Inst M1 m1 pmos4
+   Inst M2 m2 pmos4
+   Inst M4 m4 pmos4
+   Inst M5 m5 nmos4
+   Inst M6 m6 nmos4
+End Cell
+
+Cell le
+   Pin LE le
+   Pin S1 s1
+   Pin S2 s2
+   Pin A a
+   Pin B b
+   Net N$10 n$10
+   Net N$9 n$9
+   Net N$21 n$21
+   Net N$19 n$19
+   Net N$17 n$17
+   Net B b
+   Net A a
+   Net S2 s2
+   Net S1 s1
+   Net LE le
+   Inst OR02A1 x_or02a1 or02a
+   Inst AND02A1 x_and02a1 and02a
+   Inst INV01A1 x_inv01a1 inv01a
+   Inst MUX21A_NI3 x_mux21a_ni3 mux21a_ni
+   Inst MUX21A_NI2 x_mux21a_ni2 mux21a_ni
+   Inst MUX21A_NI1 x_mux21a_ni1 mux21a_ni
+End Cell
+
+Cell axor2a
+   Pin A0 a0
+   Pin A1 a1
+   Pin Y y
+   Net N$472 n$472
+   Net N$470 n$470
+   Net N$468 n$468
+   Net N$467 n$467
+   Net N$465 n$465
+   Net Y y
+   Net A1 a1
+   Net A0 a0
+   Global GND gnd
+   Global VDD vdd
+   Inst M9 m9 nmos4
+   Inst M12 m12 nmos4
+   Inst M8 m8 nmos4
+   Inst M7 m7 nmos4
+   Inst M6 m6 pmos4
+   Inst M3 m3 pmos4
+   Inst M1 m1 pmos4
+   Inst M2 m2 pmos4
+   Inst M4 m4 pmos4
+   Inst M5 m5 pmos4
+   Inst M11 m11 nmos4
+   Inst M10 m10 nmos4
+End Cell
+
+Cell fulladder
+   Pin A a
+   Pin B b
+   Pin Cin cin
+   Pin Cout cout
+   Pin Sum sum
+   Net N$7 n$7
+   Net N$1 n$1
+   Net N$3 n$3
+   Net Sum sum
+   Net Cout cout
+   Net Cin cin
+   Net B b
+   Net A a
+   Inst AXOR2A2 x_axor2a2 axor2a
+   Inst AXOR2A1 x_axor2a1 axor2a
+   Inst OR02A1 x_or02a1 or02a
+   Inst AND02A2 x_and02a2 and02a
+   Inst AND02A1 x_and02a1 and02a
+End Cell
+
+Cell ae
+   Pin C c
+   Pin Cin cin
+   Pin Ea ea
+   Pin A a
+   Pin Eb eb
+   Pin B b
+   Pin Wa wa
+   Pin Wb wb
+   Pin AE ae
+   Net N$38 n$38
+   Net N$31 n$31
+   Net N$30 n$30
+   Net N$40 n$40
+   Net AE ae
+   Net Wb wb
+   Net Wa wa
+   Net B b
+   Net Eb eb
+   Net A a
+   Net Ea ea
+   Net Cin cin
+   Net C c
+   Inst FULLADDER1 x_fulladder1 fulladder
+   Inst AXOR2A3 x_axor2a3 axor2a
+   Inst AND02A3 x_and02a3 and02a
+   Inst AXOR2A4 x_axor2a4 axor2a
+   Inst AND02A4 x_and02a4 and02a
+End Cell
+
+Cell #top#
+   Pin Cin cin
+   Pin Cout cout
+   Pin Sum sum
+   Pin Out1 out1
+   Pin Wb wb
+   Pin S1 s1
+   Pin S2 s2
+   Pin A a
+   Pin B b
+   Net Eb eb
+   Net N$3 n$3
+   Net B b
+   Net A a
+   Net S2 s2
+   Net S1 s1
+   Net Wb wb
+   Net Out1 out1
+   Net Sum sum
+   Net Cout cout
+   Net Cin cin
+   Global GND gnd
+   Global VDD vdd
+   Inst INV01A1 x_inv01a1 inv01a
+   Inst MUX21A_NI1 x_mux21a_ni1 mux21a_ni
+   Inst LE1 x_le1 le
+   Inst AE1 x_ae1 ae
+End Cell
+

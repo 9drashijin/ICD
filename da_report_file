@@ -1,0 +1,217 @@
+
+
+Check Schematic  "LE_tb/schematic/sheet1"
+Check Sheet "LE_tb/schematic/sheet1"
+Check SymbolPins --------   0 errors   0 warnings  (MGC-required)
+Check Overlap -----------   0 errors   0 warnings
+Check NotDots -----------   0 errors   0 warnings
+Check Closedots ---------   0 errors   0 warnings
+Check Dangle ------------   0 errors   0 warnings
+Check INIT Properties ---   0 errors   0 warnings
+Check Function Blocks ---   0 errors   0 warnings
+Check Owner -------------   0 errors   0 warnings
+Check Instance ----------   0 errors   0 warnings  (MGC-required)
+Check Special -----------   0 errors   0 warnings  (MGC-required)
+Check Net ---------------   0 errors   0 warnings  (MGC-required)
+Check Frame -------------   0 errors   0 warnings  (MGC-required)
+
+ "LE_tb/schematic/sheet1" passed check :  0 Errors, 0 Warnings
+
+Check Schematic Interface -------   0 errors   1 warnings
+  Warning:  Interface "LE_tb" has no pins
+
+Check Schematic Instance --------   0 errors   0 warnings
+Check Schematic Special ---------   0 errors   0 warnings
+Check Schematic Net -------------   0 errors   0 warnings
+Check Schematic Function Blocks -   0 errors   0 warnings
+
+ "LE_tb/schematic/sheet1" passed check :  0 Errors, 1 Warnings
+
+
+Check Schematic  "LE_tb/schematic/sheet1"
+Check Sheet "LE_tb/schematic/sheet1"
+Check SymbolPins --------   0 errors   0 warnings  (MGC-required)
+Check Overlap -----------   0 errors   0 warnings
+Check NotDots -----------   0 errors   0 warnings
+Check Closedots ---------   0 errors   0 warnings
+Check Dangle ------------   0 errors   0 warnings
+Check INIT Properties ---   0 errors   0 warnings
+Check Function Blocks ---   0 errors   0 warnings
+Check Owner -------------   0 errors   0 warnings
+Check Instance ----------   0 errors   0 warnings  (MGC-required)
+Check Special -----------   0 errors   0 warnings  (MGC-required)
+Check Net ---------------   0 errors   0 warnings  (MGC-required)
+Check Frame -------------   0 errors   0 warnings  (MGC-required)
+
+ "LE_tb/schematic/sheet1" passed check :  0 Errors, 0 Warnings
+
+Check Schematic Interface -------   0 errors   1 warnings
+  Warning:  Interface "LE_tb" has no pins
+
+Check Schematic Instance --------   0 errors   0 warnings
+Check Schematic Special ---------   0 errors   0 warnings
+Check Schematic Net -------------   0 errors   0 warnings
+Check Schematic Function Blocks -   0 errors   0 warnings
+
+ "LE_tb/schematic/sheet1" passed check :  0 Errors, 1 Warnings
+
+
+Check Symbol "AE/AE"
+Check Body -------   0 errors   0 warnings  (MGC-required)
+Check Interface --   0 errors   8 warnings
+  Warning:  The following pins on the symbol are not on the interface: Cin
+  Warning:  The following pins on the symbol are not on the interface: Ea
+  Warning:  The following pins on the symbol are not on the interface: A
+  Warning:  The following pins on the symbol are not on the interface: Eb
+  Warning:  The following pins on the symbol are not on the interface: B
+  Warning:  The following pins on the symbol are not on the interface: Wa
+  Warning:  The following pins on the symbol are not on the interface: Wb
+  Warning:  The following pins on the symbol are not on the interface: AE
+
+Check Pin --------   0 errors   0 warnings  (MGC-required)
+Check Special ----   0 errors   0 warnings  (MGC-required)
+
+ "AE/AE" passed check :  0 Errors, 8 Warnings
+
+
+Check Schematic  "FullAdder/schematic/sheet1"
+Check Sheet "FullAdder/schematic/sheet1"
+Check SymbolPins --------   0 errors   0 warnings  (MGC-required)
+Check Overlap -----------   0 errors   0 warnings
+Check NotDots -----------   0 errors   0 warnings
+Check Closedots ---------   0 errors   0 warnings
+Check Dangle ------------   0 errors   0 warnings
+Check INIT Properties ---   0 errors   0 warnings
+Check Function Blocks ---   0 errors   0 warnings
+Check Owner -------------   0 errors   0 warnings
+Check Instance ----------   0 errors   0 warnings  (MGC-required)
+Check Special -----------   0 errors   0 warnings  (MGC-required)
+Check Net ---------------   0 errors   0 warnings  (MGC-required)
+Check Frame -------------   0 errors   0 warnings  (MGC-required)
+
+ "FullAdder/schematic/sheet1" passed check :  0 Errors, 0 Warnings
+
+Check Schematic Interface -------   0 errors   1 warnings
+  Warning:  Schematic is not registered with an interface
+
+Check Schematic Instance --------   0 errors   0 warnings
+Check Schematic Special ---------   0 errors   0 warnings
+Check Schematic Net -------------   0 errors   0 warnings
+Check Schematic Function Blocks -   0 errors   0 warnings
+
+ "FullAdder/schematic/sheet1" passed check :  0 Errors, 1 Warnings
+
+
+Check Schematic  "FullAdder/schematic/sheet1"
+Check Sheet "FullAdder/schematic/sheet1"
+Check SymbolPins --------   0 errors   0 warnings  (MGC-required)
+Check Overlap -----------   0 errors   0 warnings
+Check NotDots -----------   0 errors   0 warnings
+Check Closedots ---------   0 errors   0 warnings
+Check Dangle ------------   0 errors   0 warnings
+Check INIT Properties ---   0 errors   0 warnings
+Check Function Blocks ---   0 errors   0 warnings
+Check Owner -------------   0 errors   0 warnings
+Check Instance ----------   0 errors   0 warnings  (MGC-required)
+Check Special -----------   0 errors   0 warnings  (MGC-required)
+Check Net ---------------   0 errors   0 warnings  (MGC-required)
+Check Frame -------------   0 errors   0 warnings  (MGC-required)
+
+ "FullAdder/schematic/sheet1" passed check :  0 Errors, 0 Warnings
+
+Check Schematic Interface -------   0 errors   1 warnings
+  Warning:  Interface "FullAdder" has no pins
+
+Check Schematic Instance --------   0 errors   0 warnings
+Check Schematic Special ---------   0 errors   0 warnings
+Check Schematic Net -------------   0 errors   0 warnings
+Check Schematic Function Blocks -   0 errors   0 warnings
+
+ "FullAdder/schematic/sheet1" passed check :  0 Errors, 1 Warnings
+
+
+Check Schematic  "FullAdder/schematic/sheet1"
+Check Sheet "FullAdder/schematic/sheet1"
+Check SymbolPins --------   0 errors   0 warnings  (MGC-required)
+Check Overlap -----------   0 errors   0 warnings
+Check NotDots -----------   0 errors   0 warnings
+Check Closedots ---------   0 errors   0 warnings
+Check Dangle ------------   0 errors   0 warnings
+Check INIT Properties ---   0 errors   0 warnings
+Check Function Blocks ---   0 errors   0 warnings
+Check Owner -------------   0 errors   0 warnings
+Check Instance ----------   0 errors   0 warnings  (MGC-required)
+Check Special -----------   0 errors   0 warnings  (MGC-required)
+Check Net ---------------   0 errors   0 warnings  (MGC-required)
+Check Frame -------------   0 errors   0 warnings  (MGC-required)
+
+ "FullAdder/schematic/sheet1" passed check :  0 Errors, 0 Warnings
+
+Check Schematic Interface -------   0 errors   1 warnings
+  Warning:  Interface "FullAdder" has no pins
+
+Check Schematic Instance --------   0 errors   0 warnings
+Check Schematic Special ---------   0 errors   0 warnings
+Check Schematic Net -------------   0 errors   0 warnings
+Check Schematic Function Blocks -   0 errors   0 warnings
+
+ "FullAdder/schematic/sheet1" passed check :  0 Errors, 1 Warnings
+
+
+Check Schematic  "FullAdder_tb/schematic/sheet1"
+Check Sheet "FullAdder_tb/schematic/sheet1"
+Check SymbolPins --------   0 errors   0 warnings  (MGC-required)
+Check Overlap -----------   0 errors   0 warnings
+Check NotDots -----------   0 errors   0 warnings
+Check Closedots ---------   0 errors   0 warnings
+Check Dangle ------------   0 errors   0 warnings
+Check INIT Properties ---   0 errors   0 warnings
+Check Function Blocks ---   0 errors   0 warnings
+Check Owner -------------   0 errors   0 warnings
+Check Instance ----------   2 errors   0 warnings  (MGC-required)
+  Error:  Could not determine current version of FullAdder/part for instance I$1
+  Error:  Could not determine current version of FullAdder/part for instance I$1
+
+Check Special -----------   0 errors   0 warnings  (MGC-required)
+Check Net ---------------   0 errors   0 warnings  (MGC-required)
+Check Frame -------------   0 errors   0 warnings  (MGC-required)
+
+ "FullAdder_tb/schematic/sheet1" failed check :  2 Errors, 0 Warnings
+
+Check Schematic Interface -------   0 errors   1 warnings
+  Warning:  Interface "FullAdder_tb" has no pins
+
+Check Schematic Instance --------   0 errors   0 warnings
+Check Schematic Special ---------   0 errors   0 warnings
+Check Schematic Net -------------   0 errors   0 warnings
+Check Schematic Function Blocks -   0 errors   0 warnings
+
+ "FullAdder_tb/schematic/sheet1" failed check :  2 Errors, 1 Warnings
+
+
+Check Schematic  "FullAdder_tb/schematic/sheet1"
+Check Sheet "FullAdder_tb/schematic/sheet1"
+Check SymbolPins --------   0 errors   0 warnings  (MGC-required)
+Check Overlap -----------   0 errors   0 warnings
+Check NotDots -----------   0 errors   0 warnings
+Check Closedots ---------   0 errors   0 warnings
+Check Dangle ------------   0 errors   0 warnings
+Check INIT Properties ---   0 errors   0 warnings
+Check Function Blocks ---   0 errors   0 warnings
+Check Owner -------------   0 errors   0 warnings
+Check Instance ----------   0 errors   0 warnings  (MGC-required)
+Check Special -----------   0 errors   0 warnings  (MGC-required)
+Check Net ---------------   0 errors   0 warnings  (MGC-required)
+Check Frame -------------   0 errors   0 warnings  (MGC-required)
+
+ "FullAdder_tb/schematic/sheet1" passed check :  0 Errors, 0 Warnings
+
+Check Schematic Interface -------   0 errors   1 warnings
+  Warning:  Interface "FullAdder_tb" has no pins
+
+Check Schematic Instance --------   0 errors   0 warnings
+Check Schematic Special ---------   0 errors   0 warnings
+Check Schematic Net -------------   0 errors   0 warnings
+Check Schematic Function Blocks -   0 errors   0 warnings
+
+ "FullAdder_tb/schematic/sheet1" passed check :  0 Errors, 1 Warnings

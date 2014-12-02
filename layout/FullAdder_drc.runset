@@ -1,0 +1,17 @@
+*drcRulesFile: $MIMOS_KIT/calibre/drc/Calibre035DRC.rul
+*drcRunDir: /home/training/ALU_CL/layout
+*drcLayoutPaths: FullAdder.calibre.db
+*drcLayoutPrimary: FullAdder
+*drcLayoutGetFromViewer: 1
+*drcResultsFile: FullAdder.drc.results
+*drcSummaryFile: FullAdder.drc.summary
+*drcIncrDRCSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*drcIncrDRCLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*drcIncrDRCGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnWarnLayoutOverwrite: 0
+*cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnFDILayoutLibrary: %L
+*cmnFDILayoutView: %V
+*cmnFDIDEFLayoutPath: FullAdder.def

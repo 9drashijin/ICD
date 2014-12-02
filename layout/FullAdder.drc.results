@@ -1,0 +1,899 @@
+FullAdder 1000
+NW.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width of NW region = 1.7u
+NW.W.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width of hot NW region = 3.0u
+NW.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing 2 NW region with diff potential
+NW.S.2
+0 0 3 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing 2 NW region with same potential
+merge if space less than 1um
+OD.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width of OD region of NMOS/PMOS = 0.4u
+OD.W.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width of OD region for interconnection N+/P+ = 0.3u
+OD.S.1
+0 0 3 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min space between 2 OD regions = 0.6u
+both inside or outside NWEL with can either N+ to N+ or P+ to P+ or N+ to P+
+OD.C.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance from NWEL edge to N+ OD region which is inside NWEL = 0.2u
+OD.C.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance from NWEL edge to N+ OD region which is outside cold NWEL = 1.2u
+OD.C.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance from NWEL edge to N+ OD region which is outside hot NWEL = 2.6u
+OD.C.4
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance from NWEL edge to P+ OD region which is inside NWEL = 1.2u
+OD.C.5
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance from NWEL edge to P+ OD region which is outside NWEL = 0.2u
+OD.C.6A
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance PO2 edge to OD edge which is opposite type of doping = 0.45u
+OD.C.6B
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance PO2 edge to OD edge which is opposite type of doping = 0.45u
+OD.S.2
+0 0 4 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min space of N+ OD to P+ OD 
+for butted diffusion = 0.0u
+for non-butted diffusion = 0.6u
+PO2.W.1_2_3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width of poly2  region = 0.35um
+PO2.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 PO2 regions on OD area = 0.45u
+PO2.C.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance OD region to PO2 on field area = 0.2u
+PO2.C.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance PO gate to OD edge = 0.5u
+PO2.O.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min overlap of PO2 region extended into field oxide = 0.4u
+PO2.R.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+PO2 not allowed on poly resistor.
+INFO_PO2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+PO2 check angles 90/135 degree
+NP.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width of NP region = 0.6u
+NP.S.1
+0 0 3 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between to NP regions = 0.6u
+merge if less than 0.6u
+NP.C.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance NP region to OD region = 0.35u
+NP.C.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance NP edge to P-channel PO gate = 0.45u
+NP.C.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance NP edge to N-channel PO gate = 0.45u
+NP.C.4
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min overlap NP region to OD region = 0.45u
+NP.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension NP region beyond NP OD region = 0.25u
+NP.C.6
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+clearance of NP region over OD region with PP same potential = 0.0u
+PP.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width of PP region = 0.6u
+PP.S.1
+0 0 3 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between to PP regions = 0.6u
+merge if less than 0.6u
+PP.C.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance PP region to OD region = 0.35u
+PP.C.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance PP edge to P-channel PO gate = 0.45u
+PP.O.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min overlap PP region to OD region = 0.45u
+PP.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension PP region beyond PP OD region = 0.25u
+PP.C.5
+0 0 3 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance PP region to NP region when both PP & NP are located on PO2 region = 0.25u
+overlap PP & NP on same PO2 are not allowed
+PP.C.6
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+clearance of PP region over OD region with NP same potential = 0.0u
+VIA1.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min/max width of VIA1 region = 0.5u 0.5u
+VIA1.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 VIA1 region = 0.45u
+VIA1.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension of M1 region beyond VIA1 region = 0.2u
+VIA2.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min/max width of VIA2 region = 0.5u 0.5u
+VIA2.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 VIA2 region = 0.45u
+VIA2.S.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing VIA2 region to VIA1 region = 0.1u
+VIA2.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension of M2 region beyond VIA2 region = 0.2u
+VIA2.C.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+VIA2 cannot stack with VIA1
+M1.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width of M1 region = 0.5u
+M1.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 M1 region = 0.45u
+M1.S.2A_2B
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 wide M1 = 0.8
+M1.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension of M1 region beyond CO region = 0.15u
+INFO_M1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+M1 check angles 90/135 degree
+CO.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min/max width CO region = 0.4u 0.4u
+CO.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 CO region = 0.4u
+CO.C.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance CO on OD region to PO2 gate = 0.3u
+CO.C.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance CO on PO2 to OD region = 0.4u
+CO.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension OD region beyond CO region = 0.15u
+CO.E.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension PO2 region beyond CO region = 0.2u
+CO.E.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension PP region beyond CO region = 0.25u
+CO.E.4
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension NP region beyond CO region = 0.25u
+CO.R.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+COPO2 on OD region is forbidden
+M2.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width of M2 region = 0.6u
+M2.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 M2 region = 0.5u
+M2.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension of M2 region beyond VIA1 region = 0.15u
+M2.S.2A_B
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between wide M2 = 0.8u
+INFO_M2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+M2 check angles 90/135 degree
+M3.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width of M3 region = 0.6u
+M3.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 M3 region = 0.5u
+M3.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension of M3 region beyond VIA2 region = 0.15u
+M3.S.2A_B
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between wide M3 = 0.8u
+INFO_M3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+M3 check angles 90/135 degree
+CB.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width CB region = 86u
+CB.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing 2 CB region = 15.0u
+CB.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min M1 region over CB region = 5.0u
+CB.E.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min M2 region over CB region = 5.0u
+CB.E.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min M3 region over CB region = 5.0u
+CB.E.4
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension M1 region over the nearest VIA1(four corner diamond) = 3.0u
+CB.E.5
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension M2 region over the nearest VIA2 and VIA1(four corner diamond) = 3.0u
+CB.E.6
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min extension M3 region over the nearest VIA2(four corner diamond) = 3.0u
+CB.S.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 VIA1 region = 0.8u
+CB.S.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 VIA2 region = 0.8u
+CB.C.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min clearance VIA2 and VIA1 = 0.3u
+CB.R.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min ratio of total exposed VIA1 to CB opening = 5%
+CB.R.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min ratio of total exposed VIA2 to CB opening = 5%
+PO.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width CPOLY region = 0.8u
+PO.W.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width of PO region = 0.65u
+PO.W.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width RPOLYH region = 0.8u
+PO.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 CPOLY region = 0.65u
+PO.S.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 PO region = 0.50u
+PO.S.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing between 2 RPOLYH region = 0.75u
+PO.C.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing COPO to CPOLY region = 1.2u
+PO.C.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing OD to PO region = 0.2u
+PO.C.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing PO2 to PO = 0.65u
+PO.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min enclosure PO over CPOLY region = 1u
+PO.E.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min enclosure CPOLY over COPO2 region = 0.6u
+PO.E.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min enclosure PO over COPO region = 0.25u
+PO.R.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+PO area not allowed on OD area
+INFO_PO
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+PO check angles 90/135 degree
+HR.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min width of HRES region = 0.6u
+HR.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing of two HRES region = 0.6u
+HR.R.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+HRES is not allowed over OD
+HR.R.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+HRES is not allowed over PP
+HR.R.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+HRES is not allowed over PO2
+HR.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min enclosure HRES over PO = 3u
+HR.S.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing HRES to PO2 region = 0.35u
+HR.S.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing HRES to PO region = 3u
+HR.S.4
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+min spacing HRES to OD region = 0.35u
+OFFGRID_NWEL
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on NWEL
+OFFGRID_OD
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on OD
+OFFGRID_PO2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on PO2
+OFFGRID_PO
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on PO
+OFFGRID_PP
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on PP
+OFFGRID_NP
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on NP
+OFFGRID_CO
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on CO
+OFFGRID_M1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on M1
+OFFGRID_M2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on M2
+OFFGRID_M3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on M3
+OFFGRID_VIA1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on VIA1
+OFFGRID_VIA2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on VIA2
+OFFGRID_CB
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on CB
+OFFGRID_HRES
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on HRES
+OFFGRID_ESD
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on ESD
+OFFGRID_PSUB
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on PSUB
+OFFGRID_M1SLOT
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on M1SLOT
+OFFGRID_M2SLOT
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on M2SLOT
+OFFGRID_M3SLOT
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on M3SLOT
+OFFGRID_PLDMY
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on PLDMY
+OFFGRID_SDI
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on SDI
+OFFGRID_SDI2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on SDI2
+OFFGRID_RESDEF
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on RESDEF
+OFFGRID_HTWL
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on HTWL
+OFFGRID_CAP
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on CAP
+OFFGRID_CAPOPLY
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Offgrid vertex on CAPOLY
+PO2_DENSITY_14
+1 1 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+PO2 Density is less than 14%
+p 1 4
+-20730 -5190
+36485 -5190
+36485 10810
+-20730 10810
+PO2_DENSITY_70
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+PO2 Density exceeds 70 %
+M1_DENSITY_25
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+M1 Density is less than 25%
+M1_DENSITY_50
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+M1 Density exceeds 50 %
+M2_DENSITY_25
+1 1 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+M2 Density is less than 25%
+p 1 4
+-20730 -5190
+36485 -5190
+36485 10810
+-20730 10810
+M2_DENSITY_50
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+M2 Density exceeds 50%
+M3_DENSITY_25
+1 1 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+M3 Density is less than 25%
+p 1 4
+-20730 -5190
+36485 -5190
+36485 10810
+-20730 10810
+M3_DENSITY_50
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+M3 Density exceeds 50%
+LUP.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+SOURCE/DRAIN of PMOS more than 20um from ntap
+LUP.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+SOURCE/DRAIN of NMOS more than 20um from ptap
+LUP.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+SOURCE/DRAIN of NMOS more than 20um from psub_tap 
+LUP.4.Diffring
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Any single diffusion area larger than 400um2 needs fully closed diffusion ring around
+M1SLOT.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+minimum width M1SLOT 1um
+M1SLOT.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+minimum spacing M1SLOT 8um
+M1SLOT.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Min/Max extension M1 wide over M1SLOT region 10u
+M1SLOT.E.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+M1SLOT without met1
+M1SLOT.A.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum m1slot area >= 10.0
+AMS.1.M1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Wide Metal (>30um) must have slot.
+AMS.DN.M1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Min. Hole density for metal lines that need to apply slot  1.5%
+AM.W.3.M1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Min. width for metal connected to wide metal 10um.
+M2SLOT.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+minimum width M2SLOT 1um
+M2SLOT.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+minimum spacing M2SLOT 8um
+M2SLOT.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Min/Max extension M2 wide over M2SLOT region 10u
+M2SLOT.E.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+M2SLOT without met2
+M2SLOT.A.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum m2slot area >= 10.0
+AMS.1.M2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Wide Metal (>30um) must have slot.
+AMS.DN.M2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Min. Hole density for metal lines that need to apply slot  1.5%
+AM.W.3.M2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Min. width for metal connected to wide metal 10um.
+M3SLOT.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+minimum width M3SLOT 1um
+M3SLOT.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+minimum spacing M3SLOT 8um
+M3SLOT.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Min/Max extension M3 wide over M3SLOT region 10u
+M3SLOT.E.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+M3SLOT without met3
+M3SLOT.A.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum m3slot area >= 10.0
+AMS.1.M3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Wide Metal (>30um) must have slot.
+AMS.DN.M3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Min. Hole density for metal lines that need to apply slot  1.5%
+AM.W.3.M3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Min. width for metal connected to wide metal 10um.
+ESD.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum esd width >= 0.9um
+ESD.S.1
+0 0 3 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum esd space >= 0.9um 
+Merge if space less than 0.9um.
+ESD.S.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum space between ESD and NP or PP >= 0.2um
+ESD.C.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum clearance from an ESD to a NP OD >= 0.45um
+ESD.C.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum clearance from an ESD to a PP OD >= 0.45um
+ESD.C.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum clearance from an ESD to a N channel PO gate >= 0.7um
+ESD.C.4
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum clearance from an ESD to a P channel PO gate >= 0.7um
+ESD.O.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum overlap from an ESD edge to an OD region >= 0.7um
+ESD.C.5
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum clearance from ESD region to ESD OD >= 0.9um
+ESD.E.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum enclosure of ESD region over OD >= 0.3um
+ESD.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+I/O - contact to poly edge on source side for PMOS < 0.85um
+ESD.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+I/O - contact to poly edge on drain side for PMOS < 2.55um
+ESD.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+I/O - Min ESD NMOS gate length(thick gate) < 0.5um
+ESD.4
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+I/O - Min ESD PMOS gate length(thick gate) < 0.5um
+ESD.5
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+I/O - Min unit finger width for ESD NMOS 40 um 
+ESD.6
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+I/O - Min unit finger width for ESD PMOS 40 um 
+ESD.7
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+I/O - contact to poly edge on source side for NMOS < 0.85um
+ESD.8
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+I/O - contact to poly edge on drain side for NMOS < 4.0um
+ESD.9
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+I/O - Min ESD NMOS gate length(thin gate) < 0.36um
+ESD.10
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+I/O - Min ESD PMOS gate length(thin gate) < 0.36um
+SDI.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Min enlosure of SDI/SDI2 over PMOS ESD >0.3
+SDI.2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Min enlosure of SDI/SDI2 over NMOS ESD >0.3
+SDI.3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+ESD have to be inside SDI
+SDI.4
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+SDI2 without SDI is not allowed
+PL_M1.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+PL_M1 width >= 4um
+PL_M1.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+PL_M1 spacing >= 1.00
+PL_M2.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+PL_M2 width >= 4um
+PL_M2.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+PL_M2 spacing >= 1.00
+PL_M3.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+PL_M3 width >= 4um
+PL_M3.S.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+PL_M3 spacing >= 1.00
+INFO_PL_M1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Power Line not recommended at 90 degree
+INFO_PL_M2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Power Line not recommended at 90 degree
+INFO_PL_M3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Power Line not recommended at 90 degree
+ADP.R.0D
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Via-CO overlap structure in Power Line
+ADP.S.1_CO
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum space between two CO or Vias at the same level>= 0.8um.
+ADP.S.1_V1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum space between two CO or Vias at the same level>= 0.8um.
+ADP.S.1_V2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum space between two CO or Vias at the same level>= 0.8um.
+ADP.C.1_CO_V1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum clearance between two CO or Vias at different levels>= 0.4um.
+ADP.C.1_V1_V2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum clearance between two CO or Vias at different levels>= 0.4um.
+ADP.E.1_CO_PO
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum extension of Power Line PO2 over CO>= 0.4um.
+ADP.E.1_CO_M1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum extension of Power Line Metal1 over CO >= 0.4um.
+ADP.E.2_V1_M1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum extension of Power Line Metal1 over VIA1 >= 0.4um.
+ADP.E.2_V1_M2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum extension of Power Line Metal2 over VIA1 >= 0.4um.
+ADP.E.2_V2_M2
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum extension of Power Line Metal2 over VIA2 >= 0.4um.
+ADP.E.2_V2_M3
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+Minimum extension of Power Line Metal3 over VIA2 >= 0.4um.
+GATEN.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+maximum dimension of a N-gate width and length is 20um
+GATEP.W.1
+0 0 2 Nov 26 00:29:57 2014                     
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035DRC.rul_
+maximum dimension of a P-gate width and length is 20um
+NET_AREA_RATIO_RDBS
+0 0 3 Nov 26 00:29:57 2014
+M1Hole.density2 0
+M2Hole.density2 0
+M3Hole.density2 0
+DENSITY_PRINT_FILES
+0 0 8 Nov 26 00:29:57 2014
+PO2_DENSITY_LOW.log
+PO2_DENSITY_HIGH.log
+M1_DENSITY_LOW.log
+M1_DENSITY_HIGH.log
+M2_DENSITY_LOW.log
+M2_DENSITY_HIGH.log
+M3_DENSITY_LOW.log
+M3_DENSITY_HIGH.log

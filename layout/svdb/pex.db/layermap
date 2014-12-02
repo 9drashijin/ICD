@@ -1,0 +1,48 @@
+OK
+VERSION          2
+TIME_NUMBER 2736881823
+LAYER_COUNT         36
+VIACOR_COUNT          5
+FIELD_NAMES drc_layer_nb layer_name
+        11 M1
+        42 PO2
+        54 PWELL
+        58 NWELL
+        66 PO2GATE
+        67 GATE
+        68 NSD
+        69 NSTP
+        70 NSTPL
+        71 PSD
+        72 PSTP
+        81 POLY2WIRE
+        84 CO
+        98 NTAP
+       106 PO
+       108 PIN_RN
+       109 PIN_RP
+       111 NPLUG
+       119 R_PIN
+       122 RPOLYHTERM
+       123 PO2TERM
+       124 PO1TERM
+       132 PNPVERT10_e
+       134 PNPVERT5_e
+       138 emit_npn
+       139 base_npn
+       140 coll_npn
+       198 M2
+       213 M3
+       496 VIA1
+       500 VIA2
+       586 temporary_layer586
+       587 temporary_layer587
+       588 temporary_layer588
+       589 temporary_layer589
+       590 temporary_layer590
+VIACOR_FIELD_NAMES VIA_drc_layer_nb LAYER1_drc_layer_nb LAYER2_drc_layer_nb
+496  11  198
+500  198  213
+84  11  42
+84  11  68
+587  11  71

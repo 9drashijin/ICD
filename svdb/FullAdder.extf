@@ -1,0 +1,14 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 2
+lvs_ExtRunTimes 1417530960 1417530961
+lvs_ExtOutFile RUNDIR /home/training/ALU_CL
+lvs_ExtOutFile RULES_FILE /home/training/ALU_CL/_Calibre035LVS.rul_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoErcSummary {3 0 0 0 0 3 63 82 25 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST /home/training/ALU_CL/FullAdder.sp
+lvs_ExtOutFile EXTRACTION_REPORT FullAdder.lvs.report.ext
+lvs_ExtOutFile ERC_PATHCHK_DATABASE svdb/FullAdder.pathchk.erc
+lvs_ExtOutFile ERC_PATHCHK_REPORT svdb/FullAdder.pathchk.rep
+lvs_ExtOutFile ERC_DATABASE FullAdder.erc.results
+lvs_ExtOutFile ERC_SUMMARY FullAdder.erc.summary

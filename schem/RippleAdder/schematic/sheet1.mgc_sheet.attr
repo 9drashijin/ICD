@@ -1,0 +1,29 @@
+A 5 u mgc_sheet 54340806893c.03.7f.00.00.01.00.3c.a8 2 2 9 0
+V v 1 2 54340806893c.03.7f.00.00.01.01.3c.a8
+F f 1 "sheet1.ssht_1"
+F f 1 "sheet1.sgfx_1"
+V v 2 2 54340bc1b56d.03.7f.00.00.01.00.3c.a8
+F f 2 "sheet1.ssht_2"
+F f 2 "sheet1.sgfx_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/RippleAdder/schematic" 1 mgc_schematic 5434080688d5.03.7f.00.00.01.01.3c.a8 5434080688d5.03.7f.00.00.01.00.3c.a8
+R csduv 1 "/home/training/ALU_CL/schem/FullAdder/part" 2 Eddm_part 543401e260af.03.7f.00.00.01.00.3c.a8 543401c05114.03.7f.00.00.01.00.3c.a8
+R csduv 2 "/home/training/ALU_CL/schem/FullAdder/FullAdder" 1 mgc_symbol 543401a7c6a7.03.7f.00.00.01.01.3c.a8 543401a7c6a7.03.7f.00.00.01.00.3c.a8
+R csduv 3 "$MIMOS_KIT/lib/portout/part" 2 Eddm_part 4e51ea806d32.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.09.1a.18
+R csduv 4 "$MIMOS_KIT/lib/portout/portout" 3 mgc_symbol 4e51ea81cc3f.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.08.1a.18
+R csduv 5 "$MIMOS_KIT/lib/portin/part" 2 Eddm_part 4e51ea770272.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.07.1a.18
+R csduv 6 "$MIMOS_KIT/lib/portin/portin" 3 mgc_symbol 4e51ea793ba5.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.06.1a.18
+R csduv 7 "$MIMOS_KIT/lib/GND/part" 3 Eddm_part 4e54a29bb414.03.7f.00.00.01.00.15.55 4e54a268e978.03.7f.00.00.01.00.15.55
+R csduv 8 "$MIMOS_KIT/lib/GND/GND" 4 mgc_symbol 4e54a29d1d21.03.7f.00.00.01.00.15.55 4e54a268ea06.03.7f.00.00.01.00.15.55
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/RippleAdder/schematic" 1 mgc_schematic 5434080688d5.03.7f.00.00.01.01.3c.a8 5434080688d5.03.7f.00.00.01.00.3c.a8
+R csduv 1 "/home/training/ALU_CL/schem/FullAdder/part" 2 Eddm_part 543401e260af.03.7f.00.00.01.00.3c.a8 543401c05114.03.7f.00.00.01.00.3c.a8
+R csduv 2 "/home/training/ALU_CL/schem/FullAdder/FullAdder" 1 mgc_symbol 543401a7c6a7.03.7f.00.00.01.01.3c.a8 543401a7c6a7.03.7f.00.00.01.00.3c.a8
+R csduv 3 "$MIMOS_KIT/lib/portout/part" 2 Eddm_part 4e51ea806d32.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.09.1a.18
+R csduv 4 "$MIMOS_KIT/lib/portout/portout" 3 mgc_symbol 4e51ea81cc3f.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.08.1a.18
+R csduv 5 "$MIMOS_KIT/lib/portin/part" 2 Eddm_part 4e51ea770272.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.07.1a.18
+R csduv 6 "$MIMOS_KIT/lib/portin/portin" 3 mgc_symbol 4e51ea793ba5.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.06.1a.18
+R csduv 7 "$MIMOS_KIT/lib/GND/part" 3 Eddm_part 4e54a29bb414.03.7f.00.00.01.00.15.55 4e54a268e978.03.7f.00.00.01.00.15.55
+R csduv 8 "$MIMOS_KIT/lib/GND/GND" 4 mgc_symbol 4e54a29d1d21.03.7f.00.00.01.00.15.55 4e54a268ea06.03.7f.00.00.01.00.15.55

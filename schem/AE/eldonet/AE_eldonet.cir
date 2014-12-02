@@ -1,0 +1,13 @@
+* Component: /home/training/ALU_CL/schem/AE  Viewpoint: eldonet
+.INCLUDE /home/training/ALU_CL/schem/AE/eldonet/AE_eldonet.spi
+
+
+
+
+.OPTION NOASCII
+.OPTION MODWL
+.OPTION ENGNOT
+.OPTION AEX
+
+.TEMP 27 
+

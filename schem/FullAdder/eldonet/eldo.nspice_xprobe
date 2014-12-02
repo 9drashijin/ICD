@@ -1,0 +1,111 @@
+# This file provides name mapping information for all objects
+# on the schematic design.  It provides a mapping for each
+# object between its name on the schematic and its name in the netlist.
+version 1.0
+
+Globals
+   GND gnd
+   VDD vdd
+End Globals
+
+Cell nmos4
+   Pin D d
+   Pin G g
+   Pin S s
+   Pin B b
+End Cell
+
+Cell pmos4
+   Pin D d
+   Pin G g
+   Pin S s
+   Pin B b
+End Cell
+
+Cell or02a
+   Pin Y y
+   Pin A1 a1
+   Pin A0 a0
+   Net N$431 n$431
+   Net N$429 n$429
+   Net A0 a0
+   Net A1 a1
+   Net Y y
+   Global GND gnd
+   Global VDD vdd
+   Inst M4 m4 nmos4
+   Inst M3 m3 pmos4
+   Inst M2 m2 pmos4
+   Inst M1 m1 pmos4
+   Inst M6 m6 nmos4
+   Inst M5 m5 nmos4
+End Cell
+
+Cell and02a
+   Pin A1 a1
+   Pin A0 a0
+   Pin Y y
+   Net N$649 n$649
+   Net N$647 n$647
+   Net Y y
+   Net A0 a0
+   Net A1 a1
+   Global GND gnd
+   Global VDD vdd
+   Inst M3 m3 nmos4
+   Inst M1 m1 pmos4
+   Inst M2 m2 pmos4
+   Inst M4 m4 pmos4
+   Inst M5 m5 nmos4
+   Inst M6 m6 nmos4
+End Cell
+
+Cell axor2a
+   Pin A0 a0
+   Pin A1 a1
+   Pin Y y
+   Net N$472 n$472
+   Net N$470 n$470
+   Net N$468 n$468
+   Net N$467 n$467
+   Net N$465 n$465
+   Net Y y
+   Net A1 a1
+   Net A0 a0
+   Global GND gnd
+   Global VDD vdd
+   Inst M9 m9 nmos4
+   Inst M12 m12 nmos4
+   Inst M8 m8 nmos4
+   Inst M7 m7 nmos4
+   Inst M6 m6 pmos4
+   Inst M3 m3 pmos4
+   Inst M1 m1 pmos4
+   Inst M2 m2 pmos4
+   Inst M4 m4 pmos4
+   Inst M5 m5 pmos4
+   Inst M11 m11 nmos4
+   Inst M10 m10 nmos4
+End Cell
+
+Cell #top#
+   Pin Cin cin
+   Pin Sum sum
+   Pin Cout cout
+   Pin B b
+   Pin A a
+   Net N$29 n$29
+   Net N$18 n$18
+   Net N$21 n$21
+   Net A a
+   Net B b
+   Net Cout cout
+   Net Sum sum
+   Net Cin cin
+   Inst OR02A1 x_or02a1 or02a
+   Inst AND02A2 x_and02a2 and02a
+   Inst AND02A1 x_and02a1 and02a
+   Inst AXOR2A1 x_axor2a1 axor2a
+   Inst AXOR2A2 x_axor2a2 axor2a
+End Cell
+

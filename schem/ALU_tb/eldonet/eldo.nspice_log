@@ -1,0 +1,52 @@
+//  ICnet  v2008.2_14.1 (2008.2m)  Fri Feb 25 10:44:08 PST 2011
+//  Core Libraries  v2008.2_14.1 Fri Feb 25 11:00:25 PST 2011
+//
+//             Copyright Mentor Graphics Corporation 1982
+//
+//                      All Rights Reserved.
+//
+//    THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+//      WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR
+//           ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+//
+//  Mentor Graphics software executing under x86_64 Linux.
+//
+
+
+//  Invocation args:  -eldo -o /home/training/ALU_CL/schem/ALU_tb/eldonet/ALU_tb_eldonet.spi -check -upper -dmsfile /home/training/ALU_CL/schem/ALU_tb/eldonet/design.dms /home/training/ALU_CL/schem/ALU_tb/eldonet
+
+// **** Reading </home/training/ALU_CL/schem/ALU_tb/eldonet> for ELDO netlist ****
+
+// Checking 10 sheet(s) for out of date references to symbols and interfaces...
+// Done.
+// Parsing file '/EDA/mimos035_lib/lib/pulse_v_source/@ncf.dir/pulse_v_source.ncf' succeeded.
+// Parsing file '/EDA/mimos035_lib/lib/dc_v_source/@ncf.dir/dc_v_source.ncf' succeeded.
+// Parsing file '/EDA/mimos035_lib/lib/nmos4/@ncf.dir/nmos4.ncf' succeeded.
+// Parsing file '/EDA/mimos035_lib/lib/pmos4/@ncf.dir/pmos4.ncf' succeeded.
+// NOTE: There is no part interface for the top level schematic.  The external nets in the schematic
+//       are being scanned to create the pin names for the top level subckt.
+Processing [/home/training/ALU_CL/schem/ALU_tb] [ALU_tb/ALU_tb] [schematic]
+Processing [/home/training/ALU_CL/schem/ALU] [ALU/ALU] [schematic]
+Processing [/home/training/ALU_CL/schem/AE] [AE/AE] [schematic]
+Processing [$MIMOS_KIT/mimos035-std-cells/schem/and02a] [and02a/and02a] [schematic]
+Processing [$MIMOS_KIT/mimos035-std-cells/schem/axor2a] [axor2a/axor2a] [schematic]
+Processing [/home/training/ALU_CL/schem/FullAdder] [FullAdder/FullAdder] [schematic]
+Processing [$MIMOS_KIT/mimos035-std-cells/schem/or02a] [or02a/or02a] [schematic]
+Processing [/home/training/ALU_CL/schem/LE] [LE/LE] [schematic]
+Processing [$MIMOS_KIT/mimos035-std-cells/schem/mux21a_ni] [mux21a_ni/mux21a_ni] [schematic]
+Processing [$MIMOS_KIT/mimos035-std-cells/schem/inv01a] [inv01a/inv01a] [schematic]
+Primitive [$MIMOS_KIT/lib/pmos4] [pmos4/pmos4] [SPICE=X] (NCF entry line:8 file:$MIMOS_KIT/lib/pmos4/@ncf.dir/pmos4.ncf)
+Primitive [$MIMOS_KIT/lib/nmos4] [nmos4/nmos4] [SPICE=X] (NCF entry line:8 file:$MIMOS_KIT/lib/nmos4/@ncf.dir/nmos4.ncf)
+Primitive [$MIMOS_KIT/lib/pulse_v_source] [pulse_v_source/pulse_v_source] [SPICE=V] (NCF entry line:8 file:$MIMOS_KIT/lib/pulse_v_source/@ncf.dir/pulse_v_source.ncf)
+Primitive [$MIMOS_KIT/lib/dc_v_source] [dc_v_source/dc_v_source] [SPICE=V] (NCF entry line:8 file:$MIMOS_KIT/lib/dc_v_source/@ncf.dir/dc_v_source.ncf)
+
+**** Writing </home/training/ALU_CL/schem/ALU_tb/eldonet> netlist for ELDO ****
+
+Number of cells: 14
+Number of primitive instances: 148
+
+Done...
+// Registration file '/EDA/mimos035_lib/lib/pulse_v_source/@ncf.dir/pulse_v_source.ncf' closed.
+// Registration file '/EDA/mimos035_lib/lib/dc_v_source/@ncf.dir/dc_v_source.ncf' closed.
+// Registration file '/EDA/mimos035_lib/lib/nmos4/@ncf.dir/nmos4.ncf' closed.
+// Registration file '/EDA/mimos035_lib/lib/pmos4/@ncf.dir/pmos4.ncf' closed.

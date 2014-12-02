@@ -1,0 +1,170 @@
+# This file provides name mapping information for all objects
+# on the schematic design.  It provides a mapping for each
+# object between its name on the schematic and its name in the netlist.
+version 1.0
+
+Globals
+   GND gnd
+   VDD vdd
+End Globals
+
+Cell pulse_v_source
+   Pin POS pos
+   Pin NEG neg
+End Cell
+
+Cell dc_v_source
+   Pin POS pos
+   Pin NEG neg
+End Cell
+
+Cell nmos4
+   Pin D d
+   Pin G g
+   Pin S s
+   Pin B b
+End Cell
+
+Cell pmos4
+   Pin D d
+   Pin G g
+   Pin S s
+   Pin B b
+End Cell
+
+Cell axor2a
+   Pin A0 a0
+   Pin A1 a1
+   Pin Y y
+   Net N$472 n$472
+   Net N$470 n$470
+   Net N$468 n$468
+   Net N$467 n$467
+   Net N$465 n$465
+   Net Y y
+   Net A1 a1
+   Net A0 a0
+   Global GND gnd
+   Global VDD vdd
+   Inst M9 m9 nmos4
+   Inst M12 m12 nmos4
+   Inst M8 m8 nmos4
+   Inst M7 m7 nmos4
+   Inst M6 m6 pmos4
+   Inst M3 m3 pmos4
+   Inst M1 m1 pmos4
+   Inst M2 m2 pmos4
+   Inst M4 m4 pmos4
+   Inst M5 m5 pmos4
+   Inst M11 m11 nmos4
+   Inst M10 m10 nmos4
+End Cell
+
+Cell and02a
+   Pin A1 a1
+   Pin A0 a0
+   Pin Y y
+   Net N$649 n$649
+   Net N$647 n$647
+   Net Y y
+   Net A0 a0
+   Net A1 a1
+   Global GND gnd
+   Global VDD vdd
+   Inst M3 m3 nmos4
+   Inst M1 m1 pmos4
+   Inst M2 m2 pmos4
+   Inst M4 m4 pmos4
+   Inst M5 m5 nmos4
+   Inst M6 m6 nmos4
+End Cell
+
+Cell or02a
+   Pin Y y
+   Pin A1 a1
+   Pin A0 a0
+   Net N$431 n$431
+   Net N$429 n$429
+   Net A0 a0
+   Net A1 a1
+   Net Y y
+   Global GND gnd
+   Global VDD vdd
+   Inst M4 m4 nmos4
+   Inst M3 m3 pmos4
+   Inst M2 m2 pmos4
+   Inst M1 m1 pmos4
+   Inst M6 m6 nmos4
+   Inst M5 m5 nmos4
+End Cell
+
+Cell fulladder
+   Pin A a
+   Pin B b
+   Pin Cin cin
+   Pin Cout cout
+   Pin Sum sum
+   Net N$7 n$7
+   Net N$1 n$1
+   Net N$3 n$3
+   Net Sum sum
+   Net Cout cout
+   Net Cin cin
+   Net B b
+   Net A a
+   Inst AXOR2A2 x_axor2a2 axor2a
+   Inst AXOR2A1 x_axor2a1 axor2a
+   Inst OR02A1 x_or02a1 or02a
+   Inst AND02A2 x_and02a2 and02a
+   Inst AND02A1 x_and02a1 and02a
+End Cell
+
+Cell ae
+   Pin Cin cin
+   Pin Ea ea
+   Pin A a
+   Pin Eb eb
+   Pin B b
+   Pin Wa wa
+   Pin Wb wb
+   Pin AE ae
+   Net N$7 n$7
+   Net N$1 n$1
+   Net N$3 n$3
+   Net N$24 n$24
+   Net N$10 n$10
+   Net AE ae
+   Net Wb wb
+   Net Wa wa
+   Net B b
+   Net Eb eb
+   Net A a
+   Net Ea ea
+   Net Cin cin
+   Inst AXOR2A2 x_axor2a2 axor2a
+   Inst AXOR2A1 x_axor2a1 axor2a
+   Inst AND02A2 x_and02a2 and02a
+   Inst AND02A1 x_and02a1 and02a
+   Inst FULLADDER1 x_fulladder1 fulladder
+End Cell
+
+Cell #top#
+   Net Cin cin
+   Net A a
+   Net B b
+   Net Wb wb
+   Net Eb eb
+   Net Ea ea
+   Net AEout aeout
+   Global GND gnd
+   Global VDD vdd
+   Inst V8 v8 pulse_v_source
+   Inst V7 v7 pulse_v_source
+   Inst V6 v6 pulse_v_source
+   Inst V5 v5 pulse_v_source
+   Inst V4 v4 pulse_v_source
+   Inst V2 v2 pulse_v_source
+   Inst V1 v1 dc_v_source
+   Inst AE1 x_ae1 ae
+End Cell
+

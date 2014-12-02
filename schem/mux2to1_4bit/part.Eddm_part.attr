@@ -1,0 +1,12 @@
+A 5 u Eddm_part 5458e7b06695.03.7f.00.00.01.00.10.30 2 2 2 0
+V v 1 1 5458e7b06695.03.7f.00.00.01.01.10.30
+F f 1 "part.part_1"
+V v 2 1 5458e7f6cec8.03.7f.00.00.01.00.10.30
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/mux2to1_4bit/schematic" 1 mgc_schematic 5458e5c1c5e1.03.7f.00.00.01.01.10.30 5458e5c1c5e1.03.7f.00.00.01.00.10.30
+R csduv 1 "/home/training/ALU_CL/schem/mux2to1_4bit/mux2to1_4bit" 1 mgc_symbol 5458e7e37c36.03.7f.00.00.01.01.10.30 5458e7b94d5b.03.7f.00.00.01.00.10.30
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/mux2to1_4bit/schematic" 1 mgc_schematic 5458e5c1c5e1.03.7f.00.00.01.01.10.30 5458e5c1c5e1.03.7f.00.00.01.00.10.30

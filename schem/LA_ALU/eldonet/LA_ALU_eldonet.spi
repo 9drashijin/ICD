@@ -1,0 +1,177 @@
+*
+* .CONNECT statements
+*
+.CONNECT GROUND 0
+
+
+* ELDO netlist generated with ICnet by 'training' on Wed Nov  5 2014 at 00:42:38
+
+*
+* Globals.
+*
+.global VDD GND
+
+*
+* Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/mux21a_ni
+*
+.subckt MUX21A_NI  Y S0 A0 A1
+
+        M11 N$462 A1 GND GND nch L=0.35u W=1.2u M=1
+        M10 N$461 S0 N$462 GND nch L=0.35u W=1.2u M=1
+        M9 N$461 N$223 N$464 GND nch L=0.35u W=1.2u M=1
+        M8 Y N$461 GND GND nch L=0.35u W=1.2u M=1
+        M7 N$223 S0 GND GND nch L=0.35u W=1.2u M=1
+        M1 N$223 S0 VDD VDD pch L=0.35u W=2u M=1
+        M4 N$459 A1 VDD VDD pch L=0.35u W=2u M=1
+        M2 Y N$461 VDD VDD pch L=0.35u W=2u M=1
+        M5 N$461 S0 N$457 VDD pch L=0.35u W=2u M=1
+        M3 N$457 A0 VDD VDD pch L=0.35u W=2u M=1
+        M12 N$464 A0 GND GND nch L=0.35u W=1.2u M=1
+        M6 N$461 N$223 N$459 VDD pch L=0.35u W=2u M=1
+.ends MUX21A_NI
+
+*
+* Component pathname : /home/training/ALU_CL/schem/mux2to1_4bit
+*
+.subckt MUX2TO1_4BIT  S2 AE3 LE3 AE2 LE2 AE1 LE1 AE0 LE0 Q0 Q1 Q2 Q3
+
+        X_MUX21A_NI4 Q0 S2 AE0 LE0 MUX21A_NI
+        X_MUX21A_NI2 Q1 S2 AE1 LE1 MUX21A_NI
+        X_MUX21A_NI1 Q2 S2 AE2 LE2 MUX21A_NI
+        X_MUX21A_NI3 Q3 S2 AE3 LE3 MUX21A_NI
+.ends MUX2TO1_4BIT
+
+*
+* Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/and02a
+*
+.subckt AND02A  A1 A0 Y
+
+        M3 Y N$647 GND GND nch L=0.35u W=1.2u M=1
+        M1 N$647 A0 VDD VDD pch L=0.35u W=2u M=1
+        M2 N$647 A1 VDD VDD pch L=0.35u W=2u M=1
+        M4 Y N$647 VDD VDD pch L=0.35u W=2u M=1
+        M5 N$647 A0 N$649 GND nch L=0.35u W=1.2u M=1
+        M6 N$649 A1 GND GND nch L=0.35u W=1.2u M=1
+.ends AND02A
+
+*
+* Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/or02a
+*
+.subckt OR02A  Y A1 A0
+
+        M4 N$431 A0 GND GND nch L=0.35u W=1.2u M=1
+        M3 Y N$431 VDD VDD pch L=0.35u W=2u M=1
+        M2 N$431 A1 N$429 VDD pch L=0.35u W=2u M=1
+        M1 N$429 A0 VDD VDD pch L=0.35u W=2u M=1
+        M6 Y N$431 GND GND nch L=0.35u W=1.2u M=1
+        M5 N$431 A1 GND GND nch L=0.35u W=1.2u M=1
+.ends OR02A
+
+*
+* Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/inv01a
+*
+.subckt INV01A  A Y
+
+        M1 Y A VDD VDD pch L=0.35u W=2u M=1
+        M2 Y A GND GND nch L=0.35u W=1.2u M=1
+.ends INV01A
+
+*
+* Component pathname : /home/training/ALU_CL/schem/LE
+*
+.subckt LE  LE S1 S2 A B
+
+        X_OR02A1 N$21 B A OR02A
+        X_AND02A1 B A N$19 AND02A
+        X_INV01A1 A N$17 INV01A
+        X_MUX21A_NI3 LE S2 N$10 N$9 MUX21A_NI
+        X_MUX21A_NI2 N$9 S1 N$19 N$21 MUX21A_NI
+        X_MUX21A_NI1 N$10 S1 A N$17 MUX21A_NI
+.ends LE
+
+*
+* Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/axor2a
+*
+.subckt AXOR2A  A0 A1 Y
+
+        M9 N$470 A0 N$472 GND nch L=0.35u W=1.2u M=1
+        M12 Y N$470 GND GND nch L=0.35u W=1.2u M=1
+        M8 N$468 A1 GND GND nch L=0.35u W=1.2u M=1
+        M7 N$467 A0 N$468 GND nch L=0.35u W=1.2u M=1
+        M6 Y N$470 VDD VDD pch L=0.35u W=2u M=1
+        M3 N$470 N$467 VDD VDD pch L=0.35u W=2u M=1
+        M1 N$467 A0 VDD VDD pch L=0.35u W=2u M=1
+        M2 N$467 A1 VDD VDD pch L=0.35u W=2u M=1
+        M4 N$465 A0 VDD VDD pch L=0.35u W=2u M=1
+        M5 N$470 A1 N$465 VDD pch L=0.35u W=2u M=1
+        M11 N$472 N$467 GND GND nch L=0.35u W=1.2u M=1
+        M10 N$470 A1 N$472 GND nch L=0.35u W=1.2u M=1
+.ends AXOR2A
+
+*
+* Component pathname : /home/training/ALU_CL/schem/CE
+*
+.subckt CE  S0 S1 C0 S2
+
+        X_AND02A1 S2 N$7 C0 AND02A
+        X_AXOR2A1 S0 S1 N$7 AXOR2A
+.ends CE
+
+*
+* Component pathname : /home/training/ALU_CL/schem/LookAhead
+*
+.subckt LOOKAHEAD  CIN X0 Y0 X1 Y1 X2 Y2 X3 Y3 S0 S1 S2 S3 COUT
+
+        X_AXOR2A8 N$35 N$17 S3 AXOR2A
+        X_AXOR2A7 N$34 N$15 S2 AXOR2A
+        X_AXOR2A6 N$29 N$13 S1 AXOR2A
+        X_AXOR2A5 CIN N$5 S0 AXOR2A
+        X_OR02A4 COUT N$7 N$19 OR02A
+        X_OR02A3 N$35 N$9 N$21 OR02A
+        X_OR02A2 N$34 N$11 N$23 OR02A
+        X_AND02A8 N$17 N$35 N$7 AND02A
+        X_AND02A7 N$15 N$34 N$9 AND02A
+        X_AND02A6 N$13 N$29 N$11 AND02A
+        X_OR02A1 N$29 N$3 N$1 OR02A
+        X_AND02A5 N$5 CIN N$3 AND02A
+        X_AXOR2A4 X3 Y3 N$17 AXOR2A
+        X_AXOR2A3 X2 Y2 N$15 AXOR2A
+        X_AXOR2A2 X1 Y1 N$13 AXOR2A
+        X_AXOR2A1 X0 Y0 N$5 AXOR2A
+        X_AND02A4 Y3 X3 N$19 AND02A
+        X_AND02A3 Y2 X2 N$21 AND02A
+        X_AND02A2 Y1 X1 N$23 AND02A
+        X_AND02A1 Y0 X0 N$1 AND02A
+.ends LOOKAHEAD
+
+*
+* MAIN CELL: Component pathname : /home/training/ALU_CL/schem/LA_ALU
+*
+        X_MUX2TO1_4BIT1 S2 N$215 N$195 N$214 N$194 N$213 N$193 N$79 N$212
++ Q0 Q1 Q2 Q3 MUX2TO1_4BIT
+        X_AND02A12 B N$208 N$100 AND02A
+        X_LE3 N$214 S0 S1 A B LE
+        X_LE4 N$215 S0 S1 A B LE
+        X_AND02A11 A VDD N$97 AND02A
+        X_AXOR2A1 GND N$97 N$102 AXOR2A
+        X_LE1 N$79 S0 S1 A B LE
+        X_CE1 S0 S1 N$39 S2 CE
+        X_AXOR2A4 N$8 S0 N$2 AXOR2A
+        X_AXOR2A3 GND N$5 N$10 AXOR2A
+        X_AND02A4 B N$208 N$8 AND02A
+        X_AND02A1 A VDD N$5 AND02A
+        X_LOOKAHEAD1 N$39 N$10 N$2 N$102 N$104 N$121 N$123 N$131 N$133 N$212
++ N$193 N$194 N$195 COUT LOOKAHEAD
+        X_AXOR2A8 N$129 S0 N$133 AXOR2A
+        X_AND02A15 A VDD N$126 AND02A
+        X_AND02A16 B N$208 N$129 AND02A
+        X_AXOR2A6 N$119 S0 N$123 AXOR2A
+        X_AXOR2A5 GND N$116 N$121 AXOR2A
+        X_AND02A14 B N$208 N$119 AND02A
+        X_AND02A13 A VDD N$116 AND02A
+        X_INV01A1 S1 N$208 INV01A
+        X_AXOR2A7 GND N$126 N$131 AXOR2A
+        X_AXOR2A2 N$100 S0 N$104 AXOR2A
+        X_LE2 N$213 S0 S1 A B LE
+*
+.end

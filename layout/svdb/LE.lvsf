@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_LvsOutFile RUNDIR /home/training/ALU_CL/layout
+lvs_LvsfVersion 2
+lvs_LvsInputSummary {0 0 0}
+lvs_LvsComparisonSummary {3 0 0 0}
+lvs_LvsOutFile LVS_REPORT LE.lvs.report
+lvs_LvsOutFile SOURCE_NETLIST /home/training/ALU_CL/schem/LE/eldonet/LE_eldonet.spi
+lvs_LvsOutFile RULES_FILE /home/training/ALU_CL/layout/_Calibre035LVSPEX.rul_
+lvs_LvsRunTimes 1417537781 1417537781

@@ -1,0 +1,13 @@
+A 5 u mgc_symbol 5458f371bad7.03.7f.00.00.01.00.10.30 6 2 1 0
+V v 4 1 546244616b34.03.7f.00.00.01.00.54.9c
+F f 4 "LA_ALU.smbl_4"
+V v 5 1 546b577011d0.03.7f.00.00.01.00.12.6c
+F f 5 "LA_ALU.smbl_5"
+V v 6 1 546b75a21685.03.7f.00.00.01.00.6a.ca
+F f 6 "LA_ALU.smbl_6"
+O 6
+R csduv 0 "/home/training/ALU_CL/schem/LA_ALU/part" 8 Eddm_part 546b75aa3413.03.7f.00.00.01.00.6a.ca 544fca0ff331.03.7f.00.00.01.00.1b.54
+O 5
+R csduv 0 "/home/training/ALU_CL/schem/LA_ALU/part" 7 Eddm_part 546b57805689.03.7f.00.00.01.00.12.6c 544fca0ff331.03.7f.00.00.01.00.1b.54
+O 4
+R csduv 0 "/home/training/ALU_CL/schem/LA_ALU/part" 5 Eddm_part 5462446c43a4.03.7f.00.00.01.00.54.9c 544fca0ff331.03.7f.00.00.01.00.1b.54

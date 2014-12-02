@@ -1,0 +1,25 @@
+A 5 u Eddm_part 544fca0ff331.03.7f.00.00.01.00.1b.54 8 2 3 0
+V v 6 1 546244ed8ae6.03.7f.00.00.01.00.54.9c
+F f 6 "part.part_6"
+V v 7 1 546b57805689.03.7f.00.00.01.00.12.6c
+F f 7 "part.part_7"
+V v 8 1 546b75aa3413.03.7f.00.00.01.00.6a.ca
+F f 8 "part.part_8"
+O 8
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/LA_ALU/schematic" 1 mgc_schematic 544fc34eb617.03.7f.00.00.01.01.1b.54 544fc34eb617.03.7f.00.00.01.00.1b.54
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/home/training/ALU_CL/schem/LA_ALU/LA_ALU" 6 mgc_symbol 546b75a21685.03.7f.00.00.01.00.6a.ca 5458f371bad7.03.7f.00.00.01.00.10.30
+R csduv 2 "/home/training/ALU_CL/schem/LA_ALU/LA_ALU2" 1 mgc_symbol 546244e08868.03.7f.00.00.01.01.54.9c 546244e08868.03.7f.00.00.01.00.54.9c
+O 7
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/LA_ALU/schematic" 1 mgc_schematic 544fc34eb617.03.7f.00.00.01.01.1b.54 544fc34eb617.03.7f.00.00.01.00.1b.54
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/home/training/ALU_CL/schem/LA_ALU/LA_ALU" 5 mgc_symbol 546b577011d0.03.7f.00.00.01.00.12.6c 5458f371bad7.03.7f.00.00.01.00.10.30
+R csduv 2 "/home/training/ALU_CL/schem/LA_ALU/LA_ALU2" 1 mgc_symbol 546244e08868.03.7f.00.00.01.01.54.9c 546244e08868.03.7f.00.00.01.00.54.9c
+O 6
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/LA_ALU/schematic" 1 mgc_schematic 544fc34eb617.03.7f.00.00.01.01.1b.54 544fc34eb617.03.7f.00.00.01.00.1b.54
+P "eddm__refer_state" "eddm__refer_floating"
+R csduv 1 "/home/training/ALU_CL/schem/LA_ALU/LA_ALU" 4 mgc_symbol 546244616b34.03.7f.00.00.01.00.54.9c 5458f371bad7.03.7f.00.00.01.00.10.30
+R csduv 2 "/home/training/ALU_CL/schem/LA_ALU/LA_ALU2" 1 mgc_symbol 546244e08868.03.7f.00.00.01.01.54.9c 546244e08868.03.7f.00.00.01.00.54.9c

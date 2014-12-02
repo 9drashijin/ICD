@@ -1,0 +1,12 @@
+A 5 u Eddm_part 544f9eec8382.03.7f.00.00.01.00.10.6a 2 2 2 0
+V v 1 1 544f9eec8382.03.7f.00.00.01.01.10.6a
+F f 1 "part.part_1"
+V v 2 1 544f9ef468a3.03.7f.00.00.01.00.10.6a
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/CE/CE" 1 mgc_symbol 544f9ecc666c.03.7f.00.00.01.01.10.6a 544f9ecc666c.03.7f.00.00.01.00.10.6a
+R csduv 1 "/home/training/ALU_CL/schem/CE/schematic" 1 mgc_schematic 544f9e4612b4.03.7f.00.00.01.01.10.6a 544f9e4612b4.03.7f.00.00.01.00.10.6a
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/CE/CE" 1 mgc_symbol 544f9ecc666c.03.7f.00.00.01.01.10.6a 544f9ecc666c.03.7f.00.00.01.00.10.6a

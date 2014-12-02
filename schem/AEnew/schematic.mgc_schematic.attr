@@ -1,0 +1,10 @@
+A 5 u mgc_schematic 543d3e1c7f2e.03.7f.00.00.01.00.10.48 2 2 1 0
+V v 1 1 543d3e1c7f2e.03.7f.00.00.01.01.10.48
+F o 0 ""
+V v 2 1 543d3f6345cd.03.7f.00.00.01.00.10.48
+F o 0 ""
+O 2
+R cspuv 0 "/home/training/ALU_CL/schem/AEnew/schematic/sheet1" 1 mgc_sheet 543d3e1c7f90.03.7f.00.00.01.01.10.48 543d3e1c7f90.03.7f.00.00.01.00.10.48
+O 1
+R cspuv 0 "/home/training/ALU_CL/schem/AEnew/schematic/sheet1" 1 mgc_sheet 543d3e1c7f90.03.7f.00.00.01.01.10.48 543d3e1c7f90.03.7f.00.00.01.00.10.48
+P "eddm__refer_state" "eddm__refer_floating"

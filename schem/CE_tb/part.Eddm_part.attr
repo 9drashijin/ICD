@@ -1,0 +1,6 @@
+A 5 u Eddm_part 544f9fcc1e3a.03.7f.00.00.01.00.10.6a 1 2 1 0
+V v 1 1 544f9fcc1e3a.03.7f.00.00.01.01.10.6a
+F f 1 "part.part_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/CE_tb/schematic" 1 mgc_schematic 544f9f00da15.03.7f.00.00.01.01.10.6a 544f9f00da15.03.7f.00.00.01.00.10.6a

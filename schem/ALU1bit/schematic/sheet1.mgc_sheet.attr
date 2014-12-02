@@ -1,0 +1,25 @@
+A 5 u mgc_sheet 5474975c0524.03.7f.00.00.01.00.1f.a6 1 2 19 0
+V v 1 2 5474975c0524.03.7f.00.00.01.01.1f.a6
+F f 1 "sheet1.ssht_1"
+F f 1 "sheet1.sgfx_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/ALU1bit/schematic" 1 mgc_schematic 5474975c04af.03.7f.00.00.01.01.1f.a6 5474975c04af.03.7f.00.00.01.00.1f.a6
+R csduv 1 "/home/training/ALU_CL/schem/AE/part" 3 Eddm_part 543d3fb2bc4e.03.7f.00.00.01.00.10.48 543418d92a68.03.7f.00.00.01.00.51.70
+R csduv 2 "/home/training/ALU_CL/schem/AE/AE" 4 mgc_symbol 543d3fa9c5bc.03.7f.00.00.01.00.10.48 543418e40980.03.7f.00.00.01.00.51.70
+R csduv 3 "/home/training/ALU_CL/schem/CE/part" 2 Eddm_part 544f9ef468a3.03.7f.00.00.01.00.10.6a 544f9eec8382.03.7f.00.00.01.00.10.6a
+R csduv 4 "/home/training/ALU_CL/schem/CE/CE" 1 mgc_symbol 544f9ecc666c.03.7f.00.00.01.01.10.6a 544f9ecc666c.03.7f.00.00.01.00.10.6a
+R csduv 5 "/home/training/ALU_CL/schem/LE/part" 2 Eddm_part 543411bce3fe.03.7f.00.00.01.00.48.b4 5434118dc80f.03.7f.00.00.01.00.48.b4
+R csduv 6 "/home/training/ALU_CL/schem/LE/LE" 1 mgc_symbol 5434119e2a1b.03.7f.00.00.01.00.48.b4 5434119e2a1a.03.7f.00.00.01.00.48.b4
+R csduv 7 "$MIMOS_KIT/mimos035-std-cells/schem/mux21a_ni/part" 4 Eddm_part 4d82d7650ebc.03.7f.00.00.01.00.2e.60 4d688de548fb.03.7f.00.00.01.01.41.19
+R csduv 8 "$MIMOS_KIT/mimos035-std-cells/schem/mux21a_ni/mux21a_ni" 10 mgc_symbol 4d82d7a69679.03.7f.00.00.01.00.2e.60 4d688de548fb.03.7f.00.00.01.05.41.19
+R csduv 9 "$MIMOS_KIT/mimos035-std-cells/schem/inv01a/part" 7 Eddm_part 4d689b592af4.03.7f.00.00.01.00.50.5a 4d688d53e519.03.7f.00.00.01.03.41.19
+R csduv 10 "$MIMOS_KIT/mimos035-std-cells/schem/inv01a/inv01a" 14 mgc_symbol 4d689b592ae7.03.7f.00.00.01.00.50.5a 4d688d53e519.03.7f.00.00.01.0a.41.19
+R csduv 11 "$MIMOS_KIT/lib/portin/part" 2 Eddm_part 4e51ea770272.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.07.1a.18
+R csduv 12 "$MIMOS_KIT/lib/portin/portin" 3 mgc_symbol 4e51ea793ba5.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.06.1a.18
+R csduv 13 "$MIMOS_KIT/lib/GND/part" 3 Eddm_part 4e54a29bb414.03.7f.00.00.01.00.15.55 4e54a268e978.03.7f.00.00.01.00.15.55
+R csduv 14 "$MIMOS_KIT/lib/GND/GND" 4 mgc_symbol 4e54a29d1d21.03.7f.00.00.01.00.15.55 4e54a268ea06.03.7f.00.00.01.00.15.55
+R csduv 15 "$MIMOS_KIT/lib/vdd/part" 2 Eddm_part 4e51eb6a40c6.03.7f.00.00.01.00.35.65 45518f999570.03.c0.a8.00.17.00.1a.18
+R csduv 16 "$MIMOS_KIT/lib/vdd/vdd" 5 mgc_symbol 4e51eb7f5557.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.0a.1a.18
+R csduv 17 "$MIMOS_KIT/lib/portout/part" 2 Eddm_part 4e51ea806d32.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.09.1a.18
+R csduv 18 "$MIMOS_KIT/lib/portout/portout" 3 mgc_symbol 4e51ea81cc3f.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.08.1a.18

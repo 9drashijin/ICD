@@ -1,0 +1,12 @@
+A 5 u Eddm_part 547dc613d404.03.7f.00.00.01.00.1f.63 2 2 2 0
+V v 1 1 547dc613d404.03.7f.00.00.01.01.1f.63
+F f 1 "part.part_1"
+V v 2 1 547dd52e3f56.03.7f.00.00.01.00.57.b3
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/FullAdder/schematic" 1 mgc_schematic 547dc4d52833.03.7f.00.00.01.01.1f.63 547dc4d52833.03.7f.00.00.01.00.1f.63
+R csduv 1 "/home/training/ALU_CL/schem/FullAdder/FullAdder" 1 mgc_symbol 547dd51dc3da.03.7f.00.00.01.00.57.b3 543401a7c6a7.03.7f.00.00.01.00.3c.a8
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/FullAdder/schematic" 1 mgc_schematic 547dc4d52833.03.7f.00.00.01.01.1f.63 547dc4d52833.03.7f.00.00.01.00.1f.63

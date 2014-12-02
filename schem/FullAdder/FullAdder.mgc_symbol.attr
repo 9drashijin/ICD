@@ -1,0 +1,5 @@
+A 5 u mgc_symbol 547dd51dc3d9.03.7f.00.00.01.00.57.b3 1 2 1 0
+V v 1 1 547dd51dc3da.03.7f.00.00.01.00.57.b3
+F f 1 "FullAdder.smbl_1"
+O 1
+R csduv 0 "/home/training/ALU_CL/schem/FullAdder/part" 2 Eddm_part 547dd52e3f56.03.7f.00.00.01.00.57.b3 547dc613d404.03.7f.00.00.01.00.1f.63

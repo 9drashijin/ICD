@@ -1,0 +1,20 @@
+*lvsRulesFile: $MIMOS_KIT/calibre/lvs/Calibre035LVS.rul
+*lvsRunDir: /home/training/ALU_CL/layout
+*lvsLayoutPaths: FullAdder.calibre.db
+*lvsLayoutPrimary: FullAdder
+*lvsLayoutGetFromViewer: 1
+*lvsSourcePath: FullAdder.src.net
+*lvsSourcePrimary: FullAdder
+*lvsSpiceFile: FullAdder.sp
+*lvsPowerNames: VDD VDDO
+*lvsGroundNames: GND GNDA VSSA
+*lvsERCDatabase: FullAdder.erc.results
+*lvsERCSummaryFile: FullAdder.erc.summary
+*lvsReportFile: FullAdder.lvs.report
+*lvsMaskDBFile: FullAdder.maskdb
+*cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnFDILayoutLibrary: %L
+*cmnFDILayoutView: %V
+*cmnFDIDEFLayoutPath: FullAdder.def

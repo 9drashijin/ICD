@@ -1,0 +1,51 @@
+** CALIBRE LAYOUT NETLIST **
+** CALIBRE VERSION: v2011.1_15.11    Thu Feb 10 17:13:25 PST 2011
+** LAYOUT NAME: FullAdder.calibre.db (FullAdder)
+** NETLIST FILE: output.spi
+** GENERATED: Tue Dec  2 22:36:01 2014
+
+
+.SUBCKT FullAdder COUT SUM B A CIN GND VDD 
+MM0 GND 10 COUT GND nch l=3.5e-07 w=1.2e-06 
+MM1 10 2 GND GND nch l=3.5e-07 w=1.2e-06 
+MM2 GND 3 10 GND nch l=3.5e-07 w=1.2e-06 
+MM3 VDD 10 COUT VDD pch l=3.5e-07 w=2e-06 
+MM4 9 2 VDD VDD pch l=3.5e-07 w=2e-06 
+MM5 10 3 9 VDD pch l=3.5e-07 w=2e-06 
+MX6/M0 X6/22 B X6/6 GND nch l=3.5e-07 w=1.2e-06 
+MX6/M1 GND A X6/22 GND nch l=3.5e-07 w=1.2e-06 
+MX6/M2 X6/8 A X6/7 GND nch l=3.5e-07 w=1.2e-06 
+MX6/M3 X6/7 B X6/8 GND nch l=3.5e-07 w=1.2e-06 
+MX6/M4 GND X6/6 X6/7 GND nch l=3.5e-07 w=1.2e-06 
+MX6/M5 7 X6/8 GND GND nch l=3.5e-07 w=1.2e-06 
+MX6/M6 X6/23 B VDD VDD pch l=3.5e-07 w=2e-06 
+MX6/M7 X6/8 A X6/23 VDD pch l=3.5e-07 w=2e-06 
+MX6/M8 X6/6 A VDD VDD pch l=3.5e-07 w=2e-06 
+MX6/M9 VDD B X6/6 VDD pch l=3.5e-07 w=2e-06 
+MX6/M10 X6/8 X6/6 VDD VDD pch l=3.5e-07 w=2e-06 
+MX6/M11 7 X6/8 VDD VDD pch l=3.5e-07 w=2e-06 
+MX7/M0 X7/22 7 X7/6 GND nch l=3.5e-07 w=1.2e-06 
+MX7/M1 GND CIN X7/22 GND nch l=3.5e-07 w=1.2e-06 
+MX7/M2 X7/8 CIN X7/7 GND nch l=3.5e-07 w=1.2e-06 
+MX7/M3 X7/7 7 X7/8 GND nch l=3.5e-07 w=1.2e-06 
+MX7/M4 GND X7/6 X7/7 GND nch l=3.5e-07 w=1.2e-06 
+MX7/M5 SUM X7/8 GND GND nch l=3.5e-07 w=1.2e-06 
+MX7/M6 X7/23 7 VDD VDD pch l=3.5e-07 w=2e-06 
+MX7/M7 X7/8 CIN X7/23 VDD pch l=3.5e-07 w=2e-06 
+MX7/M8 X7/6 CIN VDD VDD pch l=3.5e-07 w=2e-06 
+MX7/M9 VDD 7 X7/6 VDD pch l=3.5e-07 w=2e-06 
+MX7/M10 X7/8 X7/6 VDD VDD pch l=3.5e-07 w=2e-06 
+MX7/M11 SUM X7/8 VDD VDD pch l=3.5e-07 w=2e-06 
+MX8/M0 GND X8/7 3 GND nch l=3.5e-07 w=1.2e-06 
+MX8/M1 X8/6 B GND GND nch l=3.5e-07 w=1.2e-06 
+MX8/M2 X8/7 A X8/6 GND nch l=3.5e-07 w=1.2e-06 
+MX8/M3 VDD X8/7 3 VDD pch l=3.5e-07 w=2e-06 
+MX8/M4 X8/7 B VDD VDD pch l=3.5e-07 w=2e-06 
+MX8/M5 VDD A X8/7 VDD pch l=3.5e-07 w=2e-06 
+MX9/M0 GND X9/7 2 GND nch l=3.5e-07 w=1.2e-06 
+MX9/M1 X9/6 7 GND GND nch l=3.5e-07 w=1.2e-06 
+MX9/M2 X9/7 CIN X9/6 GND nch l=3.5e-07 w=1.2e-06 
+MX9/M3 VDD X9/7 2 VDD pch l=3.5e-07 w=2e-06 
+MX9/M4 X9/7 7 VDD VDD pch l=3.5e-07 w=2e-06 
+MX9/M5 VDD CIN X9/7 VDD pch l=3.5e-07 w=2e-06 
+.ENDS

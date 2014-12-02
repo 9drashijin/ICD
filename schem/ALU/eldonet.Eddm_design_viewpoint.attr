@@ -1,0 +1,69 @@
+A 5 u Eddm_design_viewpoint 543d4e9424db.03.7f.00.00.01.00.10.48 3 2 63 0
+V v 1 4 543d4e9424db.03.7f.00.00.01.01.10.48
+F f 1 "eldonet.dvpt_1"
+F o 0 ""
+F o 0 ""
+F o 0 ""
+V v 2 4 543d4ea39637.03.7f.00.00.01.00.10.48
+F f 2 "eldonet.dvpt_2"
+F o 0 ""
+F o 0 ""
+F o 0 ""
+V v 3 4 54748b31c928.03.7f.00.00.01.00.12.61
+F f 3 "eldonet.dvpt_3"
+F o 0 ""
+F o 0 ""
+F o 0 ""
+O 3
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/training/ALU_CL/schem/ALU/part" 4 Eddm_part 544fa1177f24.03.7f.00.00.01.00.10.6a 543d431f95b8.03.7f.00.00.01.00.10.48
+R cspuv 1 "/home/training/ALU_CL/schem/ALU/schematic" 7 mgc_schematic 544fa124b490.03.7f.00.00.01.00.10.6a 543d403e81d6.03.7f.00.00.01.00.10.48
+R cspuv 3 "/home/training/ALU_CL/schem/ALU/eldonet" 1 Eddm_ba_mgr 543d4e942b98.03.7f.00.00.01.01.10.48 543d4e942b98.03.7f.00.00.01.00.10.48
+R cspuv 4 "/home/training/ALU_CL/schem/AE/part" 3 Eddm_part 543d3fb2bc4e.03.7f.00.00.01.00.10.48 543418d92a68.03.7f.00.00.01.00.51.70
+R cspuv 5 "/home/training/ALU_CL/schem/LE/part" 2 Eddm_part 543411bce3fe.03.7f.00.00.01.00.48.b4 5434118dc80f.03.7f.00.00.01.00.48.b4
+R cspuv 6 "$MIMOS_KIT/mimos035-std-cells/schem/mux21a_ni/part" 4 Eddm_part 4d82d7650ebc.03.7f.00.00.01.00.2e.60 4d688de548fb.03.7f.00.00.01.01.41.19
+R cspuv 7 "$MIMOS_KIT/mimos035-std-cells/schem/axor2a/part" 2 Eddm_part 47591142a387.03.7f.00.00.01.00.3f.b2 4d688ca6cc96.03.7f.00.00.01.01.41.19
+R cspuv 8 "$MIMOS_KIT/mimos035-std-cells/schem/inv01a/part" 7 Eddm_part 4d689b592af4.03.7f.00.00.01.00.50.5a 4d688d53e519.03.7f.00.00.01.03.41.19
+R cspuv 9 "$MIMOS_KIT/mimos035-std-cells/schem/axor2a/schematic" 10 mgc_schematic 4e69779456ed.03.7f.00.00.01.00.3b.0d 4d688ca6cc96.03.7f.00.00.01.02.41.19
+R cspuv 12 "$MIMOS_KIT/mimos035-std-cells/schem/mux21a_ni/schematic" 11 mgc_schematic 4e6eef340b5a.03.7f.00.00.01.00.45.f2 4d688de548fb.03.7f.00.00.01.02.41.19
+R cspuv 13 "/home/training/ALU_CL/schem/AE/schematic" 9 mgc_schematic 543d401017aa.03.7f.00.00.01.00.10.48 543415d04f29.03.7f.00.00.01.00.51.70
+R cspuv 15 "/home/training/ALU_CL/schem/LE/schematic" 2 mgc_schematic 5434118dc945.03.7f.00.00.01.00.48.b4 54340fc84156.03.7f.00.00.01.00.48.b4
+R cspuv 17 "$MIMOS_KIT/mimos035-std-cells/schem/inv01a/schematic" 14 mgc_schematic 4e66d35a70a3.03.7f.00.00.01.00.2b.83 4d688d53e519.03.7f.00.00.01.04.41.19
+R cspuv 27 "$MIMOS_KIT/lib/nmos4/part" 16 Eddm_part 4e5323c538a9.03.7f.00.00.01.00.3d.9f 44d8c301d884.03.c0.a8.00.17.00.0b.47
+R cspuv 28 "$MIMOS_KIT/lib/pmos4/part" 9 Eddm_part 4e5323d7dd0b.03.7f.00.00.01.00.3d.9f 44d8c308bb9d.03.c0.a8.00.17.01.0b.47
+R cspuv 33 "$MIMOS_KIT/mimos035-std-cells/schem/and02a/part" 5 Eddm_part 4758ff8ea168.03.7f.00.00.01.00.34.d4 4d688b727e10.03.7f.00.00.01.00.41.19
+R cspuv 34 "$MIMOS_KIT/mimos035-std-cells/schem/or02a/part" 3 Eddm_part 4844f0ad8081.03.7f.00.00.01.00.7c.f8 4d688fa64926.03.7f.00.00.01.01.41.19
+R cspuv 35 "$MIMOS_KIT/mimos035-std-cells/schem/or02a/schematic" 10 mgc_schematic 4e685e985d5b.03.7f.00.00.01.00.3a.f0 4d688fa64926.03.7f.00.00.01.02.41.19
+R cspuv 37 "$MIMOS_KIT/mimos035-std-cells/schem/and02a/schematic" 50 mgc_schematic 4e65c7b688c7.03.7f.00.00.01.00.0a.26 4d688b727e10.03.7f.00.00.01.01.41.19
+R cspuv 39 "/home/training/ALU_CL/schem/FullAdder/part" 2 Eddm_part 543401e260af.03.7f.00.00.01.00.3c.a8 543401c05114.03.7f.00.00.01.00.3c.a8
+R cspuv 41 "/home/training/ALU_CL/schem/FullAdder/schematic" 2 mgc_schematic 543401e26186.03.7f.00.00.01.00.3c.a8 54340076174e.03.7f.00.00.01.00.3c.a8
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/training/ALU_CL/schem/ALU/part" 2 Eddm_part 543d45cf6673.03.7f.00.00.01.00.10.48 543d431f95b8.03.7f.00.00.01.00.10.48
+R cspuv 1 "/home/training/ALU_CL/schem/ALU/schematic" 5 mgc_schematic 543d4d648f78.03.7f.00.00.01.00.10.48 543d403e81d6.03.7f.00.00.01.00.10.48
+R cspuv 3 "/home/training/ALU_CL/schem/ALU/eldonet" 1 Eddm_ba_mgr 543d4e942b98.03.7f.00.00.01.01.10.48 543d4e942b98.03.7f.00.00.01.00.10.48
+R cspuv 4 "/home/training/ALU_CL/schem/AE/part" 3 Eddm_part 543d3fb2bc4e.03.7f.00.00.01.00.10.48 543418d92a68.03.7f.00.00.01.00.51.70
+R cspuv 5 "/home/training/ALU_CL/schem/LE/part" 2 Eddm_part 543411bce3fe.03.7f.00.00.01.00.48.b4 5434118dc80f.03.7f.00.00.01.00.48.b4
+R cspuv 6 "$MIMOS_KIT/mimos035-std-cells/schem/mux21a_ni/part" 4 Eddm_part 4d82d7650ebc.03.7f.00.00.01.00.2e.60 4d688de548fb.03.7f.00.00.01.01.41.19
+R cspuv 7 "$MIMOS_KIT/mimos035-std-cells/schem/axor2a/part" 2 Eddm_part 47591142a387.03.7f.00.00.01.00.3f.b2 4d688ca6cc96.03.7f.00.00.01.01.41.19
+R cspuv 8 "$MIMOS_KIT/mimos035-std-cells/schem/inv01a/part" 7 Eddm_part 4d689b592af4.03.7f.00.00.01.00.50.5a 4d688d53e519.03.7f.00.00.01.03.41.19
+R cspuv 9 "$MIMOS_KIT/mimos035-std-cells/schem/axor2a/schematic" 10 mgc_schematic 4e69779456ed.03.7f.00.00.01.00.3b.0d 4d688ca6cc96.03.7f.00.00.01.02.41.19
+R cspuv 12 "$MIMOS_KIT/mimos035-std-cells/schem/mux21a_ni/schematic" 11 mgc_schematic 4e6eef340b5a.03.7f.00.00.01.00.45.f2 4d688de548fb.03.7f.00.00.01.02.41.19
+R cspuv 13 "/home/training/ALU_CL/schem/AE/schematic" 9 mgc_schematic 543d401017aa.03.7f.00.00.01.00.10.48 543415d04f29.03.7f.00.00.01.00.51.70
+R cspuv 15 "/home/training/ALU_CL/schem/LE/schematic" 2 mgc_schematic 5434118dc945.03.7f.00.00.01.00.48.b4 54340fc84156.03.7f.00.00.01.00.48.b4
+R cspuv 17 "$MIMOS_KIT/mimos035-std-cells/schem/inv01a/schematic" 14 mgc_schematic 4e66d35a70a3.03.7f.00.00.01.00.2b.83 4d688d53e519.03.7f.00.00.01.04.41.19
+R cspuv 27 "$MIMOS_KIT/lib/nmos4/part" 16 Eddm_part 4e5323c538a9.03.7f.00.00.01.00.3d.9f 44d8c301d884.03.c0.a8.00.17.00.0b.47
+R cspuv 28 "$MIMOS_KIT/lib/pmos4/part" 9 Eddm_part 4e5323d7dd0b.03.7f.00.00.01.00.3d.9f 44d8c308bb9d.03.c0.a8.00.17.01.0b.47
+R cspuv 33 "$MIMOS_KIT/mimos035-std-cells/schem/and02a/part" 5 Eddm_part 4758ff8ea168.03.7f.00.00.01.00.34.d4 4d688b727e10.03.7f.00.00.01.00.41.19
+R cspuv 34 "$MIMOS_KIT/mimos035-std-cells/schem/or02a/part" 3 Eddm_part 4844f0ad8081.03.7f.00.00.01.00.7c.f8 4d688fa64926.03.7f.00.00.01.01.41.19
+R cspuv 35 "$MIMOS_KIT/mimos035-std-cells/schem/or02a/schematic" 10 mgc_schematic 4e685e985d5b.03.7f.00.00.01.00.3a.f0 4d688fa64926.03.7f.00.00.01.02.41.19
+R cspuv 37 "$MIMOS_KIT/mimos035-std-cells/schem/and02a/schematic" 50 mgc_schematic 4e65c7b688c7.03.7f.00.00.01.00.0a.26 4d688b727e10.03.7f.00.00.01.01.41.19
+R cspuv 39 "/home/training/ALU_CL/schem/FullAdder/part" 2 Eddm_part 543401e260af.03.7f.00.00.01.00.3c.a8 543401c05114.03.7f.00.00.01.00.3c.a8
+R cspuv 41 "/home/training/ALU_CL/schem/FullAdder/schematic" 2 mgc_schematic 543401e26186.03.7f.00.00.01.00.3c.a8 54340076174e.03.7f.00.00.01.00.3c.a8
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/training/ALU_CL/schem/ALU/part" 2 Eddm_part 543d45cf6673.03.7f.00.00.01.00.10.48 543d431f95b8.03.7f.00.00.01.00.10.48
+R cspuv 1 "/home/training/ALU_CL/schem/ALU/schematic" 1 mgc_schematic 543d403e81d6.03.7f.00.00.01.01.10.48 543d403e81d6.03.7f.00.00.01.00.10.48
+P "eddm__refer_state" "eddm__refer_floating"
+R cspuv 2 "/home/training/ALU_CL/schem/ALU/ALU" 1 mgc_symbol 543d45b9bbec.03.7f.00.00.01.01.10.48 543d45b9bbec.03.7f.00.00.01.00.10.48
+R cspuv 3 "/home/training/ALU_CL/schem/ALU/eldonet" 1 Eddm_ba_mgr 543d4e942b98.03.7f.00.00.01.01.10.48 543d4e942b98.03.7f.00.00.01.00.10.48

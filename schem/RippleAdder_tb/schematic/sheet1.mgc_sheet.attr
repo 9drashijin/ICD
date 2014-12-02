@@ -1,0 +1,17 @@
+A 5 u mgc_sheet 54340bf2ec44.03.7f.00.00.01.00.3c.a8 1 2 11 0
+V v 1 2 54340bf2ec44.03.7f.00.00.01.01.3c.a8
+F f 1 "sheet1.ssht_1"
+F f 1 "sheet1.sgfx_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/training/ALU_CL/schem/RippleAdder_tb/schematic" 1 mgc_schematic 54340bf2ebda.03.7f.00.00.01.01.3c.a8 54340bf2ebda.03.7f.00.00.01.00.3c.a8
+R csduv 1 "/home/training/ALU_CL/schem/RippleAdder/part" 2 Eddm_part 54340be57dee.03.7f.00.00.01.00.3c.a8 54340bbf163a.03.7f.00.00.01.00.3c.a8
+R csduv 2 "/home/training/ALU_CL/schem/RippleAdder/RippleAdder" 1 mgc_symbol 54340bd31864.03.7f.00.00.01.01.3c.a8 54340bd31864.03.7f.00.00.01.00.3c.a8
+R csduv 3 "$MIMOS_KIT/lib/pulse_v_source/part" 2 Eddm_part 4e51eaad73b6.03.7f.00.00.01.00.35.65 4551954a70fc.03.c0.a8.00.17.07.1a.5b
+R csduv 4 "$MIMOS_KIT/lib/pulse_v_source/pulse_v_source" 2 mgc_symbol 4e51eaad73a7.03.7f.00.00.01.00.35.65 4551954a70fc.03.c0.a8.00.17.06.1a.5b
+R csduv 5 "$MIMOS_KIT/lib/dc_v_source/part" 2 Eddm_part 4e51e9c65dbd.03.7f.00.00.01.00.35.65 45519744668b.03.c0.a8.00.17.01.1a.f6
+R csduv 6 "$MIMOS_KIT/lib/dc_v_source/dc_v_source" 2 mgc_symbol 4e51e9c65db1.03.7f.00.00.01.00.35.65 45519744668b.03.c0.a8.00.17.02.1a.f6
+R csduv 7 "$MIMOS_KIT/lib/GND/part" 3 Eddm_part 4e54a29bb414.03.7f.00.00.01.00.15.55 4e54a268e978.03.7f.00.00.01.00.15.55
+R csduv 8 "$MIMOS_KIT/lib/GND/GND" 4 mgc_symbol 4e54a29d1d21.03.7f.00.00.01.00.15.55 4e54a268ea06.03.7f.00.00.01.00.15.55
+R csduv 9 "$MIMOS_KIT/lib/vdd/part" 2 Eddm_part 4e51eb6a40c6.03.7f.00.00.01.00.35.65 45518f999570.03.c0.a8.00.17.00.1a.18
+R csduv 10 "$MIMOS_KIT/lib/vdd/vdd" 5 mgc_symbol 4e51eb7f5557.03.7f.00.00.01.00.35.65 45518f99956f.03.c0.a8.00.17.0a.1a.18

@@ -1,0 +1,5 @@
+A 5 u mgc_symbol 544fbbade9a7.03.7f.00.00.01.00.1b.54 1 2 1 0
+V v 1 1 544fbbade9a7.03.7f.00.00.01.01.1b.54
+F f 1 "LookAhead.smbl_1"
+O 1
+R csduv 0 "/home/training/ALU_CL/schem/LookAhead/part" 2 Eddm_part 544fbbc39bf5.03.7f.00.00.01.00.1b.54 544fbaa3cf23.03.7f.00.00.01.00.1b.54

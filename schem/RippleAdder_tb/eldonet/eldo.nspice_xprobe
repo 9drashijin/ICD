@@ -1,0 +1,162 @@
+# This file provides name mapping information for all objects
+# on the schematic design.  It provides a mapping for each
+# object between its name on the schematic and its name in the netlist.
+version 1.0
+
+Globals
+   VDD VDD
+   GND GND
+End Globals
+
+Cell DC_V_SOURCE
+   Pin POS POS
+   Pin NEG NEG
+End Cell
+
+Cell PULSE_V_SOURCE
+   Pin POS POS
+   Pin NEG NEG
+End Cell
+
+Cell NMOS4
+   Pin D D
+   Pin G G
+   Pin S S
+   Pin B B
+End Cell
+
+Cell PMOS4
+   Pin D D
+   Pin G G
+   Pin S S
+   Pin B B
+End Cell
+
+Cell AXOR2A
+   Pin A0 A0
+   Pin A1 A1
+   Pin Y Y
+   Net N$472 N$472
+   Net N$470 N$470
+   Net N$468 N$468
+   Net N$467 N$467
+   Net N$465 N$465
+   Net Y Y
+   Net A1 A1
+   Net A0 A0
+   Global GND GND
+   Global VDD VDD
+   Inst M9 M9 NMOS4
+   Inst M12 M12 NMOS4
+   Inst M8 M8 NMOS4
+   Inst M7 M7 NMOS4
+   Inst M6 M6 PMOS4
+   Inst M3 M3 PMOS4
+   Inst M1 M1 PMOS4
+   Inst M2 M2 PMOS4
+   Inst M4 M4 PMOS4
+   Inst M5 M5 PMOS4
+   Inst M11 M11 NMOS4
+   Inst M10 M10 NMOS4
+End Cell
+
+Cell OR02A
+   Pin Y Y
+   Pin A1 A1
+   Pin A0 A0
+   Net N$431 N$431
+   Net N$429 N$429
+   Net A0 A0
+   Net A1 A1
+   Net Y Y
+   Global GND GND
+   Global VDD VDD
+   Inst M4 M4 NMOS4
+   Inst M3 M3 PMOS4
+   Inst M2 M2 PMOS4
+   Inst M1 M1 PMOS4
+   Inst M6 M6 NMOS4
+   Inst M5 M5 NMOS4
+End Cell
+
+Cell AND02A
+   Pin A1 A1
+   Pin A0 A0
+   Pin Y Y
+   Net N$649 N$649
+   Net N$647 N$647
+   Net Y Y
+   Net A0 A0
+   Net A1 A1
+   Global GND GND
+   Global VDD VDD
+   Inst M3 M3 NMOS4
+   Inst M1 M1 PMOS4
+   Inst M2 M2 PMOS4
+   Inst M4 M4 PMOS4
+   Inst M5 M5 NMOS4
+   Inst M6 M6 NMOS4
+End Cell
+
+Cell FULLADDER
+   Pin A A
+   Pin B B
+   Pin Cin CIN
+   Pin Cout COUT
+   Pin Sum SUM
+   Net N$7 N$7
+   Net N$1 N$1
+   Net N$3 N$3
+   Net Sum SUM
+   Net Cout COUT
+   Net Cin CIN
+   Net B B
+   Net A A
+   Inst AXOR2A2 X_AXOR2A2 AXOR2A
+   Inst AXOR2A1 X_AXOR2A1 AXOR2A
+   Inst OR02A1 X_OR02A1 OR02A
+   Inst AND02A2 X_AND02A2 AND02A
+   Inst AND02A1 X_AND02A1 AND02A
+End Cell
+
+Cell RIPPLEADDER
+   Pin A A
+   Pin B B
+   Pin S0 S0
+   Pin S1 S1
+   Pin S2 S2
+   Pin S3 S3
+   Pin Cout COUT
+   Net N$14 N$14
+   Net N$38 N$38
+   Net N$9 N$9
+   Net Cout COUT
+   Net S3 S3
+   Net S2 S2
+   Net S1 S1
+   Net S0 S0
+   Net B B
+   Net A A
+   Global GND GND
+   Inst FULLADDER4 X_FULLADDER4 FULLADDER
+   Inst FULLADDER3 X_FULLADDER3 FULLADDER
+   Inst FULLADDER2 X_FULLADDER2 FULLADDER
+   Inst FULLADDER1 X_FULLADDER1 FULLADDER
+End Cell
+
+Cell #top#
+   Net B B
+   Net S3 S3
+   Net S2 S2
+   Net S1 S1
+   Net S0 S0
+   Net Cout COUT
+   Net A A
+   Global VDD VDD
+   Global GND GND
+   Inst V3 V3 DC_V_SOURCE
+   Inst V2 V2 PULSE_V_SOURCE
+   Inst V1 V1 PULSE_V_SOURCE
+   Inst RIPPLEADDER1 X_RIPPLEADDER1 RIPPLEADDER
+End Cell
+

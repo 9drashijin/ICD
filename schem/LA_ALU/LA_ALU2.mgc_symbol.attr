@@ -1,0 +1,5 @@
+A 5 u mgc_symbol 546244e08868.03.7f.00.00.01.00.54.9c 1 2 1 0
+V v 1 1 546244e08868.03.7f.00.00.01.01.54.9c
+F f 1 "LA_ALU2.smbl_1"
+O 1
+R csduv 0 "/home/training/ALU_CL/schem/LA_ALU/part" 6 Eddm_part 546244ed8ae6.03.7f.00.00.01.00.54.9c 544fca0ff331.03.7f.00.00.01.00.1b.54

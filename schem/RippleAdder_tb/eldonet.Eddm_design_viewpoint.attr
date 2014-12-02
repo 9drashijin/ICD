@@ -1,0 +1,36 @@
+A 5 u Eddm_design_viewpoint 54340ca52c49.03.7f.00.00.01.00.3c.a8 2 2 32 0
+V v 1 4 54340ca52c49.03.7f.00.00.01.01.3c.a8
+F f 1 "eldonet.dvpt_1"
+F o 0 ""
+F o 0 ""
+F o 0 ""
+V v 2 4 54340fb14c8b.03.7f.00.00.01.00.48.b4
+F f 2 "eldonet.dvpt_2"
+F o 0 ""
+F o 0 ""
+F o 0 ""
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/training/ALU_CL/schem/RippleAdder_tb/part" 1 Eddm_part 54340c9d33c9.03.7f.00.00.01.01.3c.a8 54340c9d33c9.03.7f.00.00.01.00.3c.a8
+R cspuv 1 "/home/training/ALU_CL/schem/RippleAdder_tb/schematic" 2 mgc_schematic 54340c9d34f2.03.7f.00.00.01.00.3c.a8 54340bf2ebda.03.7f.00.00.01.00.3c.a8
+R cspuv 2 "/home/training/ALU_CL/schem/RippleAdder_tb/eldonet" 1 Eddm_ba_mgr 54340ca52cea.03.7f.00.00.01.01.3c.a8 54340ca52cea.03.7f.00.00.01.00.3c.a8
+R cspuv 3 "/home/training/ALU_CL/schem/RippleAdder/part" 2 Eddm_part 54340be57dee.03.7f.00.00.01.00.3c.a8 54340bbf163a.03.7f.00.00.01.00.3c.a8
+R cspuv 4 "$MIMOS_KIT/lib/pulse_v_source/part" 2 Eddm_part 4e51eaad73b6.03.7f.00.00.01.00.35.65 4551954a70fc.03.c0.a8.00.17.07.1a.5b
+R cspuv 5 "$MIMOS_KIT/lib/dc_v_source/part" 2 Eddm_part 4e51e9c65dbd.03.7f.00.00.01.00.35.65 45519744668b.03.c0.a8.00.17.01.1a.f6
+R cspuv 6 "/home/training/ALU_CL/schem/RippleAdder/schematic" 3 mgc_schematic 54340bc1b585.03.7f.00.00.01.00.3c.a8 5434080688d5.03.7f.00.00.01.00.3c.a8
+R cspuv 14 "/home/training/ALU_CL/schem/FullAdder/part" 2 Eddm_part 543401e260af.03.7f.00.00.01.00.3c.a8 543401c05114.03.7f.00.00.01.00.3c.a8
+R cspuv 16 "/home/training/ALU_CL/schem/FullAdder/schematic" 2 mgc_schematic 543401e26186.03.7f.00.00.01.00.3c.a8 54340076174e.03.7f.00.00.01.00.3c.a8
+R cspuv 17 "$MIMOS_KIT/mimos035-std-cells/schem/and02a/part" 5 Eddm_part 4758ff8ea168.03.7f.00.00.01.00.34.d4 4d688b727e10.03.7f.00.00.01.00.41.19
+R cspuv 18 "$MIMOS_KIT/mimos035-std-cells/schem/or02a/part" 3 Eddm_part 4844f0ad8081.03.7f.00.00.01.00.7c.f8 4d688fa64926.03.7f.00.00.01.01.41.19
+R cspuv 19 "$MIMOS_KIT/mimos035-std-cells/schem/axor2a/part" 2 Eddm_part 47591142a387.03.7f.00.00.01.00.3f.b2 4d688ca6cc96.03.7f.00.00.01.01.41.19
+R cspuv 20 "$MIMOS_KIT/mimos035-std-cells/schem/axor2a/schematic" 10 mgc_schematic 4e69779456ed.03.7f.00.00.01.00.3b.0d 4d688ca6cc96.03.7f.00.00.01.02.41.19
+R cspuv 22 "$MIMOS_KIT/mimos035-std-cells/schem/or02a/schematic" 10 mgc_schematic 4e685e985d5b.03.7f.00.00.01.00.3a.f0 4d688fa64926.03.7f.00.00.01.02.41.19
+R cspuv 24 "$MIMOS_KIT/mimos035-std-cells/schem/and02a/schematic" 50 mgc_schematic 4e65c7b688c7.03.7f.00.00.01.00.0a.26 4d688b727e10.03.7f.00.00.01.01.41.19
+R cspuv 26 "$MIMOS_KIT/lib/nmos4/part" 16 Eddm_part 4e5323c538a9.03.7f.00.00.01.00.3d.9f 44d8c301d884.03.c0.a8.00.17.00.0b.47
+R cspuv 27 "$MIMOS_KIT/lib/pmos4/part" 9 Eddm_part 4e5323d7dd0b.03.7f.00.00.01.00.3d.9f 44d8c308bb9d.03.c0.a8.00.17.01.0b.47
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/training/ALU_CL/schem/RippleAdder_tb/part" 1 Eddm_part 54340c9d33c9.03.7f.00.00.01.01.3c.a8 54340c9d33c9.03.7f.00.00.01.00.3c.a8
+R cspuv 1 "/home/training/ALU_CL/schem/RippleAdder_tb/schematic" 1 mgc_schematic 54340bf2ebda.03.7f.00.00.01.01.3c.a8 54340bf2ebda.03.7f.00.00.01.00.3c.a8
+P "eddm__refer_state" "eddm__refer_floating"
+R cspuv 2 "/home/training/ALU_CL/schem/RippleAdder_tb/eldonet" 1 Eddm_ba_mgr 54340ca52cea.03.7f.00.00.01.01.3c.a8 54340ca52cea.03.7f.00.00.01.00.3c.a8

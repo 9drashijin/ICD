@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 543415d04f29.03.7f.00.00.01.00.51.70 9 2 1 0
+V v 7 1 543d3c94eac1.03.7f.00.00.01.00.10.48
+F o 0 ""
+V v 8 1 543d3cf12b8b.03.7f.00.00.01.00.10.48
+F o 0 ""
+V v 9 1 543d401017aa.03.7f.00.00.01.00.10.48
+F o 0 ""
+O 9
+R cspuv 0 "/home/training/ALU_CL/schem/AE/schematic/sheet1" 8 mgc_sheet 543d40101790.03.7f.00.00.01.00.10.48 543415d04f9b.03.7f.00.00.01.00.51.70
+O 8
+R cspuv 0 "/home/training/ALU_CL/schem/AE/schematic/sheet1" 7 mgc_sheet 543d3cf12b74.03.7f.00.00.01.00.10.48 543415d04f9b.03.7f.00.00.01.00.51.70
+O 7
+R cspuv 0 "/home/training/ALU_CL/schem/AE/schematic/sheet1" 6 mgc_sheet 543d3c94eaa9.03.7f.00.00.01.00.10.48 543415d04f9b.03.7f.00.00.01.00.51.70

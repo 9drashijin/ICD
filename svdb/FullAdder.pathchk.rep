@@ -1,0 +1,7 @@
+ERC PATHCHK REPORT for FullAdder
+  PATHCHK GROUND && ! POWER:
+  PATHCHK POWER && ! GROUND:
+  PATHCHK ! POWER && ! GROUND:
+      cell AXOR2a (X6): 9 10 11 12 13 14 15 16 17 18 19 20 21 
+      cell AND02a (X8): 8 9 10 11 12 13 
+      cell FullAdder: 13 14 15 16 17 18 

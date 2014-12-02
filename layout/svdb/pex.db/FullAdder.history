@@ -1,0 +1,8 @@
+//OK 
+//NUMBER_OF_HEADER_LINES: 6
+//VERSION: 1
+//TOKEN_DELIMITER: "
+//TOKEN_SEPARATOR: " "
+//FORMAT: "time" "calibre version" "command line"
+"Tue Dec  2 22:39:34 2014 " "v2011.1_15.11" "-xrc -pdb -rcc -turbo 1 /home/training/ALU_CL/layout/_Calibre035LVSPEX.rul_"
+"Tue Dec  2 22:39:34 2014 " "v2011.1_15.11" "-xrc -fmt -all /home/training/ALU_CL/layout/_Calibre035LVSPEX.rul_"

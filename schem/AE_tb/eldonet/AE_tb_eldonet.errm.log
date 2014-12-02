@@ -1,0 +1,12 @@
+START report: Tue Oct 14 22:07:58 2014 
+** Warning: (eldo - 1615)  In file "./schem/AE_tb/eldonet/AE_tb_eldonet.cir" line 16:
++   COMMAND ".TRAN": Tstep can not be <= 0.0.
++   It is set to Tmax/20.0 = 5.000e-08 s.
+** Warning: (eldo - 526)  MODEL "NCH":  VFBFLAG = 1. VFBFLAG has no effect when CAPOMOD != 0.
+
+** Warning: (eldo - 526)  MODEL "PCH":  VFBFLAG = 1. VFBFLAG has no effect when CAPOMOD != 0.
+
+** Warning: (eldo - 526)  MODEL "NCH":  VFBFLAG = 1. VFBFLAG has no effect when CAPOMOD != 0.
+
+** Warning: (eldo - 526)  MODEL "PCH":  VFBFLAG = 1. VFBFLAG has no effect when CAPOMOD != 0.
+

@@ -1,0 +1,13 @@
+* Component: /home/training/ALU_CL/schem/ALU4bit  Viewpoint: eldonet
+.INCLUDE /home/training/ALU_CL/schem/ALU4bit/eldonet/ALU4bit_eldonet.spi
+
+
+
+
+.OPTION NOASCII
+.OPTION MODWL
+.OPTION ENGNOT
+.OPTION AEX
+
+.TEMP 27 
+

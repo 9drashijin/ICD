@@ -1,0 +1,5 @@
+A 5 u mgc_symbol 544f9ecc666c.03.7f.00.00.01.00.10.6a 1 2 1 0
+V v 1 1 544f9ecc666c.03.7f.00.00.01.01.10.6a
+F f 1 "CE.smbl_1"
+O 1
+R csduv 0 "/home/training/ALU_CL/schem/CE/part" 1 Eddm_part 544f9eec8382.03.7f.00.00.01.01.10.6a 544f9eec8382.03.7f.00.00.01.00.10.6a
