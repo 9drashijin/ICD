@@ -4,125 +4,125 @@
 version 1.0
 
 Globals
-   GND GND
-   VDD VDD
+   GND gnd
+   VDD vdd
 End Globals
 
-Cell NMOS4
-   Pin D D
-   Pin G G
-   Pin S S
-   Pin B B
+Cell nmos4
+   Pin D d
+   Pin G g
+   Pin S s
+   Pin B b
 End Cell
 
-Cell PMOS4
-   Pin D D
-   Pin G G
-   Pin S S
-   Pin B B
+Cell pmos4
+   Pin D d
+   Pin G g
+   Pin S s
+   Pin B b
 End Cell
 
-Cell OR02A
-   Pin Y Y
-   Pin A1 A1
-   Pin A0 A0
-   Net N$431 N$431
-   Net N$429 N$429
-   Net A0 A0
-   Net A1 A1
-   Net Y Y
-   Global GND GND
-   Global VDD VDD
-   Inst M4 M4 NMOS4
-   Inst M3 M3 PMOS4
-   Inst M2 M2 PMOS4
-   Inst M1 M1 PMOS4
-   Inst M6 M6 NMOS4
-   Inst M5 M5 NMOS4
+Cell or02a
+   Pin Y y
+   Pin A1 a1
+   Pin A0 a0
+   Net N$431 n$431
+   Net N$429 n$429
+   Net A0 a0
+   Net A1 a1
+   Net Y y
+   Global GND gnd
+   Global VDD vdd
+   Inst M4 m4 nmos4
+   Inst M3 m3 pmos4
+   Inst M2 m2 pmos4
+   Inst M1 m1 pmos4
+   Inst M6 m6 nmos4
+   Inst M5 m5 nmos4
 End Cell
 
-Cell AND02A
-   Pin A1 A1
-   Pin A0 A0
-   Pin Y Y
-   Net N$649 N$649
-   Net N$647 N$647
-   Net Y Y
-   Net A0 A0
-   Net A1 A1
-   Global GND GND
-   Global VDD VDD
-   Inst M3 M3 NMOS4
-   Inst M1 M1 PMOS4
-   Inst M2 M2 PMOS4
-   Inst M4 M4 PMOS4
-   Inst M5 M5 NMOS4
-   Inst M6 M6 NMOS4
+Cell and02a
+   Pin A1 a1
+   Pin A0 a0
+   Pin Y y
+   Net N$649 n$649
+   Net N$647 n$647
+   Net Y y
+   Net A0 a0
+   Net A1 a1
+   Global GND gnd
+   Global VDD vdd
+   Inst M3 m3 nmos4
+   Inst M1 m1 pmos4
+   Inst M2 m2 pmos4
+   Inst M4 m4 pmos4
+   Inst M5 m5 nmos4
+   Inst M6 m6 nmos4
 End Cell
 
-Cell INV01A
-   Pin A A
-   Pin Y Y
-   Net Y Y
-   Net A A
-   Global GND GND
-   Global VDD VDD
-   Inst M1 M1 PMOS4
-   Inst M2 M2 NMOS4
+Cell inv01a
+   Pin A a
+   Pin Y y
+   Net Y y
+   Net A a
+   Global GND gnd
+   Global VDD vdd
+   Inst M1 m1 pmos4
+   Inst M2 m2 nmos4
 End Cell
 
-Cell MUX21A_NI
-   Pin Y Y
-   Pin S0 S0
-   Pin A0 A0
-   Pin A1 A1
-   Net N$464 N$464
-   Net N$462 N$462
-   Net N$461 N$461
-   Net N$459 N$459
-   Net N$457 N$457
-   Net N$223 N$223
-   Net A1 A1
-   Net A0 A0
-   Net S0 S0
-   Net Y Y
-   Global GND GND
-   Global VDD VDD
-   Inst M11 M11 NMOS4
-   Inst M10 M10 NMOS4
-   Inst M9 M9 NMOS4
-   Inst M8 M8 NMOS4
-   Inst M7 M7 NMOS4
-   Inst M1 M1 PMOS4
-   Inst M4 M4 PMOS4
-   Inst M2 M2 PMOS4
-   Inst M5 M5 PMOS4
-   Inst M3 M3 PMOS4
-   Inst M12 M12 NMOS4
-   Inst M6 M6 PMOS4
+Cell mux21a_ni
+   Pin Y y
+   Pin S0 s0
+   Pin A0 a0
+   Pin A1 a1
+   Net N$464 n$464
+   Net N$462 n$462
+   Net N$461 n$461
+   Net N$459 n$459
+   Net N$457 n$457
+   Net N$223 n$223
+   Net A1 a1
+   Net A0 a0
+   Net S0 s0
+   Net Y y
+   Global GND gnd
+   Global VDD vdd
+   Inst M11 m11 nmos4
+   Inst M10 m10 nmos4
+   Inst M9 m9 nmos4
+   Inst M8 m8 nmos4
+   Inst M7 m7 nmos4
+   Inst M1 m1 pmos4
+   Inst M4 m4 pmos4
+   Inst M2 m2 pmos4
+   Inst M5 m5 pmos4
+   Inst M3 m3 pmos4
+   Inst M12 m12 nmos4
+   Inst M6 m6 pmos4
 End Cell
 
 Cell #top#
-   Pin LE LE
-   Pin S1 S1
-   Pin S2 S2
-   Pin A A
-   Pin B B
-   Net N$10 N$10
-   Net N$9 N$9
-   Net N$21 N$21
-   Net N$19 N$19
-   Net N$17 N$17
-   Net B B
-   Net A A
-   Net S2 S2
-   Net S1 S1
-   Net LE LE
-   Inst OR02A1 X_OR02A1 OR02A
-   Inst AND02A1 X_AND02A1 AND02A
-   Inst INV01A1 X_INV01A1 INV01A
-   Inst MUX21A_NI3 X_MUX21A_NI3 MUX21A_NI
-   Inst MUX21A_NI2 X_MUX21A_NI2 MUX21A_NI
-   Inst MUX21A_NI1 X_MUX21A_NI1 MUX21A_NI
+   Pin LE le
+   Pin S1 s1
+   Pin S2 s2
+   Pin A a
+   Pin B b
+   Net N$10 n$10
+   Net N$9 n$9
+   Net N$21 n$21
+   Net N$19 n$19
+   Net N$17 n$17
+   Net B b
+   Net A a
+   Net S2 s2
+   Net S1 s1
+   Net LE le
+   Inst OR02A1 x_or02a1 or02a
+   Inst AND02A1 x_and02a1 and02a
+   Inst INV01A1 x_inv01a1 inv01a
+   Inst MUX21A_NI3 x_mux21a_ni3 mux21a_ni
+   Inst MUX21A_NI2 x_mux21a_ni2 mux21a_ni
+   Inst MUX21A_NI1 x_mux21a_ni1 mux21a_ni
 End Cell
 

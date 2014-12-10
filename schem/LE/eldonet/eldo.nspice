@@ -1,72 +1,72 @@
-* ELDO netlist generated with ICnet by 'training' on Tue Dec  2 2014 at 23:20:18
+* ELDO netlist generated with ICnet by 'training' on Tue Dec  9 2014 at 22:00:36
 
 *
 * Globals.
 *
-.global GND VDD
+.global gnd vdd
 
 *
 * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/or02a
 *
-.subckt OR02A  Y A1 A0
+.subckt or02a  y a1 a0
 
-        M4 N$431 A0 GND GND nch L=0.35u W=1.2u M=1
-        M3 Y N$431 VDD VDD pch L=0.35u W=2u M=1
-        M2 N$431 A1 N$429 VDD pch L=0.35u W=2u M=1
-        M1 N$429 A0 VDD VDD pch L=0.35u W=2u M=1
-        M6 Y N$431 GND GND nch L=0.35u W=1.2u M=1
-        M5 N$431 A1 GND GND nch L=0.35u W=1.2u M=1
-.ends OR02A
+        m4 n$431 a0 gnd gnd nch L=0.35u W=1.2u M=1
+        m3 y n$431 vdd vdd pch L=0.35u W=2u M=1
+        m2 n$431 a1 n$429 vdd pch L=0.35u W=2u M=1
+        m1 n$429 a0 vdd vdd pch L=0.35u W=2u M=1
+        m6 y n$431 gnd gnd nch L=0.35u W=1.2u M=1
+        m5 n$431 a1 gnd gnd nch L=0.35u W=1.2u M=1
+.ends or02a
 
 *
 * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/and02a
 *
-.subckt AND02A  A1 A0 Y
+.subckt and02a  a1 a0 y
 
-        M3 Y N$647 GND GND nch L=0.35u W=1.2u M=1
-        M1 N$647 A0 VDD VDD pch L=0.35u W=2u M=1
-        M2 N$647 A1 VDD VDD pch L=0.35u W=2u M=1
-        M4 Y N$647 VDD VDD pch L=0.35u W=2u M=1
-        M5 N$647 A0 N$649 GND nch L=0.35u W=1.2u M=1
-        M6 N$649 A1 GND GND nch L=0.35u W=1.2u M=1
-.ends AND02A
+        m3 y n$647 gnd gnd nch L=0.35u W=1.2u M=1
+        m1 n$647 a0 vdd vdd pch L=0.35u W=2u M=1
+        m2 n$647 a1 vdd vdd pch L=0.35u W=2u M=1
+        m4 y n$647 vdd vdd pch L=0.35u W=2u M=1
+        m5 n$647 a0 n$649 gnd nch L=0.35u W=1.2u M=1
+        m6 n$649 a1 gnd gnd nch L=0.35u W=1.2u M=1
+.ends and02a
 
 *
 * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/inv01a
 *
-.subckt INV01A  A Y
+.subckt inv01a  a y
 
-        M1 Y A VDD VDD pch L=0.35u W=2u M=1
-        M2 Y A GND GND nch L=0.35u W=1.2u M=1
-.ends INV01A
+        m1 y a vdd vdd pch L=0.35u W=2u M=1
+        m2 y a gnd gnd nch L=0.35u W=1.2u M=1
+.ends inv01a
 
 *
 * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/mux21a_ni
 *
-.subckt MUX21A_NI  Y S0 A0 A1
+.subckt mux21a_ni  y s0 a0 a1
 
-        M11 N$462 A1 GND GND nch L=0.35u W=1.2u M=1
-        M10 N$461 S0 N$462 GND nch L=0.35u W=1.2u M=1
-        M9 N$461 N$223 N$464 GND nch L=0.35u W=1.2u M=1
-        M8 Y N$461 GND GND nch L=0.35u W=1.2u M=1
-        M7 N$223 S0 GND GND nch L=0.35u W=1.2u M=1
-        M1 N$223 S0 VDD VDD pch L=0.35u W=2u M=1
-        M4 N$459 A1 VDD VDD pch L=0.35u W=2u M=1
-        M2 Y N$461 VDD VDD pch L=0.35u W=2u M=1
-        M5 N$461 S0 N$457 VDD pch L=0.35u W=2u M=1
-        M3 N$457 A0 VDD VDD pch L=0.35u W=2u M=1
-        M12 N$464 A0 GND GND nch L=0.35u W=1.2u M=1
-        M6 N$461 N$223 N$459 VDD pch L=0.35u W=2u M=1
-.ends MUX21A_NI
+        m11 n$462 a1 gnd gnd nch L=0.35u W=1.2u M=1
+        m10 n$461 s0 n$462 gnd nch L=0.35u W=1.2u M=1
+        m9 n$461 n$223 n$464 gnd nch L=0.35u W=1.2u M=1
+        m8 y n$461 gnd gnd nch L=0.35u W=1.2u M=1
+        m7 n$223 s0 gnd gnd nch L=0.35u W=1.2u M=1
+        m1 n$223 s0 vdd vdd pch L=0.35u W=2u M=1
+        m4 n$459 a1 vdd vdd pch L=0.35u W=2u M=1
+        m2 y n$461 vdd vdd pch L=0.35u W=2u M=1
+        m5 n$461 s0 n$457 vdd pch L=0.35u W=2u M=1
+        m3 n$457 a0 vdd vdd pch L=0.35u W=2u M=1
+        m12 n$464 a0 gnd gnd nch L=0.35u W=1.2u M=1
+        m6 n$461 n$223 n$459 vdd pch L=0.35u W=2u M=1
+.ends mux21a_ni
 
 *
 * MAIN CELL: Component pathname : /home/training/ALU_CL/schem/LE
 *
-        X_OR02A1 N$21 B A OR02A
-        X_AND02A1 B A N$19 AND02A
-        X_INV01A1 A N$17 INV01A
-        X_MUX21A_NI3 LE S2 N$10 N$9 MUX21A_NI
-        X_MUX21A_NI2 N$9 S1 N$19 N$21 MUX21A_NI
-        X_MUX21A_NI1 N$10 S1 A N$17 MUX21A_NI
+        x_or02a1 n$21 b a or02a
+        x_and02a1 b a n$19 and02a
+        x_inv01a1 a n$17 inv01a
+        x_mux21a_ni3 le s2 n$10 n$9 mux21a_ni
+        x_mux21a_ni2 n$9 s1 n$19 n$21 mux21a_ni
+        x_mux21a_ni1 n$10 s1 a n$17 mux21a_ni
 *
 .end

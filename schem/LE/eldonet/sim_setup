@@ -55,7 +55,7 @@ $$set_sim_value("sim_plots_vector",[]);
 $$set_sim_value("sim_polezero",[]);
 $$set_sim_value("sim_probes",[]);
 $$set_sim_value("sim_probes_vector",[]);
-$$set_sim_value("wdb_sequence_number",0);
+$$set_sim_value("wdb_sequence_number",1);
 
 // Analysis
 $$set_sim_value("ac_enabled_entry",@off);
@@ -238,6 +238,7 @@ $$set_sim_value("sim_dcop_dec_places",2);
 $$set_sim_value("sim_monitor_entries",[]);
 $$set_sim_value("sim_monitor_font","stroke");
 $$set_sim_value("sim_monitor_font_half_height",@true);
+$$set_sim_value("sim_ss_show_dialog",@true);
 
 // Safe Operating Area
 $$set_sim_value("sim_soa_result","");

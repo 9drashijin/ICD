@@ -1,0 +1,39 @@
+//  ICnet  v2008.2_14.1 (2008.2m)  Fri Feb 25 10:44:08 PST 2011
+//  Core Libraries  v2008.2_14.1 Fri Feb 25 11:00:25 PST 2011
+//
+//             Copyright Mentor Graphics Corporation 1982
+//
+//                      All Rights Reserved.
+//
+//    THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+//      WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR
+//           ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+//
+//  Mentor Graphics software executing under x86_64 Linux.
+//
+
+
+//  Invocation args:  -lvs -o /home/training/ALU_CL/schem/AE/eldonet/AE_eldonet.spi -check -upper -spice_top_sub -dmsfile /home/training/ALU_CL/schem/AE/eldonet/design.dms /home/training/ALU_CL/schem/AE/eldonet
+
+// **** Reading </home/training/ALU_CL/schem/AE/eldonet> for LVS netlist ****
+
+// Checking 5 sheet(s) for out of date references to symbols and interfaces...
+// Done.
+// Parsing file '/EDA/mimos035_lib/lib/nmos4/@ncf.dir/nmos4.ncf' succeeded.
+// Parsing file '/EDA/mimos035_lib/lib/pmos4/@ncf.dir/pmos4.ncf' succeeded.
+Processing [/home/training/ALU_CL/schem/AE] [AE/AE] [schematic]
+Processing [$MIMOS_KIT/mimos035-std-cells/schem/and02a] [and02a/and02a] [schematic]
+Processing [$MIMOS_KIT/mimos035-std-cells/schem/axor2a] [axor2a/axor2a] [schematic]
+Processing [/home/training/ALU_CL/schem/FullAdder] [FullAdder/FullAdder] [schematic]
+Processing [$MIMOS_KIT/mimos035-std-cells/schem/or02a] [or02a/or02a] [schematic]
+Primitive [$MIMOS_KIT/lib/nmos4] [nmos4/nmos4] [SPICE=X] (NCF entry line:8 file:$MIMOS_KIT/lib/nmos4/@ncf.dir/nmos4.ncf)
+Primitive [$MIMOS_KIT/lib/pmos4] [pmos4/pmos4] [SPICE=X] (NCF entry line:8 file:$MIMOS_KIT/lib/pmos4/@ncf.dir/pmos4.ncf)
+
+**** Writing </home/training/ALU_CL/schem/AE/eldonet> netlist for LVS ****
+
+Number of cells: 7
+Number of primitive instances: 78
+
+Done...
+// Registration file '/EDA/mimos035_lib/lib/nmos4/@ncf.dir/nmos4.ncf' closed.
+// Registration file '/EDA/mimos035_lib/lib/pmos4/@ncf.dir/pmos4.ncf' closed.

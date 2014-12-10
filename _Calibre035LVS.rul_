@@ -1,22 +1,22 @@
 //
-//  Rule file generated on Tue Dec 02 22:35:43 MYT 2014
+//  Rule file generated on Tue Dec 09 21:27:54 MYT 2014
 //     by Calibre Interactive - LVS (v2011.1_15.11)
 //
 //      *** PLEASE DO NOT MODIFY THIS FILE ***
 //
 //
 
-LAYOUT PATH  "FullAdder.calibre.db"
-LAYOUT PRIMARY "FullAdder"
+LAYOUT PATH  "LE.calibre.db"
+LAYOUT PRIMARY "LE"
 LAYOUT SYSTEM GDSII
 
-SOURCE PATH "/home/training/ALU_CL/schem/FullAdder/eldonet/FullAdder_eldonet.spi"
-SOURCE PRIMARY "FULLADDER"
+SOURCE PATH "/home/training/ALU_CL/schem/LE/eldonet/LE_eldonet.spi"
+SOURCE PRIMARY "LE"
 SOURCE SYSTEM SPICE
 
 MASK SVDB DIRECTORY "svdb" QUERY
 
-LVS REPORT "FullAdder.lvs.report"
+LVS REPORT "LE.lvs.report"
 
 LVS REPORT OPTION NONE
 LVS FILTER UNUSED OPTION NONE SOURCE
@@ -48,8 +48,8 @@ LVS ISOLATE SHORTS NO
 VIRTUAL CONNECT COLON NO
 VIRTUAL CONNECT REPORT NO
 LVS EXECUTE ERC YES
-ERC RESULTS DATABASE "FullAdder.erc.results"
-ERC SUMMARY REPORT "FullAdder.erc.summary" REPLACE HIER
+ERC RESULTS DATABASE "LE.erc.results"
+ERC SUMMARY REPORT "LE.erc.summary" REPLACE HIER
 ERC MAXIMUM RESULTS 1000
 ERC MAXIMUM VERTEX 4096
 

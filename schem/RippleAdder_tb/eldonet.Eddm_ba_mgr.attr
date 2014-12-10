@@ -1,6 +1,0 @@
-A 5 u Eddm_ba_mgr 54340ca52cea.03.7f.00.00.01.00.3c.a8 1 2 1 0
-V v 1 1 54340ca52cea.03.7f.00.00.01.01.3c.a8
-F f 1 "eldonet.ba_1"
-O 1
-P "eddm__stream_to_use" "eddm__propl_dstream"
-R cspuv 0 "/home/training/ALU_CL/schem/RippleAdder_tb/eldonet" 1 Eddm_design_viewpoint 54340ca52c49.03.7f.00.00.01.01.3c.a8 54340ca52c49.03.7f.00.00.01.00.3c.a8

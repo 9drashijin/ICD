@@ -1,0 +1,14 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 2
+lvs_ExtRunTimes 1418143088 1418143088
+lvs_ExtOutFile RUNDIR /home/training/ALU_CL/layout
+lvs_ExtOutFile RULES_FILE /home/training/ALU_CL/layout/_Calibre035LVSPEX.rul_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoErcSummary {3 0 0 0 0 3 101 158 25 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST /home/training/ALU_CL/layout/svdb/AE.sp
+lvs_ExtOutFile EXTRACTION_REPORT AE.lvs.report.ext
+lvs_ExtOutFile ERC_PATHCHK_DATABASE svdb/AE.pathchk.erc
+lvs_ExtOutFile ERC_PATHCHK_REPORT svdb/AE.pathchk.rep
+lvs_ExtOutFile ERC_DATABASE calibre_erc.db
+lvs_ExtOutFile ERC_SUMMARY calibre_erc.sum

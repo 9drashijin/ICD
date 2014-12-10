@@ -13,7 +13,7 @@
 //
 
 
-//  Invocation args:  -force /home/training/ALU_CL/schem/AE/eldonet
+//  Invocation args:  -dmsfile /home/training/ALU_CL/schem/AE/eldonet/design.dms -force /home/training/ALU_CL/schem/AE/eldonet
 
 // **** Reading </home/training/ALU_CL/schem/AE/eldonet> for ELDO netlist ****
 
@@ -22,10 +22,10 @@
 // Parsing file '/EDA/mimos035_lib/lib/nmos4/@ncf.dir/nmos4.ncf' succeeded.
 // Parsing file '/EDA/mimos035_lib/lib/pmos4/@ncf.dir/pmos4.ncf' succeeded.
 Processing [/home/training/ALU_CL/schem/AE] [AE/AE] [schematic]
-Processing [/home/training/ALU_CL/schem/FullAdder] [FullAdder/FullAdder] [schematic]
 Processing [$MIMOS_KIT/mimos035-std-cells/schem/and02a] [and02a/and02a] [schematic]
-Processing [$MIMOS_KIT/mimos035-std-cells/schem/or02a] [or02a/or02a] [schematic]
 Processing [$MIMOS_KIT/mimos035-std-cells/schem/axor2a] [axor2a/axor2a] [schematic]
+Processing [/home/training/ALU_CL/schem/FullAdder] [FullAdder/FullAdder] [schematic]
+Processing [$MIMOS_KIT/mimos035-std-cells/schem/or02a] [or02a/or02a] [schematic]
 Primitive [$MIMOS_KIT/lib/nmos4] [nmos4/nmos4] [SPICE=X] (NCF entry line:8 file:$MIMOS_KIT/lib/nmos4/@ncf.dir/nmos4.ncf)
 Primitive [$MIMOS_KIT/lib/pmos4] [pmos4/pmos4] [SPICE=X] (NCF entry line:8 file:$MIMOS_KIT/lib/pmos4/@ncf.dir/pmos4.ncf)
 

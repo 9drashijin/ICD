@@ -1,0 +1,22 @@
+  Run on TARC16 (Linux 2.6.18-308.el5)
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : training@TARC16
+*** OS    : Red Hat Enterprise Linux Client release 5.4 (Tikanga) [VCO = aol]
+*** CPU   :
+            Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : disabled
+    Number of cpu cores               : 4
+    Number of logical processors      : 4
+*** Freq  : 1600.000MHz
+*** Cache : 6144 KB
+*** MEM   : 4020648 kB
+*** Date  : Tue Dec  9 21:33:05 2014
+
+/EDA/ams_2010.2/aol/bin/eldo_64.exe -i /home/training/ALU_CL/schem/LE/eldonet/LE_tb_eldonet.cir -ezwave 
+
+ERROR 1: Unable to open file LE_tb_eldonet.cir
++   No such file or directory

@@ -1,0 +1,158 @@
+  Run on TARC16 (Linux 2.6.18-308.el5)
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : unknown@TARC16
+*** OS    : Red Hat Enterprise Linux Client release 5.4 (Tikanga) [VCO = aol]
+*** CPU   :
+            Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : disabled
+    Number of cpu cores               : 4
+    Number of logical processors      : 4
+*** Freq  : 3201.000MHz
+*** Cache : 6144 KB
+*** MEM   : 4020648 kB
+*** Date  : Tue Dec  9 22:00:51 2014
+
+/EDA/ams_2010.2/aol/bin/eldo_64.exe -i /home/training/ALU_CL/schem/LE/eldonet/LE_eldonet.cir -o /home/training/ALU_CL/schem/LE/eldonet/LE_eldonet.chi -gwl jwdb -nocou -wdb_folder -outname LE_eldonet_01 
+
+
+***** PRE-PROCESSING ...
+
+1******* 9-Dec-14 *******  ELDO 2010.2 (64 bits)  (v7.4_1.1)  *******22:00:51******
+
+0* Component: /home/training/ALU_CL/schem/LE  Viewpoint: eldonet
+
+0****     INPUT LISTING                                               
+
+0***********************************************************************
+    2  ** including /home/training/ALU_CL/schem/LE/eldonet/LE_eldonet.spi
+    1  * LVS netlist generated with ICnet by 'training' on Tue Dec  9 2014 at 22:00:49
+    2  
+    3  *
+    4  * Globals.
+    5  *
+    6  .GLOBAL GND VDD
+    7  
+    8  *
+    9  * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/or02a
+   10  *
+   11  .SUBCKT OR02A  Y A1 A0
+   12  
+   13          M4 N$431 A0 GND GND NCH L=0.35U W=1.2U M=1
+   14          M3 Y N$431 VDD VDD PCH L=0.35U W=2U M=1
+   15          M2 N$431 A1 N$429 VDD PCH L=0.35U W=2U M=1
+   16          M1 N$429 A0 VDD VDD PCH L=0.35U W=2U M=1
+   17          M6 Y N$431 GND GND NCH L=0.35U W=1.2U M=1
+   18          M5 N$431 A1 GND GND NCH L=0.35U W=1.2U M=1
+   19  .ENDS OR02A
+   20  
+   21  *
+   22  * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/and02a
+   23  *
+   24  .SUBCKT AND02A  A1 A0 Y
+   25  
+   26          M3 Y N$647 GND GND NCH L=0.35U W=1.2U M=1
+   27          M1 N$647 A0 VDD VDD PCH L=0.35U W=2U M=1
+   28          M2 N$647 A1 VDD VDD PCH L=0.35U W=2U M=1
+   29          M4 Y N$647 VDD VDD PCH L=0.35U W=2U M=1
+   30          M5 N$647 A0 N$649 GND NCH L=0.35U W=1.2U M=1
+   31          M6 N$649 A1 GND GND NCH L=0.35U W=1.2U M=1
+   32  .ENDS AND02A
+   33  
+   34  *
+   35  * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/inv01a
+   36  *
+   37  .SUBCKT INV01A  A Y
+   38  
+   39          M1 Y A VDD VDD PCH L=0.35U W=2U M=1
+   40          M2 Y A GND GND NCH L=0.35U W=1.2U M=1
+   41  .ENDS INV01A
+   42  
+   43  *
+   44  * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/mux21a_ni
+   45  *
+   46  .SUBCKT MUX21A_NI  Y S0 A0 A1
+   47  
+   48          M11 N$462 A1 GND GND NCH L=0.35U W=1.2U M=1
+   49          M10 N$461 S0 N$462 GND NCH L=0.35U W=1.2U M=1
+   50          M9 N$461 N$223 N$464 GND NCH L=0.35U W=1.2U M=1
+   51          M8 Y N$461 GND GND NCH L=0.35U W=1.2U M=1
+   52          M7 N$223 S0 GND GND NCH L=0.35U W=1.2U M=1
+   53          M1 N$223 S0 VDD VDD PCH L=0.35U W=2U M=1
+   54          M4 N$459 A1 VDD VDD PCH L=0.35U W=2U M=1
+   55          M2 Y N$461 VDD VDD PCH L=0.35U W=2U M=1
+   56          M5 N$461 S0 N$457 VDD PCH L=0.35U W=2U M=1
+   57          M3 N$457 A0 VDD VDD PCH L=0.35U W=2U M=1
+   58          M12 N$464 A0 GND GND NCH L=0.35U W=1.2U M=1
+   59          M6 N$461 N$223 N$459 VDD PCH L=0.35U W=2U M=1
+   60  .ENDS MUX21A_NI
+   61  
+   62  *
+   63  * Component pathname : /home/training/ALU_CL/schem/LE
+   64  *
+   65  .SUBCKT LE  LE S1 S2 A B
+   66  
+   67          X_OR02A1 N$21 B A OR02A
+   68          X_AND02A1 B A N$19 AND02A
+   69          X_INV01A1 A N$17 INV01A
+   70          X_MUX21A_NI3 LE S2 N$10 N$9 MUX21A_NI
+   71          X_MUX21A_NI2 N$9 S1 N$19 N$21 MUX21A_NI
+   72          X_MUX21A_NI1 N$10 S1 A N$17 MUX21A_NI
+   73  .ENDS LE
+   74  
+    2  
+    3  
+    4  
+    5  
+    6  
+    7  .OPTION NOASCII
+    8  .OPTION MODWL
+    9  .OPTION ENGNOT
+   10  .OPTION AEX
+   11  
+   12  .TEMP 27 
+   13  
+   14  .END
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+ERROR   52: In file "./schem/LE/eldonet/LE_eldonet.cir" line 14:
++   No node "0" found in the circuit
+
+***** GENERATION ...
+
+
+***** 1  error(s). 
+***** 0  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+
+Memory space allocated (MB):    178
+0 elements
+0 nodes 
+0 input signals
+
+Check your input netlist...
+
+***>MESSAGE SUMMARY: 1 error
+
+***>GLOBAL CPU TIME 0s 000ms <***
+
+
+***>GLOBAL ELAPSED TIME 0s <***
+
+
+  Job started at  9-Dec-2014 22:00:51
+  Job end at      9-Dec-2014 22:00:51
+
+  Run on TARC16 (Linux 2.6.18-308.el5)
+

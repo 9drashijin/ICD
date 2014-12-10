@@ -1,0 +1,10 @@
+A 5 u Ic_cell_template 548707ca78f0.03.7f.00.00.01.00.33.27 1 4 10 0
+V v 1 1 548729d95106.03.7f.00.00.01.00.33.27
+F f 1 "AE.iccel_1"
+O 1
+R csduv 1 "$MIMOS_KIT/process/mimos_035lib" 20 Ic_lib_template 4e81693a6191.03.7f.00.00.01.00.53.8e 4e7c0871004c.03.7f.00.00.01.00.31.cd
+R csduv 2 "$MIMOS_KIT/process/mimos_035" 26 Ic_persist_process 4e9cf42229d9.03.7f.00.00.01.00.5f.1f 45589cee70b0.03.c0.a8.00.31.00.0c.2c
+R csdni 4 "$MIMOS_KIT/calibre/drc/Calibre035DRC.rul" 1 Mgc_file
+R csduv 6 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/AND02a" 21 Ic_cell_template 4e82e477681f.03.7f.00.00.01.00.0c.e5 4e7b038898cf.03.7f.00.00.01.10.47.89
+R csduv 7 "$MIMOS_KIT/mimos035-std-cells/layout/standardcells/AXOR2a" 4 Ic_cell_template 4e82e65f2189.03.7f.00.00.01.00.0c.e5 4e7c3d92d05e.03.7f.00.00.01.00.7b.4c
+R csduv 9 "/home/training/ALU_CL/layout/FullAdder" 8 Ic_cell_template 547dcd73b479.03.7f.00.00.01.00.23.bb 54749f8f7f2b.03.7f.00.00.01.00.24.6a
