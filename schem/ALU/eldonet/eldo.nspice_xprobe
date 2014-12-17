@@ -157,22 +157,22 @@ End Cell
 Cell fulladder
    Pin A a
    Pin B b
-   Pin Cin cin
    Pin Cout cout
+   Pin Cin cin
    Pin Sum sum
-   Net N$7 n$7
-   Net N$1 n$1
-   Net N$3 n$3
+   Net N$29 n$29
+   Net N$18 n$18
+   Net N$21 n$21
    Net Sum sum
-   Net Cout cout
    Net Cin cin
+   Net Cout cout
    Net B b
    Net A a
-   Inst AXOR2A2 x_axor2a2 axor2a
-   Inst AXOR2A1 x_axor2a1 axor2a
    Inst OR02A1 x_or02a1 or02a
    Inst AND02A2 x_and02a2 and02a
    Inst AND02A1 x_and02a1 and02a
+   Inst AXOR2A1 x_axor2a1 axor2a
+   Inst AXOR2A2 x_axor2a2 axor2a
 End Cell
 
 Cell ae

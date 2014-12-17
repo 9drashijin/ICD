@@ -359,7 +359,7 @@ $$set_sim_value("sim_netlister_cdl_output",@false);
 $$set_sim_value("sim_netlister_connect_name",@false);
 $$set_sim_value("sim_netlister_debug",@false);
 $$set_sim_value("sim_netlister_force",@false);
-$$set_sim_value("sim_netlister_format",@eldospice);
+$$set_sim_value("sim_netlister_format",@lvs);
 $$set_sim_value("sim_netlister_inout_pin_types","");
 $$set_sim_value("sim_netlister_input_pin_types","");
 $$set_sim_value("sim_netlister_no_ba",@false);
@@ -369,7 +369,7 @@ $$set_sim_value("sim_netlister_output_pin_types","");
 $$set_sim_value("sim_netlister_run_in_background",@true);
 $$set_sim_value("sim_netlister_silent",@false);
 $$set_sim_value("sim_netlister_top_down",@false);
-$$set_sim_value("sim_netlister_top_level_var",@spice_no_top_sub);
+$$set_sim_value("sim_netlister_top_level_var",@spice_top_sub);
 $$set_sim_value("sim_netlister_use_dfi",@false);
 $$set_sim_value("sim_netlister_wrap_netlist",@false);
 $$set_sim_value("vsim_netlister_additional_switches","");
@@ -417,7 +417,7 @@ $$set_sim_value("sim_parasitics_vector",[]);
 $$set_sim_value("sim_to_vector",[]);
 
 // Node Zero
-$$set_sim_value("node_0_entry","GROUND");
+$$set_sim_value("node_0_entry","GROUND GND");
 $$set_sim_value("node_0_entry_sm","//ground");
 $$set_sim_value("sim_node_0_set",@true);
 

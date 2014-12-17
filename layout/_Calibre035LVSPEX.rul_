@@ -1,24 +1,24 @@
 //
-//  Rule file generated on Wed Dec 10 00:37:55 MYT 2014
+//  Rule file generated on Tue Dec 16 23:09:39 MYT 2014
 //     by Calibre Interactive - PEX (v2011.1_15.11)
 //
 //      *** PLEASE DO NOT MODIFY THIS FILE ***
 //
 //
 
-LAYOUT PATH  "AE.calibre.db"
-LAYOUT PRIMARY "AE"
+LAYOUT PATH  "ALU.calibre.db"
+LAYOUT PRIMARY "ALU"
 LAYOUT SYSTEM GDSII
 
-SOURCE PATH "/home/training/ALU_CL/schem/AE/eldonet/AE_eldonet.spi"
-SOURCE PRIMARY "AE"
+SOURCE PATH "/home/training/ALU_CL/schem/ALU/eldonet/ALU_eldonet.spi"
+SOURCE PRIMARY "ALU"
 SOURCE SYSTEM SPICE
 
 MASK SVDB DIRECTORY "svdb" QUERY XRC
 
-LVS REPORT "AE.lvs.report"
+LVS REPORT "ALU.lvs.report"
 
-PEX NETLIST "AE.pex.netlist" ELDO 1 SOURCENAMES 
+PEX NETLIST "ALU.pex.netlist" ELDO 1 SOURCENAMES 
 PEX NETLIST UPPERCASE KEYWORDS NO
 PEX NETLIST VIRTUAL CONNECT NO
 PEX NETLIST NOXREF NET NAMES YES

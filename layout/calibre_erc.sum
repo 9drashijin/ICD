@@ -3,20 +3,20 @@
 ==================================================================================
 === CALIBRE::ERC-H SUMMARY REPORT
 ===
-Execution Date/Time:          Wed Dec 10 00:38:08 2014
+Execution Date/Time:          Tue Dec 16 23:09:58 2014
 Calibre Version:              v2011.1_15.11    Thu Feb 10 17:13:25 PST 2011
 Rule File Pathname:           /home/training/ALU_CL/layout/_Calibre035LVSPEX.rul_
 Rule File Title:              
 Layout System:                GDSII
-Layout Path(s):               AE.calibre.db
-Layout Primary Cell:          AE
+Layout Path(s):               ALU.calibre.db
+Layout Primary Cell:          ALU
 Current Directory:            /home/training/ALU_CL/layout
 User Name:                    training
 Maximum Results/ERC Check:    ALL
 Maximum ERC Result Vertices:  4096
 ERC Results Database:         calibre_erc.db (ASCII)
-ERC PATHCHK Results Database: svdb/AE.pathchk.erc
-ERC PATHCHK Report:           svdb/AE.pathchk.rep
+ERC PATHCHK Results Database: svdb/ALU.pathchk.erc
+ERC PATHCHK Report:           svdb/ALU.pathchk.rep
 Layout Depth:                 ALL
 Text Depth:                   PRIMARY
 Summary Report File:          calibre_erc.sum (REPLACE)
@@ -37,35 +37,35 @@ There is no data for layout net name ?VCC?.
 LAYER M1RES ......... TOTAL Original Geometry Count = 0   (0)
 LAYER M1SLOT ........ TOTAL Original Geometry Count = 0   (0)
 LAYER DM1 ........... TOTAL Original Geometry Count = 0   (0)
-LAYER M1L ........... TOTAL Original Geometry Count = 124 (394)
+LAYER M1L ........... TOTAL Original Geometry Count = 212 (732)
 LAYER RESDEF ........ TOTAL Original Geometry Count = 0   (0)
-LAYER OD ............ TOTAL Original Geometry Count = 36  (120)
+LAYER OD ............ TOTAL Original Geometry Count = 58  (216)
 LAYER ANALOG_PSUB ... TOTAL Original Geometry Count = 0   (0)
-LAYER NWEL .......... TOTAL Original Geometry Count = 17  (53)
-LAYER PP ............ TOTAL Original Geometry Count = 17  (53)
-LAYER NP ............ TOTAL Original Geometry Count = 17  (53)
+LAYER NWEL .......... TOTAL Original Geometry Count = 29  (96)
+LAYER PP ............ TOTAL Original Geometry Count = 30  (100)
+LAYER NP ............ TOTAL Original Geometry Count = 30  (100)
 LAYER SRES .......... TOTAL Original Geometry Count = 0   (0)
-LAYER PO2 ........... TOTAL Original Geometry Count = 43  (148)
+LAYER PO2 ........... TOTAL Original Geometry Count = 78  (297)
 LAYER CAP ........... TOTAL Original Geometry Count = 0   (0)
 LAYER CAPOLY ........ TOTAL Original Geometry Count = 0   (0)
-LAYER CO ............ TOTAL Original Geometry Count = 90  (297)
+LAYER CO ............ TOTAL Original Geometry Count = 142 (529)
 LAYER PO ............ TOTAL Original Geometry Count = 0   (0)
 LAYER HRES .......... TOTAL Original Geometry Count = 0   (0)
 LAYER NPNID ......... TOTAL Original Geometry Count = 0   (0)
 LAYER DIODID ........ TOTAL Original Geometry Count = 0   (0)
 LAYER M2SLOT ........ TOTAL Original Geometry Count = 0   (0)
 LAYER DM2 ........... TOTAL Original Geometry Count = 0   (0)
-LAYER M2L ........... TOTAL Original Geometry Count = 38  (56)
+LAYER M2L ........... TOTAL Original Geometry Count = 84  (122)
 LAYER M2RES ......... TOTAL Original Geometry Count = 0   (0)
 LAYER M3SLOT ........ TOTAL Original Geometry Count = 0   (0)
 LAYER DM3 ........... TOTAL Original Geometry Count = 0   (0)
-LAYER M3L ........... TOTAL Original Geometry Count = 0   (0)
+LAYER M3L ........... TOTAL Original Geometry Count = 11  (11)
 LAYER MOPT .......... TOTAL Original Geometry Count = 0   (0)
 LAYER M3RES ......... TOTAL Original Geometry Count = 0   (0)
 LAYER PNPID ......... TOTAL Original Geometry Count = 0   (0)
 LAYER PSUB2 ......... TOTAL Original Geometry Count = 0   (0)
-LAYER VIA1 .......... TOTAL Original Geometry Count = 9   (27)
-LAYER VIA2 .......... TOTAL Original Geometry Count = 0   (0)
+LAYER VIA1 .......... TOTAL Original Geometry Count = 17  (55)
+LAYER VIA2 .......... TOTAL Original Geometry Count = 7   (7)
 ----------------------------------------------------------------------------------
 --- RULECHECK RESULTS STATISTICS
 ---
@@ -78,16 +78,16 @@ RULECHECK ERC_NWtap ........... TOTAL Result Count = 0 (0)
   PATHCHK GROUND && ! POWER:
   PATHCHK POWER && ! GROUND:
   PATHCHK ! POWER && ! GROUND:
-    TOTAL POLYGON Results: 101
-    TOTAL NET Results:     25
+    TOTAL POLYGON Results: 205
+    TOTAL NET Results:     43
 ----------------------------------------------------------------------------------
 --- SUMMARY
 ---
 TOTAL CPU Time:                              0
 TOTAL REAL Time:                             0
-TOTAL Original Layer Geometries:             391 (1201)
+TOTAL Original Layer Geometries:             698 (2265)
 TOTAL ERC RuleChecks Executed:               3
 TOTAL ERC RuleCheck Results Generated:       0 (0)
 TOTAL ERC PATHCHK Operations Executed:       3
-TOTAL ERC PATHCHK POLYGON Results Generated: 101 (158)
-TOTAL ERC PATHCHK NET Results Generated:     25
+TOTAL ERC PATHCHK POLYGON Results Generated: 205 (324)
+TOTAL ERC PATHCHK NET Results Generated:     43

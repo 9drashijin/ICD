@@ -1,150 +1,150 @@
-* ELDO netlist generated with ICnet by 'training' on Tue Nov 25 2014 at 23:16:32
+* ELDO netlist generated with ICnet by 'training' on Tue Dec 16 2014 at 23:22:57
 
 *
 * Globals.
 *
-.global VDD GND
+.global vdd gnd
 
 *
 * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/mux21a_ni
 *
-.subckt MUX21A_NI  Y S0 A0 A1
+.subckt mux21a_ni  y s0 a0 a1
 
-        M11 N$462 A1 GND GND nch L=0.35u W=1.2u M=1
-        M10 N$461 S0 N$462 GND nch L=0.35u W=1.2u M=1
-        M9 N$461 N$223 N$464 GND nch L=0.35u W=1.2u M=1
-        M8 Y N$461 GND GND nch L=0.35u W=1.2u M=1
-        M7 N$223 S0 GND GND nch L=0.35u W=1.2u M=1
-        M1 N$223 S0 VDD VDD pch L=0.35u W=2u M=1
-        M4 N$459 A1 VDD VDD pch L=0.35u W=2u M=1
-        M2 Y N$461 VDD VDD pch L=0.35u W=2u M=1
-        M5 N$461 S0 N$457 VDD pch L=0.35u W=2u M=1
-        M3 N$457 A0 VDD VDD pch L=0.35u W=2u M=1
-        M12 N$464 A0 GND GND nch L=0.35u W=1.2u M=1
-        M6 N$461 N$223 N$459 VDD pch L=0.35u W=2u M=1
-.ends MUX21A_NI
+        m11 n$462 a1 gnd gnd nch L=0.35u W=1.2u M=1
+        m10 n$461 s0 n$462 gnd nch L=0.35u W=1.2u M=1
+        m9 n$461 n$223 n$464 gnd nch L=0.35u W=1.2u M=1
+        m8 y n$461 gnd gnd nch L=0.35u W=1.2u M=1
+        m7 n$223 s0 gnd gnd nch L=0.35u W=1.2u M=1
+        m1 n$223 s0 vdd vdd pch L=0.35u W=2u M=1
+        m4 n$459 a1 vdd vdd pch L=0.35u W=2u M=1
+        m2 y n$461 vdd vdd pch L=0.35u W=2u M=1
+        m5 n$461 s0 n$457 vdd pch L=0.35u W=2u M=1
+        m3 n$457 a0 vdd vdd pch L=0.35u W=2u M=1
+        m12 n$464 a0 gnd gnd nch L=0.35u W=1.2u M=1
+        m6 n$461 n$223 n$459 vdd pch L=0.35u W=2u M=1
+.ends mux21a_ni
 
 *
 * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/and02a
 *
-.subckt AND02A  A1 A0 Y
+.subckt and02a  a1 a0 y
 
-        M3 Y N$647 GND GND nch L=0.35u W=1.2u M=1
-        M1 N$647 A0 VDD VDD pch L=0.35u W=2u M=1
-        M2 N$647 A1 VDD VDD pch L=0.35u W=2u M=1
-        M4 Y N$647 VDD VDD pch L=0.35u W=2u M=1
-        M5 N$647 A0 N$649 GND nch L=0.35u W=1.2u M=1
-        M6 N$649 A1 GND GND nch L=0.35u W=1.2u M=1
-.ends AND02A
+        m3 y n$647 gnd gnd nch L=0.35u W=1.2u M=1
+        m1 n$647 a0 vdd vdd pch L=0.35u W=2u M=1
+        m2 n$647 a1 vdd vdd pch L=0.35u W=2u M=1
+        m4 y n$647 vdd vdd pch L=0.35u W=2u M=1
+        m5 n$647 a0 n$649 gnd nch L=0.35u W=1.2u M=1
+        m6 n$649 a1 gnd gnd nch L=0.35u W=1.2u M=1
+.ends and02a
 
 *
 * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/axor2a
 *
-.subckt AXOR2A  A0 A1 Y
+.subckt axor2a  a0 a1 y
 
-        M9 N$470 A0 N$472 GND nch L=0.35u W=1.2u M=1
-        M12 Y N$470 GND GND nch L=0.35u W=1.2u M=1
-        M8 N$468 A1 GND GND nch L=0.35u W=1.2u M=1
-        M7 N$467 A0 N$468 GND nch L=0.35u W=1.2u M=1
-        M6 Y N$470 VDD VDD pch L=0.35u W=2u M=1
-        M3 N$470 N$467 VDD VDD pch L=0.35u W=2u M=1
-        M1 N$467 A0 VDD VDD pch L=0.35u W=2u M=1
-        M2 N$467 A1 VDD VDD pch L=0.35u W=2u M=1
-        M4 N$465 A0 VDD VDD pch L=0.35u W=2u M=1
-        M5 N$470 A1 N$465 VDD pch L=0.35u W=2u M=1
-        M11 N$472 N$467 GND GND nch L=0.35u W=1.2u M=1
-        M10 N$470 A1 N$472 GND nch L=0.35u W=1.2u M=1
-.ends AXOR2A
+        m9 n$470 a0 n$472 gnd nch L=0.35u W=1.2u M=1
+        m12 y n$470 gnd gnd nch L=0.35u W=1.2u M=1
+        m8 n$468 a1 gnd gnd nch L=0.35u W=1.2u M=1
+        m7 n$467 a0 n$468 gnd nch L=0.35u W=1.2u M=1
+        m6 y n$470 vdd vdd pch L=0.35u W=2u M=1
+        m3 n$470 n$467 vdd vdd pch L=0.35u W=2u M=1
+        m1 n$467 a0 vdd vdd pch L=0.35u W=2u M=1
+        m2 n$467 a1 vdd vdd pch L=0.35u W=2u M=1
+        m4 n$465 a0 vdd vdd pch L=0.35u W=2u M=1
+        m5 n$470 a1 n$465 vdd pch L=0.35u W=2u M=1
+        m11 n$472 n$467 gnd gnd nch L=0.35u W=1.2u M=1
+        m10 n$470 a1 n$472 gnd nch L=0.35u W=1.2u M=1
+.ends axor2a
 
 *
 * Component pathname : /home/training/ALU_CL/schem/CE
 *
-.subckt CE  S0 S1 C0 S2
+.subckt ce  s0 s1 c0 s2
 
-        X_AND02A1 S2 N$7 C0 AND02A
-        X_AXOR2A1 S0 S1 N$7 AXOR2A
-.ends CE
+        x_and02a1 s2 n$7 c0 and02a
+        x_axor2a1 s0 s1 n$7 axor2a
+.ends ce
 
 *
 * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/inv01a
 *
-.subckt INV01A  A Y
+.subckt inv01a  a y
 
-        M1 Y A VDD VDD pch L=0.35u W=2u M=1
-        M2 Y A GND GND nch L=0.35u W=1.2u M=1
-.ends INV01A
+        m1 y a vdd vdd pch L=0.35u W=2u M=1
+        m2 y a gnd gnd nch L=0.35u W=1.2u M=1
+.ends inv01a
 
 *
 * Component pathname : $MIMOS_KIT/mimos035-std-cells/schem/or02a
 *
-.subckt OR02A  Y A1 A0
+.subckt or02a  y a1 a0
 
-        M4 N$431 A0 GND GND nch L=0.35u W=1.2u M=1
-        M3 Y N$431 VDD VDD pch L=0.35u W=2u M=1
-        M2 N$431 A1 N$429 VDD pch L=0.35u W=2u M=1
-        M1 N$429 A0 VDD VDD pch L=0.35u W=2u M=1
-        M6 Y N$431 GND GND nch L=0.35u W=1.2u M=1
-        M5 N$431 A1 GND GND nch L=0.35u W=1.2u M=1
-.ends OR02A
+        m4 n$431 a0 gnd gnd nch L=0.35u W=1.2u M=1
+        m3 y n$431 vdd vdd pch L=0.35u W=2u M=1
+        m2 n$431 a1 n$429 vdd pch L=0.35u W=2u M=1
+        m1 n$429 a0 vdd vdd pch L=0.35u W=2u M=1
+        m6 y n$431 gnd gnd nch L=0.35u W=1.2u M=1
+        m5 n$431 a1 gnd gnd nch L=0.35u W=1.2u M=1
+.ends or02a
 
 *
 * Component pathname : /home/training/ALU_CL/schem/LE
 *
-.subckt LE  LE S1 S2 A B
+.subckt le  le s1 s2 a b
 
-        X_OR02A1 N$21 B A OR02A
-        X_AND02A1 B A N$19 AND02A
-        X_INV01A1 A N$17 INV01A
-        X_MUX21A_NI3 LE S2 N$10 N$9 MUX21A_NI
-        X_MUX21A_NI2 N$9 S1 N$19 N$21 MUX21A_NI
-        X_MUX21A_NI1 N$10 S1 A N$17 MUX21A_NI
-.ends LE
+        x_or02a1 n$21 b a or02a
+        x_and02a1 b a n$19 and02a
+        x_inv01a1 a n$17 inv01a
+        x_mux21a_ni3 le s2 n$10 n$9 mux21a_ni
+        x_mux21a_ni2 n$9 s1 n$19 n$21 mux21a_ni
+        x_mux21a_ni1 n$10 s1 a n$17 mux21a_ni
+.ends le
 
 *
 * Component pathname : /home/training/ALU_CL/schem/FullAdder
 *
-.subckt FULLADDER  A B CIN COUT SUM
+.subckt fulladder  a b cout cin sum
 
-        X_AXOR2A2 A B N$7 AXOR2A
-        X_AXOR2A1 N$7 CIN SUM AXOR2A
-        X_OR02A1 COUT N$1 N$3 OR02A
-        X_AND02A2 B A N$1 AND02A
-        X_AND02A1 N$7 CIN N$3 AND02A
-.ends FULLADDER
+        x_or02a1 cout n$21 n$18 or02a
+        x_and02a2 cin n$29 n$18 and02a
+        x_and02a1 b a n$21 and02a
+        x_axor2a1 n$29 cin sum axor2a
+        x_axor2a2 a b n$29 axor2a
+.ends fulladder
 
 *
 * Component pathname : /home/training/ALU_CL/schem/AE
 *
-.subckt AE  C CIN EA A EB B WA WB AE
+.subckt ae  c cin ea a eb b wa wb ae
 
-        X_FULLADDER1 N$38 N$40 CIN C AE FULLADDER
-        X_AXOR2A3 WA N$30 N$38 AXOR2A
-        X_AND02A3 A EA N$30 AND02A
-        X_AXOR2A4 N$31 WB N$40 AXOR2A
-        X_AND02A4 B EB N$31 AND02A
-.ends AE
+        x_fulladder1 n$38 n$40 c cin ae fulladder
+        x_axor2a3 wa n$30 n$38 axor2a
+        x_and02a3 a ea n$30 and02a
+        x_axor2a4 n$31 wb n$40 axor2a
+        x_and02a4 b eb n$31 and02a
+.ends ae
 
 *
 * Component pathname : /home/training/ALU_CL/schem/ALU
 *
-.subckt ALU  CIN COUT SUM OUT1 WB S1 S2 A B
+.subckt alu  cin cout sum out1 wb s1 s2 a b
 
-        X_INV01A1 S1 EB INV01A
-        X_MUX21A_NI1 OUT1 S2 N$3 SUM MUX21A_NI
-        X_LE1 N$3 WB S1 A B LE
-        X_AE1 COUT CIN VDD A EB B GND WB SUM AE
-.ends ALU
+        x_inv01a1 s1 eb inv01a
+        x_mux21a_ni1 out1 s2 n$3 sum mux21a_ni
+        x_le1 n$3 wb s1 a b le
+        x_ae1 cout cin vdd a eb b gnd wb sum ae
+.ends alu
 
 *
 * MAIN CELL: Component pathname : /home/training/ALU_CL/schem/ALU4bit
 *
-        X_MUX21A_NI2 COUT S2 N$58 N$62 MUX21A_NI
-        X_MUX21A_NI1 N$62 S0 N$80 GND MUX21A_NI
-        X_AND02A1 GND N$80 N$58 AND02A
-        X_CE1 S0 S1 N$2 S2 CE
-        X_ALU5 N$78 N$80 N$72 Q3 S0 S1 S2 A B ALU
-        X_ALU7 N$2 N$99 N$103 Q0 S0 S1 S2 A B ALU
-        X_ALU6 N$99 N$90 N$94 Q1 S0 S1 S2 A B ALU
-        X_ALU4 N$90 N$78 N$70 Q2 S0 S1 S2 A B ALU
+        x_mux21a_ni2 cout s2 n$58 n$62 mux21a_ni
+        x_mux21a_ni1 n$62 s0 n$80 gnd mux21a_ni
+        x_and02a1 gnd n$80 n$58 and02a
+        x_ce1 s0 s1 n$2 s2 ce
+        x_alu5 n$78 n$80 n$72 q3 s0 s1 s2 a b alu
+        x_alu7 n$2 n$99 n$103 q0 s0 s1 s2 a b alu
+        x_alu6 n$99 n$90 n$94 q1 s0 s1 s2 a b alu
+        x_alu4 n$90 n$78 n$70 q2 s0 s1 s2 a b alu
 *
 .end

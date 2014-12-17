@@ -13,7 +13,7 @@
 //
 
 
-//  Invocation args:  -eldo -o /home/training/ALU_CL/schem/ALU4bit/eldonet/ALU4bit_eldonet.spi -check -upper -dmsfile /home/training/ALU_CL/schem/ALU4bit/eldonet/design.dms /home/training/ALU_CL/schem/ALU4bit/eldonet
+//  Invocation args:  -dmsfile /home/training/ALU_CL/schem/ALU4bit/eldonet/design.dms -force /home/training/ALU_CL/schem/ALU4bit/eldonet
 
 // **** Reading </home/training/ALU_CL/schem/ALU4bit/eldonet> for ELDO netlist ****
 

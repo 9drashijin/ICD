@@ -1,0 +1,9 @@
+A 5 u mgc_symbol 543d3f38ac00.03.7f.00.00.01.00.10.48 2 2 1 0
+V v 1 1 543d3f38ac00.03.7f.00.00.01.01.10.48
+F f 1 "AEnew.smbl_1"
+V v 2 1 543d3f5926c6.03.7f.00.00.01.00.10.48
+F f 2 "AEnew.smbl_2"
+O 2
+R csduv 0 "/home/training/ALU_CL/schem/AEnew/part" 1 Eddm_part 543d3f523c85.03.7f.00.00.01.01.10.48 543d3f523c85.03.7f.00.00.01.00.10.48
+O 1
+R csduv 0 "/home/training/ALU_CL/schem/AEnew/part" 1 Eddm_part 543d3f523c85.03.7f.00.00.01.01.10.48 543d3f523c85.03.7f.00.00.01.00.10.48

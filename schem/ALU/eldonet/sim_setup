@@ -292,6 +292,7 @@ $$set_sim_value("sim_ezwave_wd",700);
 $$set_sim_value("sim_hspice_command","$MGC_HOME/bin/run_hspice");
 $$set_sim_value("sim_hspice_command_default","$MGC_HOME/bin/run_hspice");
 $$set_sim_value("sim_hspice_command_options",[["", "<input_file>"], ["", "<netlist_file>"], ["", "<output_file>"]]);
+$$set_sim_value("sim_input_netlist","ALU_eldonet.spi");
 $$set_sim_value("sim_mach_command","$MGC_AMS_HOME/bin/mta");
 $$set_sim_value("sim_mach_command_options",[["-b"], ["-eldo"], ["<input_file>"]]);
 $$set_sim_value("sim_model_editor",@text);
@@ -345,7 +346,7 @@ $$set_sim_value("vsim_library","work");
 $$set_sim_value("vsim_netlist_run_viewer_flag",0);
 
 // Netlister Options
-$$set_sim_value("sim_eldonet_check",@true);
+$$set_sim_value("sim_eldonet_check",@false);
 $$set_sim_value("sim_eldonet_timestamp",-1);
 $$set_sim_value("sim_netlist_run_viewer_flag",1);
 $$set_sim_value("sim_netlist_uptodate_check_flag",@yes);
@@ -357,7 +358,7 @@ $$set_sim_value("sim_netlister_cdl_output",@false);
 $$set_sim_value("sim_netlister_connect_name",@false);
 $$set_sim_value("sim_netlister_debug",@false);
 $$set_sim_value("sim_netlister_force",@false);
-$$set_sim_value("sim_netlister_format",@eldospice);
+$$set_sim_value("sim_netlister_format",@lvs);
 $$set_sim_value("sim_netlister_inout_pin_types","");
 $$set_sim_value("sim_netlister_input_pin_types","");
 $$set_sim_value("sim_netlister_no_ba",@false);
@@ -367,7 +368,7 @@ $$set_sim_value("sim_netlister_output_pin_types","");
 $$set_sim_value("sim_netlister_run_in_background",@true);
 $$set_sim_value("sim_netlister_silent",@false);
 $$set_sim_value("sim_netlister_top_down",@false);
-$$set_sim_value("sim_netlister_top_level_var",@spice_no_top_sub);
+$$set_sim_value("sim_netlister_top_level_var",@spice_top_sub);
 $$set_sim_value("sim_netlister_use_dfi",@false);
 $$set_sim_value("sim_netlister_wrap_netlist",@false);
 $$set_sim_value("vsim_netlister_additional_switches","");
@@ -415,7 +416,7 @@ $$set_sim_value("sim_parasitics_vector",[]);
 $$set_sim_value("sim_to_vector",[]);
 
 // Node Zero
-$$set_sim_value("node_0_entry","GROUND");
+$$set_sim_value("node_0_entry","GROUND GND");
 $$set_sim_value("node_0_entry_sm","//ground");
 $$set_sim_value("sim_node_0_set",@true);
 

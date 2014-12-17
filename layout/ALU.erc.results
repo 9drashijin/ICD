@@ -1,0 +1,13 @@
+ALU 1000
+ERC_Nwell_no_Ntap
+0 0 2 Dec 16 23:05:24 2014                                      
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035LVS.rul_
+ERC Rule: Nwell that is floating, or connected with mutltiple nets
+ERC_PWtap
+0 0 2 Dec 16 23:05:24 2014                                      
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035LVS.rul_
+ERC Rule: Pwell Taps is not connected to Ground
+ERC_NWtap
+0 0 2 Dec 16 23:05:24 2014                                      
+Rule File Pathname: /home/training/ALU_CL/layout/_Calibre035LVS.rul_
+ERC Rule: Nwell Taps is not connected to Power

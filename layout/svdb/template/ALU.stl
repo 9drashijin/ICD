@@ -1,0 +1,12 @@
+%	ALU	ALU
+VDD	VDD	0	x 0 0
+GND	GND	0	x 0 0
+B	B	0	x 0 0
+A	A	0	x 0 0
+S1	S1	0	x 0 0
+WB	WB	0	x 0 0
+CIN	CIN	0	x 0 0
+S2	S2	0	x 0 0
+COUT	COUT	0	x 0 0
+SUM	SUM	0	x 0 0
+OUT1	OUT1	0	x 0 0

@@ -1,0 +1,293 @@
+# This file provides name mapping information for all objects
+# on the schematic design.  It provides a mapping for each
+# object between its name on the schematic and its name in the netlist.
+version 1.0
+
+Globals
+   VDD VDD
+   GND GND
+End Globals
+
+Cell NMOS4
+   Pin D D
+   Pin G G
+   Pin S S
+   Pin B B
+End Cell
+
+Cell PMOS4
+   Pin D D
+   Pin G G
+   Pin S S
+   Pin B B
+End Cell
+
+Cell MUX21A_NI
+   Pin Y Y
+   Pin S0 S0
+   Pin A0 A0
+   Pin A1 A1
+   Net N$464 N$464
+   Net N$462 N$462
+   Net N$461 N$461
+   Net N$459 N$459
+   Net N$457 N$457
+   Net N$223 N$223
+   Net A1 A1
+   Net A0 A0
+   Net S0 S0
+   Net Y Y
+   Global GND GND
+   Global VDD VDD
+   Inst M11 M11 NMOS4
+   Inst M10 M10 NMOS4
+   Inst M9 M9 NMOS4
+   Inst M8 M8 NMOS4
+   Inst M7 M7 NMOS4
+   Inst M1 M1 PMOS4
+   Inst M4 M4 PMOS4
+   Inst M2 M2 PMOS4
+   Inst M5 M5 PMOS4
+   Inst M3 M3 PMOS4
+   Inst M12 M12 NMOS4
+   Inst M6 M6 PMOS4
+End Cell
+
+Cell AND02A
+   Pin A1 A1
+   Pin A0 A0
+   Pin Y Y
+   Net N$649 N$649
+   Net N$647 N$647
+   Net Y Y
+   Net A0 A0
+   Net A1 A1
+   Global GND GND
+   Global VDD VDD
+   Inst M3 M3 NMOS4
+   Inst M1 M1 PMOS4
+   Inst M2 M2 PMOS4
+   Inst M4 M4 PMOS4
+   Inst M5 M5 NMOS4
+   Inst M6 M6 NMOS4
+End Cell
+
+Cell AXOR2A
+   Pin A0 A0
+   Pin A1 A1
+   Pin Y Y
+   Net N$472 N$472
+   Net N$470 N$470
+   Net N$468 N$468
+   Net N$467 N$467
+   Net N$465 N$465
+   Net Y Y
+   Net A1 A1
+   Net A0 A0
+   Global GND GND
+   Global VDD VDD
+   Inst M9 M9 NMOS4
+   Inst M12 M12 NMOS4
+   Inst M8 M8 NMOS4
+   Inst M7 M7 NMOS4
+   Inst M6 M6 PMOS4
+   Inst M3 M3 PMOS4
+   Inst M1 M1 PMOS4
+   Inst M2 M2 PMOS4
+   Inst M4 M4 PMOS4
+   Inst M5 M5 PMOS4
+   Inst M11 M11 NMOS4
+   Inst M10 M10 NMOS4
+End Cell
+
+Cell CE
+   Pin S0 S0
+   Pin S1 S1
+   Pin C0 C0
+   Pin S2 S2
+   Net N$7 N$7
+   Net S2 S2
+   Net C0 C0
+   Net S1 S1
+   Net S0 S0
+   Inst AND02A1 X_AND02A1 AND02A
+   Inst AXOR2A1 X_AXOR2A1 AXOR2A
+End Cell
+
+Cell INV01A
+   Pin A A
+   Pin Y Y
+   Net Y Y
+   Net A A
+   Global GND GND
+   Global VDD VDD
+   Inst M1 M1 PMOS4
+   Inst M2 M2 NMOS4
+End Cell
+
+Cell OR02A
+   Pin Y Y
+   Pin A1 A1
+   Pin A0 A0
+   Net N$431 N$431
+   Net N$429 N$429
+   Net A0 A0
+   Net A1 A1
+   Net Y Y
+   Global GND GND
+   Global VDD VDD
+   Inst M4 M4 NMOS4
+   Inst M3 M3 PMOS4
+   Inst M2 M2 PMOS4
+   Inst M1 M1 PMOS4
+   Inst M6 M6 NMOS4
+   Inst M5 M5 NMOS4
+End Cell
+
+Cell LE
+   Pin LE LE
+   Pin S1 S1
+   Pin S2 S2
+   Pin A A
+   Pin B B
+   Net N$10 N$10
+   Net N$9 N$9
+   Net N$21 N$21
+   Net N$19 N$19
+   Net N$17 N$17
+   Net B B
+   Net A A
+   Net S2 S2
+   Net S1 S1
+   Net LE LE
+   Inst OR02A1 X_OR02A1 OR02A
+   Inst AND02A1 X_AND02A1 AND02A
+   Inst INV01A1 X_INV01A1 INV01A
+   Inst MUX21A_NI3 X_MUX21A_NI3 MUX21A_NI
+   Inst MUX21A_NI2 X_MUX21A_NI2 MUX21A_NI
+   Inst MUX21A_NI1 X_MUX21A_NI1 MUX21A_NI
+End Cell
+
+Cell FULLADDER
+   Pin A A
+   Pin B B
+   Pin Cout COUT
+   Pin Cin CIN
+   Pin Sum SUM
+   Net N$29 N$29
+   Net N$18 N$18
+   Net N$21 N$21
+   Net Sum SUM
+   Net Cin CIN
+   Net Cout COUT
+   Net B B
+   Net A A
+   Inst OR02A1 X_OR02A1 OR02A
+   Inst AND02A2 X_AND02A2 AND02A
+   Inst AND02A1 X_AND02A1 AND02A
+   Inst AXOR2A1 X_AXOR2A1 AXOR2A
+   Inst AXOR2A2 X_AXOR2A2 AXOR2A
+End Cell
+
+Cell AE
+   Pin C C
+   Pin Cin CIN
+   Pin Ea EA
+   Pin A A
+   Pin Eb EB
+   Pin B B
+   Pin Wa WA
+   Pin Wb WB
+   Pin AE AE
+   Net N$38 N$38
+   Net N$31 N$31
+   Net N$30 N$30
+   Net N$40 N$40
+   Net AE AE
+   Net Wb WB
+   Net Wa WA
+   Net B B
+   Net Eb EB
+   Net A A
+   Net Ea EA
+   Net Cin CIN
+   Net C C
+   Inst FULLADDER1 X_FULLADDER1 FULLADDER
+   Inst AXOR2A3 X_AXOR2A3 AXOR2A
+   Inst AND02A3 X_AND02A3 AND02A
+   Inst AXOR2A4 X_AXOR2A4 AXOR2A
+   Inst AND02A4 X_AND02A4 AND02A
+End Cell
+
+Cell ALU
+   Pin Cin CIN
+   Pin Cout COUT
+   Pin Sum SUM
+   Pin Out1 OUT1
+   Pin Wb WB
+   Pin S1 S1
+   Pin S2 S2
+   Pin A A
+   Pin B B
+   Net Eb EB
+   Net N$3 N$3
+   Net B B
+   Net A A
+   Net S2 S2
+   Net S1 S1
+   Net Wb WB
+   Net Out1 OUT1
+   Net Sum SUM
+   Net Cout COUT
+   Net Cin CIN
+   Global GND GND
+   Global VDD VDD
+   Inst INV01A1 X_INV01A1 INV01A
+   Inst MUX21A_NI1 X_MUX21A_NI1 MUX21A_NI
+   Inst LE1 X_LE1 LE
+   Inst AE1 X_AE1 AE
+End Cell
+
+Cell #top#
+   Pin q0 Q0
+   Pin q1 Q1
+   Pin q2 Q2
+   Pin q3 Q3
+   Pin A A
+   Pin B B
+   Pin cout COUT
+   Pin S0 S0
+   Pin S2 S2
+   Pin S1 S1
+   Net N$103 N$103
+   Net N$99 N$99
+   Net N$94 N$94
+   Net N$90 N$90
+   Net N$70 N$70
+   Net N$78 N$78
+   Net N$72 N$72
+   Net N$80 N$80
+   Net N$62 N$62
+   Net N$58 N$58
+   Net N$2 N$2
+   Net S1 S1
+   Net S2 S2
+   Net S0 S0
+   Net cout COUT
+   Net B B
+   Net A A
+   Net q3 Q3
+   Net q2 Q2
+   Net q1 Q1
+   Net q0 Q0
+   Global GND GND
+   Inst MUX21A_NI2 X_MUX21A_NI2 MUX21A_NI
+   Inst MUX21A_NI1 X_MUX21A_NI1 MUX21A_NI
+   Inst AND02A1 X_AND02A1 AND02A
+   Inst CE1 X_CE1 CE
+   Inst ALU5 X_ALU5 ALU
+   Inst ALU7 X_ALU7 ALU
+   Inst ALU6 X_ALU6 ALU
+   Inst ALU4 X_ALU4 ALU
+End Cell
+

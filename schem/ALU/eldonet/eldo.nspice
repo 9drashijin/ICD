@@ -1,4 +1,4 @@
-* ELDO netlist generated with ICnet by 'training' on Tue Nov 25 2014 at 21:59:09
+* ELDO netlist generated with ICnet by 'training' on Tue Dec 16 2014 at 23:13:25
 
 *
 * Globals.
@@ -94,13 +94,13 @@
 *
 * Component pathname : /home/training/ALU_CL/schem/FullAdder
 *
-.subckt fulladder  a b cin cout sum
+.subckt fulladder  a b cout cin sum
 
-        x_axor2a2 a b n$7 axor2a
-        x_axor2a1 n$7 cin sum axor2a
-        x_or02a1 cout n$1 n$3 or02a
-        x_and02a2 b a n$1 and02a
-        x_and02a1 n$7 cin n$3 and02a
+        x_or02a1 cout n$21 n$18 or02a
+        x_and02a2 cin n$29 n$18 and02a
+        x_and02a1 b a n$21 and02a
+        x_axor2a1 n$29 cin sum axor2a
+        x_axor2a2 a b n$29 axor2a
 .ends fulladder
 
 *
@@ -108,7 +108,7 @@
 *
 .subckt ae  c cin ea a eb b wa wb ae
 
-        x_fulladder1 n$38 n$40 cin c ae fulladder
+        x_fulladder1 n$38 n$40 c cin ae fulladder
         x_axor2a3 wa n$30 n$38 axor2a
         x_and02a3 a ea n$30 and02a
         x_axor2a4 n$31 wb n$40 axor2a

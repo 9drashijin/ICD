@@ -13,10 +13,13 @@
 //
 
 
-//  Invocation args:  -eldo -o /home/training/ALU_CL/schem/ALU4bit/eldonet/ALU4bit_eldonet.spi -check -upper -dmsfile /home/training/ALU_CL/schem/ALU4bit/eldonet/design.dms /home/training/ALU_CL/schem/ALU4bit/eldonet
+//  Invocation args:  -lvs -o /home/training/ALU_CL/schem/ALU4bit/eldonet/ALU4bit_eldonet.spi -check -upper -spice_top_sub -dmsfile /home/training/ALU_CL/schem/ALU4bit/eldonet/design.dms /home/training/ALU_CL/schem/ALU4bit/eldonet
 
-// **** Reading </home/training/ALU_CL/schem/ALU4bit/eldonet> for ELDO netlist ****
+// **** Reading </home/training/ALU_CL/schem/ALU4bit/eldonet> for LVS netlist ****
 
+The pin list order of part interface /home/training/ALU_CL/schem/FullAdder/part:FullAdder has changed since
+instance(s) of the part were placed in sheet or model /home/training/ALU_CL/schem/AE/schematic/sheet1.
+To avoid the time cost of pin mapping at every evaluation, open and save /home/training/ALU_CL/schem/AE/schematic/sheet1.
 // Checking 11 sheet(s) for out of date references to symbols and interfaces...
 // Done.
 // Parsing file '/EDA/mimos035_lib/lib/nmos4/@ncf.dir/nmos4.ncf' succeeded.
@@ -35,7 +38,7 @@ Processing [/home/training/ALU_CL/schem/CE] [CE/CE] [schematic]
 Primitive [$MIMOS_KIT/lib/pmos4] [pmos4/pmos4] [SPICE=X] (NCF entry line:8 file:$MIMOS_KIT/lib/pmos4/@ncf.dir/pmos4.ncf)
 Primitive [$MIMOS_KIT/lib/nmos4] [nmos4/nmos4] [SPICE=X] (NCF entry line:8 file:$MIMOS_KIT/lib/nmos4/@ncf.dir/nmos4.ncf)
 
-**** Writing </home/training/ALU_CL/schem/ALU4bit/eldonet> netlist for ELDO ****
+**** Writing </home/training/ALU_CL/schem/ALU4bit/eldonet> netlist for LVS ****
 
 Number of cells: 13
 Number of primitive instances: 616
